@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IIFR — International Institute for Faculty & Research</title>
+<meta name="description" content="IIFR strengthens faculty capability, research excellence, and academic leadership for India and the Global South. EFMD recognised. Co-certified globally with Bharatiya Vidya Bhavan." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ====== HEADER ====== -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="logo" aria-label="IIFR home">
+      <span class="logo-mark">IIFR<span class="dot">.</span></span>
+      <span class="bvb-pill">Bharatiya Vidya Bhavan</span>
+    </a>
+    <a class="all-prog" href="#programmes">All Programmes <span class="car" aria-hidden="true">↓</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#governance">Faculty</a>
+      <a href="#programmes" class="has-down">Programmes</a>
+      <a href="#insights">Insights</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-gold" href="#apply">Apply</a>
+      <a class="btn btn-out-navy" href="#contact">Contact Us</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#governance">Faculty</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#insights">Insights</a>
+    <a class="btn btn-gold" href="#apply">Apply</a>
+    <a class="btn btn-out-navy" href="#contact">Contact Us</a>
+  </nav>
+</header>
+
+<!-- ====== ANNOUNCE ====== -->
+<div class="announce" role="region" aria-label="Announcement">
+  <div class="announce-inner">
+    <span class="pill-gold">EFMD Recognised</span>
+    <span class="msg">Co-certified globally · Bharatiya Vidya Bhavan + EFMD + IIFR</span>
+    <a class="lm" href="#about">Learn More <span aria-hidden="true">↗</span></a>
+  </div>
+</div>
+
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="grid">
+      <div class="hero-left">
+        <h1 class="h1">
+          Building the Future of <em>Faculty,&nbsp;Research,</em>
+          <svg class="underscore" viewBox="0 0 360 14" preserveAspectRatio="none" aria-hidden="true">
+            <path class="gold-stroke" d="M2 9 C 60 2, 140 2, 220 7 S 340 11, 358 6"/>
+          </svg>
+          and Academic Leadership
+        </h1>
+        <p class="lead">IIFR strengthens faculty capability, research excellence, and academic leadership for India and the Global South.</p>
+
+        <form class="lead-form" id="apply" onsubmit="event.preventDefault(); this.querySelector('.submit').textContent='Thanks — we will be in touch';">
+          <h3>Get programme guidance!</h3>
+          <label class="visually-hidden" for="lf-name">Full Name</label>
+          <input class="field" id="lf-name" name="name" type="text" placeholder="Full Name*" required />
+          <label class="visually-hidden" for="lf-email">Email</label>
+          <input class="field" id="lf-email" name="email" type="email" placeholder="Email ID*" required />
+          <div class="row-split">
+            <label class="visually-hidden" for="lf-cc">Country code</label>
+            <select class="field" id="lf-cc" name="country_code">
+              <option>India (+91)</option>
+              <option>UAE (+971)</option>
+              <option>UK (+44)</option>
+              <option>USA (+1)</option>
+            </select>
+            <label class="visually-hidden" for="lf-phone">Phone</label>
+            <input class="field" id="lf-phone" name="phone" type="tel" placeholder="Contact Number*" required />
+          </div>
+          <label class="visually-hidden" for="lf-prog">Programme of interest</label>
+          <select class="field" id="lf-prog" name="programme" required>
+            <option value="">Programme of Interest*</option>
+            <option>ECP — Educators' Certificate Programme</option>
+            <option>EFM — Executive Fellow in Management</option>
+            <option>Not sure yet</option>
+          </select>
+          <label class="check"><input type="checkbox" name="terms" checked required /> <span>I accept the <b>Terms &amp; Conditions</b></span></label>
+          <button class="submit" type="submit">Submit Enquiry</button>
+        </form>
+      </div>
+
+      <div class="pathways" aria-label="Pathways">
+        <article class="pcard">
+          <div class="ptag">Industry Leader Transitioning to</div>
+          <h4>Academic Roles via ECP</h4>
+          <div class="meta">Engaged as: <b>Professor of Practice</b></div>
+          <div class="photo" aria-hidden="true"></div>
+          <div class="pcaption"><span>Senior Executive</span><span>ECP</span></div>
+        </article>
+        <article class="pcard">
+          <div class="ptag">Doctoral Fellowship completed</div>
+          <h4>earning EFM credentials</h4>
+          <div class="meta">Co-certified by: <b>BVB · IIFR · EFMD</b></div>
+          <div class="photo" aria-hidden="true"></div>
+          <div class="pcaption"><span>Senior Practitioner</span><span>EFM</span></div>
+        </article>
+        <article class="pcard">
+          <div class="ptag">Faculty Member upskilled with</div>
+          <h4>AI-powered Pedagogy</h4>
+          <div class="meta">Now teaching at: <b>Tier-1 B-School</b></div>
+          <div class="photo" aria-hidden="true"></div>
+          <div class="pcaption"><span>Faculty</span><span>ECP Alumni</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CRED STRIP ====== -->
+<section class="cred" aria-label="Credentials">
+  <div class="wrap">
+    <div class="cred-grid">
+      <div class="cred-block">
+        <div class="shield" aria-hidden="true">BVB</div>
+        <p class="cred-text"><b>85+ Years</b> of institutional heritage as the home of India's cultural and educational legacy.</p>
+      </div>
+      <div class="cred-divider" aria-hidden="true"></div>
+      <div class="cred-block">
+        <div class="efmd-mark" aria-hidden="true">EFMD</div>
+        <p class="cred-text"><b>EFMD Recognised</b> — Global quality benchmarking from the European Foundation for Management Development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== THREE PATHWAYS ====== -->
+<section class="bandwhite">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Three Pathways</span>
+      <h2 class="h2">Three pathways to <em>transform your impact</em></h2>
+      <p class="sub">Designed for leaders in academia, industry, and research who are ready to create lasting influence in higher education.</p>
+    </div>
+    <div class="three">
+      <article class="threecard">
+        <div class="icon-tile" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-7h6v7"/></svg>
+        </div>
+        <h3>Industry to Academia</h3>
+        <p>Senior executives and CXOs leveraging decades of experience to become educators in management institutes — integrating practical wisdom with academic frameworks to nurture the next generation.</p>
+      </article>
+      <article class="threecard">
+        <div class="icon-tile" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 4-9 4-9-4 9-4zM5 9v5c0 2 3 4 7 4s7-2 7-4V9M21 9v6"/></svg>
+        </div>
+        <h3>Academic Faculty Excellence</h3>
+        <p>For management faculty, researchers, and academics elevating pedagogical practice, research impact, and global credibility through internationally recognised certification.</p>
+      </article>
+      <article class="threecard">
+        <div class="icon-tile" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19h16M6 19V9l4 4 4-6 4 8M6 5h12"/></svg>
+        </div>
+        <h3>Applied Research</h3>
+        <p>For CXOs, senior managers, and subject matter experts converting decades of expertise into lasting academic legacy through applied research and scholarship — without leaving practice.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="bandcream" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-img" aria-hidden="true">
+        <div class="about-tag"><b>2026</b>Established<br/>Bharatiya Vidya Bhavan</div>
+      </div>
+      <div>
+        <span class="eyebrow">About IIFR</span>
+        <h2 class="h2 h2-left">An autonomous academic institute for India's <em>faculty future.</em></h2>
+        <p>The International Institute for Faculty &amp; Research (IIFR) is housed within Bharatiya Vidya Bhavan's Delhi Campus, established to strengthen faculty capability, research excellence, and academic leadership across India and the Global South.</p>
+        <p>Designed in response to the evolving needs of higher education and professional practice, IIFR helps build future-ready educators for lasting institutional transformation.</p>
+        <div class="stats-row">
+          <div class="stat"><div class="num">2</div><div class="lbl">Flagship programmes</div></div>
+          <div class="stat"><div class="num">85<em>+</em></div><div class="lbl">Years of BVB heritage</div></div>
+          <div class="stat"><div class="num">3<em>yr</em></div><div class="lbl">Doctoral fellowship</div></div>
+        </div>
+        <div class="about-cta">
+          <a class="btn btn-navy" href="#">Institute Overview</a>
+          <a class="btn btn-out-gold" href="#governance">Meet Our Faculty</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROGRAMMES ====== -->
+<section class="bandwhite" id="programmes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our Programmes</span>
+      <h2 class="h2">Programmes designed for <em>academic and professional excellence</em></h2>
+      <p class="sub">Practice-oriented learning experiences for educators, leaders, and researchers.</p>
+    </div>
+    <div class="progs">
+      <article class="progcard">
+        <div class="progcover"><span class="progtag">8-Day Intensive · Flagship</span></div>
+        <div class="progbody">
+          <h3>Educators' Certificate Programme (ECP)</h3>
+          <p>An intensive programme designed to build a new category of educators who move seamlessly between industry and academia.</p>
+          <div class="checks">
+            <div class="ck">EFMD + IIFR Co-Certification</div>
+            <div class="ck">AI-Powered Pedagogy &amp; Case Writing</div>
+          </div>
+          <div class="stat-pill">₹5 LAKH · 4 MODULES · 25–30 COHORT</div>
+          <div class="progfoot">
+            <a class="btn btn-out-navy" href="#">Brochure <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-navy" href="#">View ECP details <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="progcard">
+        <div class="progcover efm"><span class="progtag">3-Year Doctoral · Fellowship</span></div>
+        <div class="progbody">
+          <h3>Executive Fellow in Management (EFM)</h3>
+          <p>A doctoral-equivalent fellowship for senior practitioners ready to engage with the rigour of academic scholarship without abandoning practice.</p>
+          <div class="checks">
+            <div class="ck">Doctoral-Equivalent Degree (BVB + IIFR + EFMD)</div>
+            <div class="ck">Min. 10 Years Experience · MBA Preferred</div>
+          </div>
+          <div class="stat-pill">₹25 LAKH + GST · 6 STAGES · 25 COHORT</div>
+          <div class="progfoot">
+            <a class="btn btn-out-navy" href="#">Brochure <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-navy" href="#">View EFM details <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+    <a class="all-link" href="#">Explore all programmes →</a>
+  </div>
+</section>
+
+<!-- ====== QUOTE BAND ====== -->
+<section class="banddark">
+  <div class="wrap">
+    <div class="quote-inner">
+      <span class="eyebrow eyebrow-light">Where the Boardroom Meets the Lectern</span>
+      <h2 class="h2">"You have the understanding. Now <em>scale its impact.</em>"</h2>
+      <p class="sub">India's National Education Policy 2020 envisions Professors of Practice — experienced industry professionals who bring real-world insight into the classroom. IIFR is the institution purpose-built to make this transition seamless, credible, and globally recognised.</p>
+      <blockquote class="pull">"We don't teach you to teach — we help you educate, research, share, and create knowledge."</blockquote>
+      <a class="btn btn-gold" href="#programmes">Explore Programmes</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHY IIFR ====== -->
+<section class="bandwhite" id="insights">
+  <div class="wrap">
+    <div class="why-grid">
+      <div>
+        <span class="eyebrow">Why IIFR · Why Now</span>
+        <h2 class="h2 h2-left">A <em>national intervention</em> for a foundational gap.</h2>
+        <p>As India climbs the value ladder, the economy needs not just skilled labour but future-ready human capital that can solve complex problems. IIFR is the bridge between academia, industry, and policy — building the faculty ecosystem India's knowledge economy demands.</p>
+        <p>Without faculty transformation, broader systemic reforms like NEP 2020 will not achieve their intended impact.</p>
+        <a class="read" href="#">Read our perspective →</a>
+      </div>
+      <div class="why-stats">
+        <div class="whycard">
+          <div class="whynum">31%</div>
+          <div><h4>Faculty shortage</h4><p>Vacancies in prestigious Indian schools of management, exceeding 50% in Tier 2 institutions.</p></div>
+        </div>
+        <div class="whycard">
+          <div class="whynum">1/5</div>
+          <div><h4>Relevance deficit</h4><p>Fewer than 1 in 5 management research papers translate into industry-relevant practice across finance, tech, and policy.</p></div>
+        </div>
+        <div class="whycard">
+          <div class="whynum">$70B</div>
+          <div><h4>Geographic deficit</h4><p>Brain drain costs the country billions and removes 1.3M+ students from the local ecosystem due to inadequate options.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== MISSION ====== -->
+<section class="bandcream">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Our Mission</span>
+      <h2 class="h2">Transforming <em>India's faculty ecosystem.</em></h2>
+      <p class="sub">IIFR is designed as a focused national intervention — a place where faculty capability, applied research, and academic leadership compound into institutional change for India and the Global South.</p>
+    </div>
+    <div class="miss-grid">
+      <article class="misscard"><div class="miss-num">01</div><h3>Cultivating Academic Leaders</h3><p>A new generation of faculty equipped to drive pedagogical innovation and institutional change.</p></article>
+      <article class="misscard"><div class="miss-num">02</div><h3>Advancing Applied Discovery</h3><p>Interdisciplinary research that solves complex real-world challenges and shapes global policy.</p></article>
+      <article class="misscard"><div class="miss-num">03</div><h3>Developing Scholar-Practitioners</h3><p>Leaders who navigate the fluid intersection of classroom, boardroom, and government.</p></article>
+      <article class="misscard"><div class="miss-num">04</div><h3>Building a Global Network</h3><p>A high-impact community linking the world's leading scholars and industry practitioners.</p></article>
+    </div>
+    <div class="miss-cta"><a class="btn btn-navy" href="#">Read Our Mission →</a></div>
+  </div>
+</section>
+
+<!-- ====== QUIZ ====== -->
+<section class="bandink" aria-label="Programme finder">
+  <div class="wrap">
+    <div class="quiz-grid">
+      <div>
+        <span class="eyebrow eyebrow-light">Take Our 3-Step Quiz!</span>
+        <h2 class="h2">Unsure which programme <em>fits your pathway?</em></h2>
+        <div class="quiz-opts" role="radiogroup" aria-label="Your role">
+          <button type="button" class="qopt active" role="radio" aria-checked="true">Industry Leader → Academia</button>
+          <button type="button" class="qopt" role="radio" aria-checked="false">Faculty Member</button>
+          <button type="button" class="qopt" role="radio" aria-checked="false">Researcher / Scholar</button>
+          <button type="button" class="qopt" role="radio" aria-checked="false">L&amp;D / Corporate Trainer</button>
+          <button type="button" class="qopt" role="radio" aria-checked="false">Academic Administrator</button>
+        </div>
+        <div class="quiz-foot">
+          <span class="quiz-step">1 / 3</span>
+          <a class="btn btn-out-gold" href="#">Next →</a>
+        </div>
+      </div>
+      <div class="quiz-img" aria-hidden="true">
+        <div class="gold-arc"></div>
+        <div class="quiz-portrait"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== GOVERNANCE ====== -->
+<section class="bandwhite" id="governance">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Governance &amp; Leadership</span>
+      <h2 class="h2">The faculty and leaders <em>driving IIFR's mission</em></h2>
+      <p class="sub">Stewards of academic excellence, institutional integrity, and global engagement.</p>
+    </div>
+    <div class="gov-grid">
+      <article class="govcard">
+        <div class="gov-portrait" aria-hidden="true"></div>
+        <div>
+          <h3>Shri Banwarilal Purohit</h3>
+          <div class="gov-role">Chairman</div>
+          <p>Former Governor of Punjab, Tamil Nadu, and Assam — a seasoned political administrator and a passionate academic. Chairman of Bharatiya Vidya Bhavan schools.</p>
+        </div>
+      </article>
+      <article class="govcard">
+        <div class="gov-portrait" aria-hidden="true"></div>
+        <div>
+          <h3>Dr. Rajendra Srivastava</h3>
+          <div class="gov-role">Vice Chairman</div>
+          <p>A global academic leader across the US, India, and Singapore — 40+ years as an educator, researcher, and brand strategist. Pioneer in launching Executive PhD programmes globally.</p>
+        </div>
+      </article>
+    </div>
+    <a class="gov-link" href="#">View all faculty →</a>
+  </div>
+</section>
+
+<!-- ====== FINAL CTA ====== -->
+<section class="final" id="contact">
+  <div class="wrap">
+    <div class="final-inner">
+      <span class="eyebrow eyebrow-light">Begin Your Journey</span>
+      <h2 class="h2">Build the <em>future of education</em> with us.</h2>
+      <p class="sub">Whether you're an industry leader entering academia or a faculty member seeking deeper relevance, IIFR has a pathway for you.</p>
+      <div class="final-cta">
+        <a class="btn btn-gold" href="#programmes">Explore Programmes</a>
+        <a class="btn btn-out-white" href="#apply">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo-mark">IIFR<span class="dot">.</span></div>
+        <p>India's institute dedicated to faculty research, teaching excellence, and academic leadership — for India and the Global South.</p>
+        <address class="meta">
+          <b>Bharatiya Vidya Bhavan</b><br/>
+          KG Marg, New Delhi 110001<br/>
+          <a href="mailto:info@iifr.global">info@iifr.global</a> · <a href="tel:+911161200000">+91 11 6120 0000</a>
+        </address>
+        <div class="socials" aria-label="Social links">
+          <a class="soc" href="#" aria-label="LinkedIn">in</a>
+          <a class="soc" href="#" aria-label="X / Twitter">X</a>
+          <a class="soc" href="#" aria-label="YouTube">YT</a>
+          <a class="soc" href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#governance">Faculty</a></li>
+          <li><a href="#programmes">Programmes</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Programmes</h5>
+        <ul>
+          <li><a href="#">ECP — Educators' Certificate</a></li>
+          <li><a href="#">EFM — Executive Fellow</a></li>
+          <li><a href="#">All Programmes</a></li>
+          <li><a href="#apply">Apply Now</a></li>
+        </ul>
+      </div>
+      <div class="foot-newscol">
+        <h5>Stay In The Loop</h5>
+        <p>Insights on faculty development, research, and academic leadership — delivered occasionally.</p>
+        <form class="news" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Subscribed';">
+          <label class="visually-hidden" for="news-email">Email</label>
+          <input id="news-email" type="email" placeholder="your@email.com" required />
+          <button type="submit">Subscribe</button>
+        </form>
+        <small>No spam. Unsubscribe anytime.</small>
+      </div>
+    </div>
+    <div class="legal">© 2026 IIFR — International Institute for Faculty &amp; Research. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- floating CTAs -->
+<div class="float-cta" aria-label="Quick actions">
+  <a class="btn btn-gold" href="#apply"><span aria-hidden="true">📞</span>&nbsp; Apply Now</a>
+  <a class="btn btn-out-white" href="mailto:info@iifr.global"><span aria-hidden="true">✉</span>&nbsp; Email Us</a>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

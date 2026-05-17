@@ -84,6 +84,15 @@
             <label class="visually-hidden" for="lf-phone">Phone</label>
             <input class="field" id="lf-phone" name="phone" type="tel" placeholder="Contact Number*" required />
           </div>
+          <label class="visually-hidden" for="lf-role">Current Role</label>
+          <select class="field" id="lf-role" name="current_role" required>
+            <option value="">Current Role*</option>
+            <option>Executive</option>
+            <option>Faculty</option>
+            <option>Administration</option>
+            <option>Government</option>
+            <option>Others</option>
+          </select>
           <label class="visually-hidden" for="lf-prog">Programme of interest</label>
           <select class="field" id="lf-prog" name="programme" required>
             <option value="">Programme of Interest*</option>
@@ -92,6 +101,18 @@
             <option>Research &amp; Faculty Workshops</option>
             <option>Custom Executive &amp; Institutional Programmes</option>
             <option>Not sure yet</option>
+          </select>
+          <label class="visually-hidden" for="lf-source">How did you hear about us?</label>
+          <select class="field" id="lf-source" name="source" required>
+            <option value="">How did you hear about us?*</option>
+            <option>Website</option>
+            <option>LinkedIn</option>
+            <option>Instagram</option>
+            <option>X</option>
+            <option>Facebook</option>
+            <option>Referral</option>
+            <option>Event</option>
+            <option>Other</option>
           </select>
           <label class="check"><input type="checkbox" name="terms" checked required /> <span>I accept the <b>Terms &amp; Conditions</b></span></label>
           <button class="submit" type="submit">Submit Enquiry</button>
@@ -108,7 +129,7 @@
         </article>
         <article class="pcard">
           <div class="ptag">Doctoral Fellowship completed</div>
-          <h4>earning EFM credentials</h4>
+          <h4>Earning EFM credentials</h4>
           <div class="meta">Co-certified by: <b>BVB · IIFR · EFMD</b></div>
           <div class="photo has-img" aria-hidden="true" style="--cover-img:url('assets/images/academy/1.jpeg')"></div>
           <div class="pcaption"><span>Senior Practitioner</span><span>EFM</span></div>
@@ -290,7 +311,7 @@
         <a class="read" href="about.html#partners">Learn more →</a>
       </article>
       <article class="partner">
-        <div class="partner-mark">LE</div>
+        <div class="partner-mark"><img src="assets/latticed.png" alt="LatticEd"/></div>
         <span class="partner-eyebrow">Learning Innovation</span>
         <h3>LatticEd</h3>
         <p>Pioneering learning impact and academic innovation — empowering institutions with new solutions for learning, research, and academic transformation.</p>

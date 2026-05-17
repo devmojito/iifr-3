@@ -6,12 +6,15 @@
    ===================================================== */
 
 :root{
-  --navy:#0d1b3e;
-  --ink:#0a1c3d;
-  --navy-hover:#1a2a55;
-  --gold:#c9900c;
-  --gold-light:#e8a81a;
-  --gold-accent:#e3b85a;
+  /* v2 — values of --navy and --gold are SWAPPED so every place
+     in CSS that referenced var(--navy) now renders gold, and vice versa.
+     Only the existing six v1 colors are used — no new ones introduced. */
+  --navy:#c9900c;       /* was gold */
+  --ink:#e8a81a;        /* was gold-light */
+  --navy-hover:#e3b85a; /* was gold-accent */
+  --gold:#0d1b3e;       /* was navy */
+  --gold-light:#1a2a55; /* was navy-hover */
+  --gold-accent:#0a1c3d;/* was ink */
   --cream:#f6f2e9;
   --paper:#fafaf6;
   --white:#ffffff;
@@ -19,7 +22,7 @@
   --text-mid:#444;
   --text-light:#777;
   --border:#e0ddd6;
-  --serif:'Playfair Display', Georgia, serif;
+  --serif:'Source Serif 4', 'Source Serif Pro', Georgia, serif;
   --sans:'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono:'JetBrains Mono', ui-monospace, monospace;
 }
@@ -395,8 +398,12 @@ body.menu-open{overflow:hidden}
   position:absolute;bottom:14px;left:20px;right:20px;
   font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--gold-accent);
-  display:flex;justify-content:space-between;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;
 }
+.pcaption > span{white-space:nowrap;min-width:0}
+.pcaption > span:first-child{text-align:left}
+.pcaption > span:last-child{text-align:right}
 
 /* ============ CRED STRIP ============ */
 .cred{
@@ -665,15 +672,19 @@ section.bandink::before{
 }
 .quiz-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center;position:relative}
 .quiz-grid .h2{font-size:42px;text-align:left;margin:18px 0 28px;max-width:560px}
-.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 28px}
+.quiz-opts{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 28px;
+  grid-auto-rows:1fr;
+}
 .qopt{
   background:#fff;color:var(--navy);
-  padding:16px 20px;border-radius:999px;
+  padding:16px 22px;border-radius:999px;
   display:flex;align-items:center;gap:12px;font-weight:500;font-size:15px;
   border:1px solid #fff;
   cursor:pointer;font-family:var(--sans);
   text-align:left;
   transition:transform .15s, box-shadow .15s;
+  width:100%;min-height:64px;height:100%;
 }
 .qopt::before{
   content:"";width:18px;height:18px;border-radius:50%;
@@ -682,7 +693,6 @@ section.bandink::before{
 }
 .qopt:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,0,0,.15)}
 .qopt.active::before{background:var(--gold);box-shadow:inset 0 0 0 3px #fff}
-.qopt:last-child{grid-column:1/-1}
 .quiz-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .quiz-step,.quiz-step-label{font-family:var(--sans);color:var(--gold-accent);letter-spacing:.16em;font-size:13px;text-transform:uppercase}
 .quiz-actions{display:flex;gap:10px;flex-wrap:wrap}
@@ -2207,3 +2217,254 @@ a,strong,em,b,i,small{font-size:inherit}
   }
   .stat .num,.stats-row .stat .num{font-size:28px !important}
 }
+
+/* =====================================================
+   v2 — heading weights for Source Serif 4
+   (Adobe's serif companion to Source Sans 3)
+   ===================================================== */
+.h1,.h2,.h2-left,
+h1,h2,h3,h4,h5,
+.logo-mark,
+.partner h3,.misscard h3,.progbody h3,.icard h3,
+.bcard h4,.govcard h3,.acard h4,.tcard h3,.rcard h3,.fcard h4,
+.module h4,.modal h3,.threecard-card h3,
+.pdetail-side h4,.apply-side h3,.lead-form h3,.apply-form h3,
+.board-head h3,.about-tag b,.stat .num,.miss-num{
+  font-weight:900 !important;
+  letter-spacing:-0.012em;
+  font-optical-sizing:auto;
+}
+/* Italic em accents — slightly lighter weight + optical size set to display */
+.h1 em,.h2 em,.h2-left em{
+  font-weight:800 !important;font-style:italic;
+}
+
+/* =====================================================
+   v2 — full navy ↔ gold role swap, including BACKGROUNDS
+   The variable values already swap automatically. This
+   block overrides hardcoded hex usages where v1 used a
+   literal navy color so v2 renders gold there instead
+   (and vice versa). No new colors are introduced — only
+   the existing v1 navy and gold values, swapped.
+   ===================================================== */
+
+/* --- Dark BAND backgrounds: navy → TINTED cream/pale gold (NO strong yellow) --- */
+section.banddark{
+  background:linear-gradient(180deg,#fbf6e7 0%,#f6f2e9 100%) !important;
+  color:#0d1b3e !important;
+}
+section.bandink,.bandink{
+  background:#f6f2e9 !important;
+  color:#0d1b3e !important;
+}
+
+/* --- FINAL CTA section (was navy bg) → tinted cream bg --- */
+.final{background:#f6f2e9 !important;color:#0d1b3e !important}
+.final::before{
+  background:radial-gradient(ellipse at 50% 100%, rgba(201,144,12,.10), transparent 60%) !important;
+}
+.final-inner *,.final .sub,.final p,.final .lead,.final .h2{color:#0d1b3e !important}
+.final .h2 em{color:#c9900c !important}
+.final .eyebrow,.final .eyebrow-light{color:#c9900c !important}
+
+/* Buttons inside now-tinted bands — use navy (primary) + gold (secondary) */
+.banddark .btn-gold,.bandink .btn-gold,.final .btn-gold{
+  background:#0d1b3e !important;color:#fff !important;border-color:#0d1b3e !important;
+}
+.banddark .btn-gold:hover,.bandink .btn-gold:hover,.final .btn-gold:hover{
+  background:#1a2a55 !important;border-color:#1a2a55 !important;
+}
+.banddark .btn-navy,.bandink .btn-navy,.final .btn-navy{
+  background:#c9900c !important;color:#fff !important;border-color:#c9900c !important;
+}
+.banddark .btn-out-white,.bandink .btn-out-white,.final .btn-out-white{
+  background:transparent !important;color:#0d1b3e !important;border-color:#0d1b3e !important;
+}
+.banddark .btn-out-white:hover,.bandink .btn-out-white:hover,.final .btn-out-white:hover{
+  background:#0d1b3e !important;color:#fff !important;
+}
+.banddark .btn-out-gold,.bandink .btn-out-gold,.final .btn-out-gold{
+  background:transparent !important;color:#c9900c !important;border-color:#c9900c !important;
+}
+
+/* --- HERO banner overlay: navy gradient overlay → light cream-tinted overlay --- */
+.pagehero.has-banner{
+  background-color:#f6f2e9 !important;
+  background-image:
+    linear-gradient(90deg, rgba(246,242,233,.85) 0%, rgba(246,242,233,.55) 45%, rgba(246,242,233,.25) 70%, rgba(246,242,233,.1) 100%),
+    var(--hero-img) !important;
+}
+.pdetail-hero.has-banner{
+  background:
+    linear-gradient(90deg, rgba(246,242,233,.88) 0%, rgba(246,242,233,.6) 45%, rgba(246,242,233,.3) 70%, rgba(246,242,233,.15) 100%),
+    var(--hero-img) center right / cover no-repeat,
+    #f6f2e9 !important;
+}
+@media (max-width:960px){
+  .pagehero.has-banner{
+    background-image:
+      linear-gradient(180deg, rgba(246,242,233,.55) 0%, rgba(246,242,233,.75) 55%, rgba(246,242,233,.9) 100%),
+      var(--hero-img) !important;
+    background-position: right center !important;
+  }
+  .pdetail-hero.has-banner{
+    background:
+      linear-gradient(180deg, rgba(246,242,233,.55) 0%, rgba(246,242,233,.75) 55%, rgba(246,242,233,.9) 100%),
+      var(--hero-img) right center / cover no-repeat,
+      #f6f2e9 !important;
+  }
+}
+
+/* Pagehero gold-bottom strip stays gold on the now-cream hero */
+.pagehero.has-banner::after{
+  background:linear-gradient(90deg, transparent, #c9900c, transparent) !important;
+}
+
+/* --- Hero text on the now-cream hero — dark navy headings, gold accents --- */
+.pagehero.has-banner .h1,
+.pdetail-hero.has-banner .h1{color:#0d1b3e !important;text-shadow:none !important}
+.pagehero.has-banner .h1 em,
+.pdetail-hero.has-banner .h1 em{color:#c9900c !important}
+.pagehero.has-banner .lead,
+.pdetail-hero.has-banner .lead{color:rgba(13,27,62,.78) !important;text-shadow:none !important}
+.pagehero.has-banner .eyebrow,
+.pdetail-hero.has-banner .eyebrow{color:#c9900c !important}
+.pagehero.has-banner .btn-out-navy,
+.pdetail-hero.has-banner .btn-out-white{
+  background:transparent !important;border-color:#0d1b3e !important;color:#0d1b3e !important;
+}
+
+/* --- Programme detail hero meta pills --- */
+.pdetail-meta span{
+  background:rgba(13,27,62,.08) !important;color:#0d1b3e !important;
+  border-color:rgba(13,27,62,.25) !important;
+}
+
+/* --- Programme/insight card cover overlays use SUBTLE gold-tinted darken --- */
+.progcover.has-img,.icover.has-img{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(13,27,62,.55) 100%),
+    var(--cover-img) center center / cover no-repeat,
+    #0d1b3e !important;
+}
+.photo.has-img{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(13,27,62,.65) 100%),
+    var(--cover-img) center center / cover no-repeat,
+    #0d1b3e !important;
+}
+.quiz-portrait.has-img{
+  background:var(--cover-img) center top / cover no-repeat, #f6f2e9 !important;
+}
+.about-img.has-img{
+  background:var(--cover-img) center center / cover no-repeat, #f6f2e9 !important;
+}
+
+/* --- 85+ "shield" big-number block (uses navy text) — keep, it auto-swaps to gold-color text on white via var(--navy) --- */
+.shield::before{color:#c9900c !important}
+
+/* --- Quiz section recommendation card on now-cream background --- */
+.quiz-rec{background:#fff !important;border-color:#e0ddd6 !important}
+.quiz-rec h3{color:#0d1b3e !important}
+.quiz-rec p{color:rgba(13,27,62,.75) !important}
+.bandink .quiz-q,.banddark .quiz-q{color:rgba(13,27,62,.7) !important}
+.bandink .quiz-step,.bandink .quiz-step-label,
+.banddark .quiz-step,.banddark .quiz-step-label{color:#c9900c !important}
+.qopt{background:#fff !important;color:#0d1b3e !important}
+.qopt::before{border-color:#c9900c !important}
+.qopt.active::before{background:#c9900c !important}
+
+/* Quote section blockquote text legibility on cream bg */
+.quote-inner{color:#0d1b3e !important}
+.quote-inner blockquote,.quote-inner .quote-q{color:rgba(13,27,62,.85) !important}
+
+/* --- Mobile sidebar logo/nav remain navy text on white card (var swap handles it) --- */
+
+/* --- Topbar Apply / Contact buttons: swap visually (Apply was gold; in v2 it should be navy and Contact gold) --- */
+.header-cta .btn-gold,.mobile-nav-cta .btn-gold{
+  background:#0d1b3e !important;color:#fff !important;border-color:#0d1b3e !important;
+}
+.header-cta .btn-gold:hover,.mobile-nav-cta .btn-gold:hover{
+  background:#1a2a55 !important;border-color:#1a2a55 !important;
+}
+.header-cta .btn-navy,.mobile-nav-cta .btn-navy{
+  background:#c9900c !important;color:#fff !important;border-color:#c9900c !important;
+}
+.header-cta .btn-navy:hover,.mobile-nav-cta .btn-navy:hover{
+  background:#e8a81a !important;border-color:#e8a81a !important;
+}
+
+/* --- Float CTA "Apply Now" was gold → navy in v2 --- */
+.float-cta .btn-gold{background:#0d1b3e !important;color:#fff !important;border-color:#0d1b3e !important}
+.float-cta .btn-out-white{color:#0d1b3e !important;border-color:#0d1b3e !important}
+
+/* --- Body text & H2/H3 heading colors:
+       var(--navy) now renders gold (#c9900c). Headings would look gold which is hard
+       to read on white. So keep them looking navy/dark on light backgrounds. --- */
+.h1,.h2,.h2-left,h1,h2,h3,h4,h5,
+.logo-mark,
+.partner h3,.misscard h3,.progbody h3,.icard h3,
+.bcard h4,.govcard h3,.acard h4,.tcard h3,.rcard h3,.fcard h4,
+.module h4,.modal h3,.threecard-card h3,
+.pdetail-side h4,.apply-side h3,.lead-form h3,.apply-form h3,
+.board-head h3,.about-tag b,.miss-num,
+section.bandwhite h2,section.bandwhite h3,section.bandwhite h4,
+section.bandcream h2,section.bandcream h3,section.bandcream h4{
+  color:#0d1b3e !important;
+}
+.h1 em,.h2 em,.h2-left em,
+section.bandwhite .h1 em,section.bandwhite .h2 em,
+section.bandcream .h1 em,section.bandcream .h2 em{
+  color:#c9900c !important;
+}
+
+/* Eyebrows on light sections: render gold (the original v1 navy-on-cream becomes navy-on-cream — let var swap do the work, but pin to gold so it's clearly the accent) */
+section.bandwhite .eyebrow,section.bandcream .eyebrow,.hero .eyebrow,
+.sec-head .eyebrow,.about-grid .eyebrow,.partner-eyebrow{
+  color:#c9900c !important;
+}
+.guide-form-wrap .eyebrow{color:#c9900c !important}
+
+/* Read-more links on light backgrounds: stay gold (the accent) */
+.read,.all-link,.gov-link,.article-back,.map-link,.fli{color:#c9900c !important}
+
+/* Body paragraph text stays dark for legibility */
+body,p,li,dd,.bcard p,.govcard p,.partner p,.progbody p,.icard p,
+.tcard p,.rcard p,.acard p,.module p,.article-body p,
+.faculty-grid p,.fcard p,.fcard-body p,
+.modal-bio,.contact-info dd,.contact-info dt,
+.apply-side p,.apply-side li{color:var(--text) !important}
+
+/* Hero h1 main text on white hero — dark navy */
+.hero .h1,.hero-left .h1{color:#0d1b3e !important}
+.hero .h1 em{color:#c9900c !important}
+.hero .lead{color:var(--text-mid) !important}
+.hero .eyebrow{color:#c9900c !important}
+.gold-stroke{stroke:#c9900c !important}
+
+/* Stat number on light bg → gold (was navy in v1) */
+.stat .num,.stats-row .stat .num{color:#c9900c !important}
+
+/* ============================================================
+   FOOTER VISIBILITY FIX (v2)
+   The footer background stays #0a1c3d (deep navy) but the heading
+   color was bound to var(--gold-accent), which got swapped to navy.
+   Restore footer text to its original light-gold + light-grey scheme.
+   ============================================================ */
+footer h5{color:#e3b85a !important}                /* column headings */
+.foot-brand .logo-mark{color:#fff !important}     /* IIFR wordmark */
+.foot-brand .logo-mark .dot{color:#e3b85a !important}
+.foot-brand p,.foot-newscol p{color:#cfd5e6 !important}
+.foot-brand .meta{color:#9aa3bd !important}
+.foot-brand .meta b{color:#fff !important}
+.foot-brand .meta a{color:#cfd5e6 !important}
+.foot-brand .meta a:hover{color:#e3b85a !important}
+footer ul a{color:#cfd5e6 !important}
+footer ul a:hover{color:#e3b85a !important}
+.soc{border-color:rgba(227,184,90,.4) !important;color:#e3b85a !important}
+.soc:hover{background:rgba(227,184,90,.1) !important}
+.news input{color:#fff !important}
+.news input::placeholder{color:#9aa3bd !important}
+.news button{background:#c9900c !important;color:#fff !important}
+.news button:hover{background:#e8a81a !important}
+.legal{color:#9aa3bd !important}

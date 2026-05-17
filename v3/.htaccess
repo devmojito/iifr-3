@@ -1,0 +1,2 @@
+# Custom error documents (path is relative to server document root; adjust if site runs in a subdirectory)
+ErrorDocument 404 /404.php

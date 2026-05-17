@@ -1,13 +1,13 @@
 {
   "functions": {
-    "v3/api/index.php": {
+    "api/v3.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60
     }
   },
   "rewrites": [
-    { "source": "/v3",       "destination": "/v3/api/index.php" },
-    { "source": "/v3/",      "destination": "/v3/api/index.php" },
-    { "source": "/v3/:path*", "destination": "/v3/api/index.php" }
+    { "source": "/v3",        "destination": "/api/v3.php" },
+    { "source": "/v3/",       "destination": "/api/v3.php" },
+    { "source": "/v3/:path*", "destination": "/api/v3.php" }
   ]
 }

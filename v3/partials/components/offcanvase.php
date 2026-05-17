@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../iifr-config.php';
     <!-- inner menu area desktop start -->
     <div class="inner-main-wrapper-desk">
         <div class="thumbnail">
-            <a href="/"><img src="assets/logo.png" alt="IIFR" style="height:150px;width:auto;"></a>
+            <a href="<?= IIFR_BASE ?>"><img src="assets/logo.png" alt="IIFR" style="height:150px;width:auto;"></a>
         </div>
         <div class="inner-content">
             <p class="disc">
@@ -33,7 +33,7 @@ require_once __DIR__ . '/../../iifr-config.php';
     <div class="mobile-menu-main">
         <nav class="nav-main mainmenu-nav mt--30">
             <ul class="mainmenu metismenu" id="mobile-menu-active">
-                <li><a href="/" class="main">Home</a></li>
+                <li><a href="<?= IIFR_BASE ?>" class="main">Home</a></li>
                 <li><a href="about.php" class="main">About Us</a></li>
                 <li class="has-droupdown">
                     <a href="#" class="main" aria-expanded="false">Programmes</a>

@@ -5,6 +5,10 @@ declare(strict_types=1);
 /**
  * Primary inbox for website forms, mailto links, and enquiries.
  */
+if (!defined('IIFR_BASE')) {
+    define('IIFR_BASE', rtrim(getenv('IIFR_BASE_PATH') ?: '/v3', '/') . '/');
+}
+
 if (!defined('IIFR_INFO_EMAIL')) {
     define('IIFR_INFO_EMAIL', 'info@iifr.global');
 }

@@ -7,7 +7,7 @@ dir="<?= htmlspecialchars($dir ?? 'ltr'); ?>">
 <body class="<?= htmlspecialchars($body_class ?? ''); ?>">
     <!-- preloader -->
     <div id="iifr-preloader" style="position:fixed;inset:0;z-index:99999;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .4s ease;">
-        <video src="/assets/preloader.mp4" autoplay muted playsinline style="max-width:520px;"></video>
+        <video src="assets/preloader.mp4" autoplay muted playsinline style="max-width:520px;"></video>
     </div>
     <script>
     (function(){

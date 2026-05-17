@@ -12,7 +12,7 @@
                     <h3 class="rts-section-title">Page Not Found</h3>
                     <p class="rts-section-description" style="margin-top:16px;">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
                     <div style="display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:32px;">
-                        <a href="/" class="rts-theme-btn btn-arrow">Back to Home <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                        <a href="<?= IIFR_BASE ?>" class="rts-theme-btn btn-arrow">Back to Home <span><i class="fa-regular fa-arrow-right"></i></span></a>
                         <a href="programmes.php" class="rts-nbg-btn btn-arrow">Explore Programmes <span><i class="fa-sharp fa-regular fa-arrow-right"></i></span></a>
                     </div>
                 </div>

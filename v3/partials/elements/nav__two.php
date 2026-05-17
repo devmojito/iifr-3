@@ -2,7 +2,7 @@
     <nav class="navigation__menu">
         <ul>
             <li class="navigation__menu--item">
-                <a href="/" class="navigation__menu--item__link">Home</a>
+                <a href="<?= IIFR_BASE ?>" class="navigation__menu--item__link">Home</a>
             </li>
 
             <li class="navigation__menu--item">

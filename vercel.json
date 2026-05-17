@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "v3/api/index.php": {
+      "runtime": "vercel-php@0.9.0",
+      "maxDuration": 60
+    }
+  },
+  "rewrites": [
+    { "source": "/v3",      "destination": "/v3/api/index.php" },
+    { "source": "/v3/(.*)", "destination": "/v3/api/index.php" }
+  ]
+}

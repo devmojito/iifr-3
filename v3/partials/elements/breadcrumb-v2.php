@@ -6,7 +6,7 @@
             <div class="col-12">
                 <div class="breadcrumb-content">
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="<?= IIFR_BASE ?>">Home</a></li>
                         <li class="breadcrumb-item"><a href="#"><?= htmlspecialchars($parent) ?? ''; ?></a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?= htmlspecialchars($page) ?? ''; ?></li>
                     </ul>

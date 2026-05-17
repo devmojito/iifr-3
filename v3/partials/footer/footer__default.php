@@ -13,7 +13,7 @@ require_once __DIR__ . '/../../iifr-config.php';
 
                 <!-- Brand column -->
                 <div class="iifr-footer__brand-col">
-                    <a href="/" class="iifr-footer__brand" aria-label="IIFR — Home">
+                    <a href="<?= IIFR_BASE ?>" class="iifr-footer__brand" aria-label="IIFR — Home">
                         <img src="assets/logo.png" alt="IIFR" class="iifr-footer__logo">
                     </a>
 
@@ -53,7 +53,7 @@ require_once __DIR__ . '/../../iifr-config.php';
                 <div>
                     <h6 class="iifr-footer__title">Explore</h6>
                     <ul class="iifr-footer__menu">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="<?= IIFR_BASE ?>">Home</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="programmes.php">Programmes</a></li>
                         <li><a href="research.php">Research</a></li>

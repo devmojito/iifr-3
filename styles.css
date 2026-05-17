@@ -57,10 +57,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
 }
 .topbar-inner{
   display:flex;align-items:center;gap:24px;
-  padding:18px 40px;
+  padding:4px 40px;
   max-width:1440px;margin:0 auto;
 }
-.logo{display:flex;align-items:center;gap:12px}
+.logo{display:flex;align-items:center;gap:2px}
+.logo-emblem{
+  width:80px;height:80px;display:block;flex-shrink:0;
+  object-fit:contain;
+  margin:-8px 0;
+}
 .logo-mark{
   font-family:var(--serif);
   font-weight:800;
@@ -70,6 +75,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
   line-height:1;
 }
 .logo-mark .dot{color:var(--gold)}
+.foot-brand .logo{gap:10px}
+.foot-brand .logo-emblem{filter:brightness(0) invert(1)}
 .bvb-pill{
   font-family:var(--mono);
   font-size:9.5px;
@@ -273,6 +280,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
   font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;
   color:rgba(227,184,90,.55);
 }
+.photo.has-img{
+  background:
+    linear-gradient(180deg,transparent 35%, rgba(10,28,61,.85) 100%),
+    var(--cover-img) center center / cover no-repeat,
+    #0a1c3d;
+}
+.photo.has-img::before{display:none}
 .pcaption{
   position:absolute;bottom:14px;left:20px;right:20px;
   font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
@@ -300,13 +314,15 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
   font-family:var(--serif);font-style:italic;font-size:22px;font-weight:700;
   padding-bottom:10px;
 }
+.shield img{max-width:70%;max-height:60%;object-fit:contain;filter:brightness(0) invert(1)}
 .efmd-mark{
   width:78px;height:78px;flex-shrink:0;
   border:2px solid var(--navy);border-radius:50%;
   display:flex;align-items:center;justify-content:center;
   font-family:var(--serif);color:var(--navy);font-weight:700;
-  font-size:18px;letter-spacing:.04em;
+  font-size:18px;letter-spacing:.04em;padding:10px;
 }
+.efmd-mark img{max-width:100%;max-height:100%;object-fit:contain}
 .cred-text{font-size:15.5px;color:var(--text-mid);line-height:1.45;margin:0}
 .cred-text b{color:var(--navy);font-weight:700}
 
@@ -375,6 +391,10 @@ section.bandink{padding:96px 0;background:#0a1c3d;color:#fff;position:relative;o
   font-family:var(--mono);font-size:11px;letter-spacing:.18em;
   color:rgba(13,27,62,.55);
 }
+.about-img.has-img{
+  background: var(--cover-img) center center / cover no-repeat, #0a1c3d;
+}
+.about-img.has-img::before{display:none}
 .about-tag{
   position:absolute;bottom:24px;left:24px;
   background:var(--cream);border-radius:14px;
@@ -608,6 +628,10 @@ section.bandink::before{
   font-family:var(--mono);font-size:9px;letter-spacing:.16em;
   color:rgba(13,27,62,.5);
 }
+.gov-portrait.has-img{
+  background: var(--cover-img) center top / cover no-repeat, #0a1c3d;
+}
+.gov-portrait.has-img::before{display:none}
 .govcard h3{
   font-family:var(--serif);font-weight:600;font-size:24px;color:var(--navy);
   margin:0 0 4px;line-height:1.15;
@@ -778,6 +802,19 @@ footer ul a:hover{color:var(--gold-accent)}
 .pagehero .lead{max-width:780px;margin:0 0 28px;font-size:19px}
 .pagehero-cta{display:flex;gap:12px;flex-wrap:wrap}
 
+/* Campus / gallery strip */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:10px;
+  max-width:1280px;margin:0 auto;
+}
+.gallery-grid img{
+  width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;
+  display:block;transition:transform .3s ease, filter .3s ease;
+}
+.gallery-grid img:hover{transform:scale(1.03);filter:saturate(1.1)}
+@media (max-width:960px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+
 /* Page hero — Blue banner variant (uses --hero-img) */
 .pagehero.has-banner{
   background-color:#06122a;
@@ -839,13 +876,14 @@ footer ul a:hover{color:var(--gold-accent)}
 }
 .partner:hover{border-color:var(--gold);transform:translateY(-2px)}
 .partner-mark{
-  width:64px;height:64px;border-radius:14px;
+  width:84px;height:64px;border-radius:14px;
   background:var(--cream);border:1px solid var(--border);
   display:flex;align-items:center;justify-content:center;
   font-family:var(--serif);font-weight:800;font-size:18px;
   letter-spacing:.02em;color:var(--navy);
-  flex-shrink:0;
+  flex-shrink:0;padding:10px;
 }
+.partner-mark img{max-width:100%;max-height:100%;object-fit:contain}
 .partner h3{
   font-family:var(--serif);font-weight:600;font-size:22px;
   color:var(--navy);margin:0;line-height:1.2;
@@ -923,7 +961,20 @@ footer ul a:hover{color:var(--gold-accent)}
   padding:24px 22px;display:flex;flex-direction:column;gap:10px;
   border-top:3px solid var(--gold);
 }
-.vbull .vico{font-size:26px;line-height:1}
+.vbull .vico{font-size:26px;line-height:1;color:var(--gold)}
+.vbull .vico .icon{width:28px;height:28px;display:block}
+
+/* Generic inline SVG icon */
+.icon{
+  display:inline-block;vertical-align:middle;
+  width:1em;height:1em;
+  stroke:currentColor;fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+}
+.rico .icon,.aico .icon,.tico .icon{width:26px;height:26px;color:var(--gold)}
+.btn .icon{width:1.05em;height:1.05em;margin-right:6px}
+.soc .icon{width:16px;height:16px;color:currentColor}
+.heart .icon{width:13px;height:13px;fill:currentColor;stroke:currentColor}
 .vbull p{margin:0;color:var(--text-mid);font-size:14.5px;line-height:1.55}
 
 /* Executive Board cards */
@@ -1326,6 +1377,12 @@ footer ul a:hover{color:var(--gold-accent)}
   linear-gradient(180deg,transparent 50%, rgba(10,28,61,.55) 100%),
   repeating-linear-gradient(90deg, rgba(227,184,90,.18) 0 10px, rgba(227,184,90,.04) 10px 20px),
   linear-gradient(135deg,#1d2f63,#0a1c3d);
+}
+.article-cover.has-img{
+  background:
+    linear-gradient(180deg, rgba(10,28,61,0) 55%, rgba(6,18,42,.6) 100%),
+    var(--cover-img) center center / cover no-repeat,
+    #0a1c3d;
 }
 .article-body p{font-size:17px;line-height:1.75;color:var(--text);margin:0 0 18px}
 .article-body h2{

@@ -396,14 +396,18 @@ body.menu-open{overflow:hidden}
 .photo.has-img::before{display:none}
 .pcaption{
   position:absolute;bottom:14px;left:20px;right:20px;
-  font-family:var(--sans);font-size:10.5px;letter-spacing:.14em;
+  font-family:var(--sans);font-size:10px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--gold-accent);
-  display:flex;justify-content:space-between;align-items:center;
-  gap:12px;
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;
+  gap:6px 12px;
 }
-.pcaption > span{white-space:nowrap;min-width:0}
+.pcaption > span{white-space:nowrap;flex:0 0 auto}
 .pcaption > span:first-child{text-align:left}
-.pcaption > span:last-child{text-align:right}
+.pcaption > span:last-child{text-align:right;color:#c9900c;font-weight:700}
+@media (max-width:1180px){
+  .pcaption{flex-direction:column;align-items:flex-start;gap:2px;letter-spacing:.08em;font-size:9.5px}
+  .pcaption > span:last-child{text-align:left}
+}
 
 /* ============ CRED STRIP ============ */
 .cred{
@@ -417,26 +421,14 @@ body.menu-open{overflow:hidden}
 }
 .cred-divider{background:var(--border);height:60px;width:1px}
 .cred-block{display:flex;align-items:center;gap:22px}
-.shield{
-  width:auto;height:auto;flex-shrink:0;
-  background:transparent;color:var(--navy);
-  clip-path:none;
+/* Unified logo box — BVB & EFMD render at identical dimensions */
+.shield,.efmd-mark{
+  width:180px;height:72px;flex-shrink:0;
+  background:transparent;border:0;border-radius:0;padding:0;
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);font-style:normal;
-  font-size:54px;font-weight:800;letter-spacing:-.02em;
-  padding:0;line-height:1;
 }
-.shield::before{content:"85+";color:var(--navy)}
-.shield img{display:none}
-.efmd-mark{
-  width:auto;height:auto;flex-shrink:0;
-  border:0;border-radius:0;background:transparent;
-  display:flex;align-items:center;justify-content:flex-start;
-  padding:0;
-}
-.efmd-mark img{
-  width:auto;height:72px;max-width:180px;
-  object-fit:contain;display:block;
+.shield img,.efmd-mark img{
+  display:block;width:100%;height:100%;object-fit:contain;
 }
 .cred-text{font-size:15.5px;color:var(--text-mid);line-height:1.45;margin:0}
 .cred-text b{color:var(--navy);font-weight:700}
@@ -1017,7 +1009,7 @@ footer ul a:hover{color:var(--gold-accent)}
 }
 .partner:hover{border-color:var(--gold);transform:translateY(-2px)}
 .partner-mark{
-  width:100%;height:80px;border-radius:0;
+  width:200px;height:80px;border-radius:0;
   background:transparent;border:0;
   display:flex;align-items:center;justify-content:flex-start;
   font-family:var(--serif);font-weight:800;font-size:18px;
@@ -1025,7 +1017,7 @@ footer ul a:hover{color:var(--gold-accent)}
   flex-shrink:0;padding:0;margin-bottom:6px;
 }
 .partner-mark img{
-  width:auto;max-width:200px;height:100%;max-height:80px;
+  width:100%;height:100%;
   object-fit:contain;object-position:left center;display:block;
 }
 .partner h3{
@@ -1689,38 +1681,37 @@ footer ul a:hover{color:var(--gold-accent)}
 
 /* ============ MEGA MENU (Programmes) ============ */
 .nav-submenu.mega{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:16px;padding:20px;min-width:760px;
+  display:grid;grid-auto-flow:column;grid-auto-columns:240px;
+  gap:10px;padding:18px;width:max-content;
   border-radius:18px;
 }
 .nav-submenu.mega .mega-card{
-  display:grid;grid-template-columns:170px 1fr;gap:16px;
+  display:flex;flex-direction:column;gap:10px;
   padding:12px;border-radius:14px;background:transparent;
   text-decoration:none;transition:background .2s ease;
-  align-items:center;
+  min-width:0;
 }
 .nav-submenu.mega .mega-card:hover,
 .nav-submenu.mega .mega-card:focus{
   background:var(--cream);outline:none;
 }
 .nav-submenu.mega .mega-thumb{
-  width:170px;aspect-ratio:1149/600;border-radius:10px;
+  width:100%;aspect-ratio:1149/600;border-radius:10px;
   background:var(--cover-img) center/cover no-repeat, #0a1c3d;
-  flex-shrink:0;
 }
 .nav-submenu.mega .mega-body{
-  display:flex;flex-direction:column;gap:4px;justify-content:center;
+  display:flex;flex-direction:column;gap:2px;
 }
 .nav-submenu.mega .mega-body strong{
   font-family:var(--sans);font-size:11px;letter-spacing:.16em;
   color:var(--gold);font-weight:700;text-transform:uppercase;
 }
 .nav-submenu.mega .mega-title{
-  font-family:var(--serif);font-size:17px;color:var(--navy);
-  font-weight:600;line-height:1.2;
+  font-family:var(--serif);font-size:15px;color:var(--navy);
+  font-weight:600;line-height:1.25;
 }
 .nav-submenu.mega .mega-desc{
-  font-size:13px;color:var(--text-mid);line-height:1.4;
+  font-size:12.5px;color:var(--text-mid);line-height:1.4;
 }
 
 /* =====================================================
@@ -2287,6 +2278,28 @@ section.bandink,.bandink{
   background:transparent !important;color:#c9900c !important;border-color:#c9900c !important;
 }
 
+/* --- Teaching Excellence pair cards on banddark (now cream-tinted) ---
+       The .tepair text was white-on-navy in v1; .tepair has a hardcoded
+       navy gradient background AND the global v2 h3 override forces text
+       navy — net result is navy-on-navy. Override the card to white bg
+       so the navy text is legible. --- */
+.tepair,
+.banddark .tepair{
+  background:#ffffff !important;
+  border:1px solid #e5d9bf !important;
+  color:#0d1b3e !important;
+  box-shadow:0 8px 24px rgba(13,27,62,.06) !important;
+}
+.tepair h3,
+.banddark .tepair h3{color:#0d1b3e !important}
+.tepair p,
+.banddark .tepair p{color:#3c4358 !important}
+.tepair .tico,
+.banddark .tepair .tico{
+  background:rgba(201,144,12,.15) !important;
+  color:#c9900c !important;
+}
+
 /* --- HERO banner overlay: navy gradient overlay → light cream-tinted overlay --- */
 .pagehero.has-banner{
   background-color:#f6f2e9 !important;
@@ -2361,7 +2374,7 @@ section.bandink,.bandink{
 }
 
 /* --- 85+ "shield" big-number block (uses navy text) — keep, it auto-swaps to gold-color text on white via var(--navy) --- */
-.shield::before{color:#c9900c !important}
+/* .shield no longer uses a pseudo — BVB logo image is shown directly */
 
 /* --- Quiz section recommendation card on now-cream background --- */
 .quiz-rec{background:#fff !important;border-color:#e0ddd6 !important}

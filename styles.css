@@ -58,13 +58,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
 .topbar-inner{
   display:flex;align-items:center;gap:24px;
   padding:4px 40px;
-  max-width:1440px;margin:0 auto;
+  max-width:1280px;margin:0 auto;
 }
 .logo{display:flex;align-items:center;gap:2px}
 .logo-emblem{
   width:80px;height:80px;display:block;flex-shrink:0;
   object-fit:contain;
-  margin:-8px 0;
+  margin:-8px 0 -8px -14px;
 }
 .logo-mark{
   font-family:var(--serif);

@@ -3,7 +3,7 @@
     "api/v3.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "includeFiles": "v3/app/**,v3/partials/**,v3/iifr-config.php,v3/iifr-config.local.php,v3/iifr-mail.php"
+      "excludeFiles": "{v1/**,v2/**,v3/assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf}"
     }
   },
   "rewrites": [

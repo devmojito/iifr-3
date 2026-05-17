@@ -6,7 +6,8 @@
     }
   },
   "rewrites": [
-    { "source": "/v3",      "destination": "/v3/api/index.php" },
-    { "source": "/v3/(.*)", "destination": "/v3/api/index.php" }
+    { "source": "/v3",       "destination": "/v3/api/index.php" },
+    { "source": "/v3/",      "destination": "/v3/api/index.php" },
+    { "source": "/v3/:path*", "destination": "/v3/api/index.php" }
   ]
 }

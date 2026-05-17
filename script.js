@@ -64,24 +64,94 @@
     });
   });
 
-  // -------- Quiz options (single-select) --------
-  const qopts = document.querySelectorAll('.quiz-opts .qopt');
-  qopts.forEach((opt) => {
-    opt.addEventListener('click', () => {
-      qopts.forEach((o) => {
+  // -------- 3-step programme quiz --------
+  const quiz = document.querySelector('[data-quiz]');
+  if (quiz){
+    const views = quiz.querySelectorAll('[data-step]');
+    const stepLabel = quiz.querySelector('.quiz-step-label');
+    const nextBtn = quiz.querySelector('[data-quiz-next]');
+    const backBtn = quiz.querySelector('[data-quiz-back]');
+    const recEl = quiz.querySelector('.quiz-rec');
+    const answers = {1:null, 2:null, 3:null};
+    let current = 1;
+
+    function setActiveOpt(stepView, opt){
+      stepView.querySelectorAll('.qopt').forEach(o => {
         o.classList.remove('active');
-        o.setAttribute('aria-checked', 'false');
+        o.setAttribute('aria-checked','false');
       });
       opt.classList.add('active');
-      opt.setAttribute('aria-checked', 'true');
+      opt.setAttribute('aria-checked','true');
+    }
+
+    quiz.querySelectorAll('[data-step] .qopt').forEach(opt => {
+      const handler = () => {
+        const stepView = opt.closest('[data-step]');
+        setActiveOpt(stepView, opt);
+        answers[stepView.dataset.step] = opt.dataset.value || opt.textContent.trim();
+        nextBtn.disabled = false;
+      };
+      opt.addEventListener('click', handler);
+      opt.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); handler(); }
+      });
     });
-    opt.addEventListener('keydown', (e) => {
-      if (e.key === ' ' || e.key === 'Enter') {
-        e.preventDefault();
-        opt.click();
+
+    function recommendation(){
+      const role = answers[1]; const goal = answers[2];
+      if (role === 'industry' && goal === 'teach')
+        return ['ECP — Educator Certification Programme','An 8-day intensive flagship for industry leaders moving into academic roles.','ecp.html','Explore ECP →'];
+      if (goal === 'doctorate' || role === 'industry')
+        return ['EFM — Executive Fellow in Management','A 3-year doctoral-equivalent fellowship for senior practitioners.','efm.html','Explore EFM →'];
+      if (role === 'admin' || goal === 'institution')
+        return ['Custom Executive &amp; Institutional Programmes','Tailored programmes co-designed with your institution.','custom.html','Explore Custom →'];
+      if (role === 'faculty' || role === 'researcher' || goal === 'upskill')
+        return ['Research &amp; Faculty Workshops','Short-format workshops in pedagogy, research, and academic leadership.','workshops.html','Explore Workshops →'];
+      return ['Talk to Admissions','Let\'s have a conversation to match you to the right pathway.','contact.html','Contact us →'];
+    }
+
+    function show(stepKey){
+      views.forEach(v => v.hidden = v.dataset.step !== String(stepKey));
+      if (stepKey === 'result'){
+        stepLabel.textContent = 'Your match';
+        nextBtn.hidden = true;
+        backBtn.hidden = false;
+        backBtn.textContent = '↺ Restart';
+        const [title, blurb, href, cta] = recommendation();
+        recEl.innerHTML = `
+          <h3>${title}</h3>
+          <p>${blurb}</p>
+          <a class="btn btn-gold" href="${href}">${cta}</a>`;
+        current = 'result';
+        return;
+      }
+      current = stepKey;
+      stepLabel.textContent = `${stepKey} / 3`;
+      backBtn.hidden = (stepKey === 1);
+      backBtn.textContent = '← Back';
+      nextBtn.hidden = false;
+      nextBtn.textContent = (stepKey === 3) ? 'See My Match →' : 'Next →';
+      nextBtn.disabled = !answers[stepKey];
+    }
+
+    nextBtn.addEventListener('click', () => {
+      if (current === 3) show('result');
+      else if (typeof current === 'number') show(current + 1);
+    });
+    backBtn.addEventListener('click', () => {
+      if (current === 'result'){
+        answers[1] = answers[2] = answers[3] = null;
+        quiz.querySelectorAll('.qopt').forEach(o => {
+          o.classList.remove('active'); o.setAttribute('aria-checked','false');
+        });
+        show(1);
+      } else if (typeof current === 'number' && current > 1){
+        show(current - 1);
       }
     });
-  });
+
+    show(1);
+  }
 
   // -------- Council modal (About page) --------
   const backdrop = document.getElementById('council-modal');

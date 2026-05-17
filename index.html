@@ -13,7 +13,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,9 +30,19 @@
       <a href="faculty.html">Faculty</a>
       <div class="has-down">
       <a href="programmes.html">Programmes <span class="dd" aria-hidden="true">▾</span></a>
-      <div class="nav-submenu" role="menu" aria-label="Programmes">
-        <a role="menuitem" href="ecp.html"><strong>ECP</strong>Educator Certification Programme</a>
-        <a role="menuitem" href="efm.html"><strong>EFM</strong>Executive Fellow in Management</a>
+      <div class="nav-submenu mega" role="menu" aria-label="Programmes">
+        <a role="menuitem" href="ecp.html" class="mega-card">
+          <div class="mega-thumb" aria-hidden="true" style="--cover-img:url('assets/Programmes/ECP/Blue%20ECP%20%281%29.png')"></div>
+          <div class="mega-body">
+            <span class="mega-title">Educator Certification Programme</span>
+          </div>
+        </a>
+        <a role="menuitem" href="efm.html" class="mega-card">
+          <div class="mega-thumb" aria-hidden="true" style="--cover-img:url('assets/Programmes/EFM/Blue%20EFM.png')"></div>
+          <div class="mega-body">
+            <span class="mega-title">Executive Fellow in Management</span>
+          </div>
+        </a>
       </div>
     </div>
       <a href="insights.html">Insights</a>
@@ -61,8 +71,8 @@
       <span class="mnav-label">Programmes</span>
       <div class="mnav-sub">
         <a href="programmes.html"><strong>All Programmes</strong>Overview &amp; comparison</a>
-        <a href="ecp.html"><strong>ECP</strong>Educator Certification Programme</a>
-        <a href="efm.html"><strong>EFM</strong>Executive Fellow in Management</a>
+        <a href="ecp.html">Educator Certification Programme</a>
+        <a href="efm.html">Executive Fellow in Management</a>
       </div>
     </div>
     <a href="insights.html">Insights</a>
@@ -87,9 +97,51 @@
           and Academic Leadership
         </h1>
         <p class="lead">Empowering educators, driving research excellence, nurturing pracademics, and building great practice–academic synthesis for India and the Global South.</p>
+        <div class="pagehero-cta">
+          <a class="btn btn-gold" href="#get-guidance">Get Programme Guidance</a>
+          <a class="btn btn-out-navy" href="programmes.html">Explore Programmes</a>
+        </div>
+      </div>
 
+      <div class="pathways" aria-label="Pathways">
+        <article class="pcard">
+          <div class="ptag">Industry Leader Transitioning to</div>
+          <h4>Academic Roles via ECP</h4>
+          <div class="meta">Engaged as: <b>Professor of Practice</b></div>
+          <div class="photo has-img" aria-hidden="true" style="--cover-img:url('assets/images/academy/2.jpeg')"></div>
+          <div class="pcaption"><span>Senior Executive</span><span>ECP</span></div>
+        </article>
+        <article class="pcard">
+          <div class="ptag">Doctoral Fellowship completed</div>
+          <h4>Earning EFM credentials</h4>
+          <div class="meta">Co-certified by: <b>BVB · IIFR · EFMD</b></div>
+          <div class="photo has-img" aria-hidden="true" style="--cover-img:url('assets/images/academy/1.jpeg')"></div>
+          <div class="pcaption"><span>Senior Practitioner</span><span>EFM</span></div>
+        </article>
+        <article class="pcard">
+          <div class="ptag">Faculty Member upskilled with</div>
+          <h4>AI-powered Pedagogy</h4>
+          <div class="meta">Now teaching at: <b>Tier-1 B-School</b></div>
+          <div class="photo has-img" aria-hidden="true" style="--cover-img:url('assets/images/academy/3.jpeg')"></div>
+          <div class="pcaption"><span>Faculty</span><span>ECP Alumni</span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== GUIDANCE FORM ====== -->
+<section class="bandcream guide-band" id="get-guidance">
+  <div class="wrap">
+    <div class="guide-grid">
+      <div class="guide-img" aria-hidden="true">
+        <img src="assets/images/about/about__h2.jpg" alt=""/>
+      </div>
+      <div class="guide-form-wrap">
+        <span class="eyebrow">Start the Conversation</span>
+        <h2 class="h2 h2-left">Get programme <em>guidance.</em></h2>
+        <p class="lead">Tell us a little about you and we'll match you to the right pathway — ECP, EFM, Workshops, or a Custom institutional programme.</p>
         <form class="lead-form" id="apply" onsubmit="event.preventDefault(); this.querySelector('.submit').textContent='Thanks — we will be in touch';">
-          <h3>Get programme guidance!</h3>
           <label class="visually-hidden" for="lf-name">Full Name</label>
           <input class="field" id="lf-name" name="name" type="text" placeholder="Full Name*" required />
           <label class="visually-hidden" for="lf-email">Email</label>
@@ -138,30 +190,6 @@
           <label class="check"><input type="checkbox" name="terms" checked required /> <span>I accept the <b>Terms &amp; Conditions</b></span></label>
           <button class="submit" type="submit">Submit Enquiry</button>
         </form>
-      </div>
-
-      <div class="pathways" aria-label="Pathways">
-        <article class="pcard">
-          <div class="ptag">Industry Leader Transitioning to</div>
-          <h4>Academic Roles via ECP</h4>
-          <div class="meta">Engaged as: <b>Professor of Practice</b></div>
-          <div class="photo has-img" aria-hidden="true" style="--cover-img:url('assets/images/academy/2.jpeg')"></div>
-          <div class="pcaption"><span>Senior Executive</span><span>ECP</span></div>
-        </article>
-        <article class="pcard">
-          <div class="ptag">Doctoral Fellowship completed</div>
-          <h4>Earning EFM credentials</h4>
-          <div class="meta">Co-certified by: <b>BVB · IIFR · EFMD</b></div>
-          <div class="photo has-img" aria-hidden="true" style="--cover-img:url('assets/images/academy/1.jpeg')"></div>
-          <div class="pcaption"><span>Senior Practitioner</span><span>EFM</span></div>
-        </article>
-        <article class="pcard">
-          <div class="ptag">Faculty Member upskilled with</div>
-          <h4>AI-powered Pedagogy</h4>
-          <div class="meta">Now teaching at: <b>Tier-1 B-School</b></div>
-          <div class="photo has-img" aria-hidden="true" style="--cover-img:url('assets/images/academy/3.jpeg')"></div>
-          <div class="pcaption"><span>Faculty</span><span>ECP Alumni</span></div>
-        </article>
       </div>
     </div>
   </div>
@@ -265,7 +293,7 @@
           <div class="stat-pill">₹5 LAKH · 4 MODULES · 25–30 COHORT</div>
           <div class="progfoot">
             <a class="btn btn-out-navy" href="#">Brochure <span aria-hidden="true">↓</span></a>
-            <a class="btn btn-navy" href="ecp.html">View ECP details <span aria-hidden="true">→</span></a>
+            <a class="btn btn-navy" href="ecp.html">ECP Details <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </article>
@@ -281,7 +309,7 @@
           <div class="stat-pill">₹25 LAKH + GST · 6 STAGES · 25 COHORT</div>
           <div class="progfoot">
             <a class="btn btn-out-navy" href="#">Brochure <span aria-hidden="true">↓</span></a>
-            <a class="btn btn-navy" href="efm.html">View EFM details <span aria-hidden="true">→</span></a>
+            <a class="btn btn-navy" href="efm.html">EFM Details <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </article>
@@ -400,19 +428,56 @@
 <section class="bandink" aria-label="Programme finder">
   <div class="wrap">
     <div class="quiz-grid">
-      <div>
+      <div data-quiz>
         <span class="eyebrow eyebrow-light">Take Our 3-Step Quiz!</span>
         <h2 class="h2">Unsure which programme <em>fits your pathway?</em></h2>
-        <div class="quiz-opts" role="radiogroup" aria-label="Your role">
-          <button type="button" class="qopt active" role="radio" aria-checked="true">Industry Leader → Academia</button>
-          <button type="button" class="qopt" role="radio" aria-checked="false">Faculty Member</button>
-          <button type="button" class="qopt" role="radio" aria-checked="false">Researcher / Scholar</button>
-          <button type="button" class="qopt" role="radio" aria-checked="false">L&amp;D / Corporate Trainer</button>
-          <button type="button" class="qopt" role="radio" aria-checked="false">Academic Administrator</button>
+
+        <!-- Step 1 -->
+        <div class="quiz-step-view" data-step="1">
+          <p class="quiz-q">What best describes you?</p>
+          <div class="quiz-opts" role="radiogroup" aria-label="Your role">
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="industry">Industry Leader → Academia</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="faculty">Faculty Member</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="researcher">Researcher / Scholar</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="ld">L&amp;D / Corporate Trainer</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="admin">Academic Administrator</button>
+          </div>
         </div>
+
+        <!-- Step 2 -->
+        <div class="quiz-step-view" data-step="2" hidden>
+          <p class="quiz-q">What's your primary goal?</p>
+          <div class="quiz-opts" role="radiogroup" aria-label="Your goal">
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="teach">Teach at a top business school</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="doctorate">Earn a doctoral-equivalent credential</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="upskill">Upskill in pedagogy &amp; research</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="institution">Build an institutional programme</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="quiz-step-view" data-step="3" hidden>
+          <p class="quiz-q">When do you want to start?</p>
+          <div class="quiz-opts" role="radiogroup" aria-label="Timeline">
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="now">Within the next 3 months</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="6m">In 3–6 months</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="12m">Within the year</button>
+            <button type="button" class="qopt" role="radio" aria-checked="false" data-value="exploring">Just exploring</button>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="quiz-step-view quiz-result" data-step="result" hidden>
+          <p class="quiz-q">Your recommended pathway</p>
+          <div class="quiz-rec"></div>
+        </div>
+
         <div class="quiz-foot">
-          <span class="quiz-step">1 / 3</span>
-          <a class="btn btn-out-gold" href="#">Next →</a>
+          <span class="quiz-step-label">1 / 3</span>
+          <div class="quiz-actions">
+            <button type="button" class="btn btn-out-gold" data-quiz-back hidden>← Back</button>
+            <button type="button" class="btn btn-gold" data-quiz-next disabled>Next →</button>
+          </div>
         </div>
       </div>
       <div class="quiz-img" aria-hidden="true">

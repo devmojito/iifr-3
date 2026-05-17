@@ -9,7 +9,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,9 +25,19 @@
       <a href="faculty.html">Faculty</a>
       <div class="has-down">
       <a href="programmes.html">Programmes <span class="dd" aria-hidden="true">▾</span></a>
-      <div class="nav-submenu" role="menu" aria-label="Programmes">
-        <a role="menuitem" href="ecp.html"><strong>ECP</strong>Educator Certification Programme</a>
-        <a role="menuitem" href="efm.html"><strong>EFM</strong>Executive Fellow in Management</a>
+      <div class="nav-submenu mega" role="menu" aria-label="Programmes">
+        <a role="menuitem" href="ecp.html" class="mega-card">
+          <div class="mega-thumb" aria-hidden="true" style="--cover-img:url('assets/Programmes/ECP/Blue%20ECP%20%281%29.png')"></div>
+          <div class="mega-body">
+            <span class="mega-title">Educator Certification Programme</span>
+          </div>
+        </a>
+        <a role="menuitem" href="efm.html" class="mega-card">
+          <div class="mega-thumb" aria-hidden="true" style="--cover-img:url('assets/Programmes/EFM/Blue%20EFM.png')"></div>
+          <div class="mega-body">
+            <span class="mega-title">Executive Fellow in Management</span>
+          </div>
+        </a>
       </div>
     </div>
       <a href="insights.html">Insights</a>
@@ -56,8 +66,8 @@
       <span class="mnav-label">Programmes</span>
       <div class="mnav-sub">
         <a href="programmes.html"><strong>All Programmes</strong>Overview &amp; comparison</a>
-        <a href="ecp.html"><strong>ECP</strong>Educator Certification Programme</a>
-        <a href="efm.html"><strong>EFM</strong>Executive Fellow in Management</a>
+        <a href="ecp.html">Educator Certification Programme</a>
+        <a href="efm.html">Executive Fellow in Management</a>
       </div>
     </div>
     <a href="insights.html">Insights</a>

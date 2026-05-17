@@ -423,6 +423,13 @@ section.bandink{padding:96px 0;background:#0a1c3d;color:#fff;position:relative;o
   font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
   color:rgba(227,184,90,.6);
 }
+.progcover.has-img{
+  background:
+    linear-gradient(180deg, rgba(10,28,61,0) 55%, rgba(6,18,42,.75) 100%),
+    var(--cover-img) center center / cover no-repeat,
+    #0a1c3d;
+}
+.progcover.has-img::before{display:none}
 .progtag{
   position:absolute;top:18px;left:24px;
   background:rgba(255,255,255,.95);color:var(--navy);
@@ -573,6 +580,12 @@ section.bandink::before{
   font-family:var(--mono);font-size:10px;letter-spacing:.18em;
   color:rgba(227,184,90,.55);
 }
+.quiz-portrait.has-img{
+  background:
+    var(--cover-img) center top / cover no-repeat,
+    #0a1c3d;
+}
+.quiz-portrait.has-img::before{display:none}
 
 /* ============ GOVERNANCE ============ */
 .gov-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1180px;margin:0 auto}
@@ -765,6 +778,57 @@ footer ul a:hover{color:var(--gold-accent)}
 .pagehero .lead{max-width:780px;margin:0 0 28px;font-size:19px}
 .pagehero-cta{display:flex;gap:12px;flex-wrap:wrap}
 
+/* Page hero — Blue banner variant (uses --hero-img) */
+.pagehero.has-banner{
+  background-color:#06122a;
+  background-image:
+    linear-gradient(90deg, rgba(6,18,42,.88) 0%, rgba(6,18,42,.62) 38%, rgba(6,18,42,.18) 62%, rgba(6,18,42,0) 80%),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  color:#fff;
+  border-bottom:none;
+  padding:0;
+  height: 520px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.pagehero.has-banner .wrap{width:100%}
+.pagehero.has-banner::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold-accent,#e3b85a), transparent);
+  opacity:.5;
+}
+.pagehero.has-banner .wrap{position:relative;z-index:1}
+.pagehero.has-banner .eyebrow{color:var(--gold-accent,#e3b85a)}
+.pagehero.has-banner .h1{color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+.pagehero.has-banner .h1 em{color:var(--gold-accent,#e3b85a)}
+.pagehero.has-banner .lead{color:#dde3f1;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.pagehero.has-banner .btn-out-navy{
+  background:rgba(255,255,255,.06);
+  border-color:rgba(255,255,255,.5);
+  color:#fff;
+}
+.pagehero.has-banner .btn-out-navy:hover{
+  background:rgba(255,255,255,.14);
+  border-color:#fff;
+}
+@media (max-width:960px){
+  .pagehero.has-banner{
+    height: 420px;
+    background-image:
+      linear-gradient(180deg, rgba(6,18,42,.78) 0%, rgba(6,18,42,.55) 55%, rgba(6,18,42,.35) 100%),
+      var(--hero-img);
+    background-position: center center;
+  }
+}
+@media (max-width:640px){
+  .pagehero.has-banner{height:360px}
+}
+
 /* Strategic Partners (3-up) */
 .partners{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:0 auto}
 .partner{
@@ -830,6 +894,13 @@ footer ul a:hover{color:var(--gold-accent)}
   font-family:var(--mono);font-size:10px;letter-spacing:.16em;
   color:rgba(227,184,90,.55);
 }
+.icover.has-img{
+  background:
+    linear-gradient(180deg, rgba(10,28,61,0) 60%, rgba(6,18,42,.55) 100%),
+    var(--cover-img) center center / cover no-repeat,
+    #0a1c3d;
+}
+.icover.has-img::before{display:none}
 .ibody{padding:24px 28px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
 .idate{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;font-weight:600}
 .ibody h3{
@@ -1131,6 +1202,33 @@ footer ul a:hover{color:var(--gold-accent)}
 .pdetail-hero .h1{color:#fff;font-size:54px;margin:14px 0 20px}
 .pdetail-hero .h1 em{color:var(--gold-accent)}
 .pdetail-hero .lead{color:#cfd5e6;max-width:760px;font-size:19px;margin:0 0 28px}
+
+/* Programme detail hero — Blue banner variant */
+.pdetail-hero.has-banner{
+  background:
+    linear-gradient(90deg, rgba(6,18,42,.92) 0%, rgba(6,18,42,.65) 40%, rgba(6,18,42,.22) 70%, rgba(6,18,42,0) 88%),
+    var(--hero-img) center right / cover no-repeat,
+    #06122a;
+  padding:0;
+  height:520px;
+  display:flex;
+  align-items:center;
+}
+.pdetail-hero.has-banner .wrap{width:100%}
+.pdetail-hero.has-banner::before{display:none}
+@media (max-width:960px){
+  .pdetail-hero.has-banner{
+    height:420px;
+    background:
+      linear-gradient(180deg, rgba(6,18,42,.82) 0%, rgba(6,18,42,.55) 60%, rgba(6,18,42,.35) 100%),
+      var(--hero-img) center center / cover no-repeat,
+      #06122a;
+  }
+}
+@media (max-width:640px){
+  .pdetail-hero.has-banner{height:360px}
+}
+
 .pdetail-meta{
   display:flex;gap:14px;flex-wrap:wrap;margin:18px 0 0;
   font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;

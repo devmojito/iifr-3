@@ -2,22 +2,46 @@
 (function () {
   'use strict';
 
-  // -------- Mobile nav toggle --------
+  // -------- Mobile nav sidebar --------
   const toggle = document.querySelector('.nav-toggle');
   const mobileNav = document.getElementById('mobile-nav');
   if (toggle && mobileNav) {
     mobileNav.removeAttribute('hidden');
     mobileNav.dataset.open = 'false';
+
+    // Inject backdrop if not present
+    let backdrop = document.querySelector('.mobile-nav-backdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.className = 'mobile-nav-backdrop';
+      backdrop.dataset.open = 'false';
+      document.body.appendChild(backdrop);
+    }
+
+    const setOpen = (open) => {
+      mobileNav.dataset.open = open ? 'true' : 'false';
+      backdrop.dataset.open = open ? 'true' : 'false';
+      toggle.setAttribute('aria-expanded', String(!!open));
+      document.body.classList.toggle('menu-open', !!open);
+    };
+
     toggle.addEventListener('click', () => {
-      const open = mobileNav.dataset.open === 'true';
-      mobileNav.dataset.open = open ? 'false' : 'true';
-      toggle.setAttribute('aria-expanded', String(!open));
+      setOpen(mobileNav.dataset.open !== 'true');
     });
+    backdrop.addEventListener('click', () => setOpen(false));
+
+    // Close button (inside the sidebar)
+    const closeBtn = mobileNav.querySelector('.mobile-nav-close');
+    if (closeBtn) closeBtn.addEventListener('click', () => setOpen(false));
+
+    // Close on link tap
     mobileNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        mobileNav.dataset.open = 'false';
-        toggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', () => setOpen(false));
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.dataset.open === 'true') setOpen(false);
     });
   }
 

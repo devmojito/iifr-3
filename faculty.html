@@ -42,12 +42,33 @@
     </button>
   </div>
   <nav id="mobile-nav" class="mobile-nav" hidden aria-label="Mobile">
+  <div class="mobile-nav-head">
+    <a href="index.html" class="logo" aria-label="IIFR home">
+      <img class="logo-emblem" src="assets/logo.png" alt="IIFR emblem"/>
+      <span class="logo-mark">IIFR<span class="dot">.</span></span>
+    </a>
+    <button class="mobile-nav-close" type="button" aria-label="Close menu">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-body">
     <a href="about.html">About</a>
-    <a href="faculty.html">Faculty</a>
-    <a href="programmes.html">Programmes</a>
+    <a href="faculty.html" class="current">Faculty</a>
+    <div class="mnav-group">
+      <span class="mnav-label">Programmes</span>
+      <div class="mnav-sub">
+        <a href="programmes.html"><strong>All Programmes</strong>Overview &amp; comparison</a>
+        <a href="ecp.html"><strong>ECP</strong>Educator Certification Programme</a>
+        <a href="efm.html"><strong>EFM</strong>Executive Fellow in Management</a>
+      </div>
+    </div>
     <a href="insights.html">Insights</a>
-    <a class="btn btn-gold" href="apply.html">Apply Now</a>
-  </nav>
+    <div class="mobile-nav-cta">
+      <a class="btn btn-gold" href="apply.html">Apply</a>
+      <a class="btn btn-navy" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
 </header>
 <section class="pagehero has-banner" style="--hero-img:url('assets/Faculty/blue%20Faculty.png')">
   <div class="wrap">

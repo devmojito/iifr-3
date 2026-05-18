@@ -164,7 +164,7 @@ include_once 'partials/header/transparent-header.php';
         $iifr_form_return = 'ecp.php';
         $iifr_form_heading = 'Enquire about ECP';
         $iifr_form_intro = 'Interested in the Educators\' Certificate Programme? Leave your details and we will respond with cohort dates and next steps.';
-        include __DIR__ . '/partials/components/inquiry-form.php';
+        include dirname(__DIR__) . '/partials/components/inquiry-form.php';
     ?>
 </section>
 

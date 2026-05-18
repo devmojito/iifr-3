@@ -58,7 +58,7 @@ include_once 'partials/header/transparent-header.php';
         $iifr_form_return = 'contact.php';
         $iifr_form_heading = 'Send us a message';
         $iifr_form_intro = 'Questions about IIFR, programmes, or partnerships — we read every enquiry.';
-        include __DIR__ . '/partials/components/inquiry-form.php';
+        include dirname(__DIR__) . '/partials/components/inquiry-form.php';
     ?>
 </section>
 

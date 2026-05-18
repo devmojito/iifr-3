@@ -137,7 +137,7 @@ include_once 'partials/header/transparent-header.php';
         $iifr_form_return = 'applied-research.php';
         $iifr_form_heading = 'Enquire about Workshops';
         $iifr_form_intro = 'Interested in a research or faculty workshop? Leave your details and we\'ll get back to you with upcoming dates and custom options.';
-        include __DIR__ . '/partials/components/inquiry-form.php';
+        include dirname(__DIR__) . '/partials/components/inquiry-form.php';
     ?>
 </section>
 

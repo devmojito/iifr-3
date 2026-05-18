@@ -4,7 +4,7 @@ require_once dirname(__DIR__, 2) . '/iifr-config.php';
 /* Determine the active nav item for highlight */
 $iifr_path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $iifr_basename = basename($iifr_path, '.php');
-$iifr_nav_active = in_array($iifr_basename, ['ecp', 'efm', 'programmes'], true) ? 'programmes' : $iifr_basename;
+$iifr_nav_active = in_array($iifr_basename, ['ecp', 'efm', 'applied-research', 'programmes'], true) ? 'programmes' : $iifr_basename;
 $iifr_nav_active = in_array($iifr_basename, ['faculty'], true) ? 'research' : $iifr_nav_active;
 $active = function ($p) use ($iifr_nav_active) {
     return $iifr_nav_active === $p ? ' active' : '';
@@ -29,6 +29,7 @@ $active = function ($p) use ($iifr_nav_active) {
                 <ul class="iifr-nav-submenu">
                     <li><a href="ecp.php">ECP</a></li>
                     <li><a href="efm.php">EFM</a></li>
+                    <li><a href="applied-research.php">Applied Research</a></li>
                 </ul>
             </li>
             <li><a href="research.php" class="<?= trim($active('research')); ?>">Research</a></li>

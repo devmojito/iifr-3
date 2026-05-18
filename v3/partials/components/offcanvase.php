@@ -41,6 +41,7 @@ require_once __DIR__ . '/../../iifr-config.php';
                         <li><a href="programmes.php">All programmes</a></li>
                         <li><a href="ecp.php">ECP — Educators' Certificate Programme</a></li>
                         <li><a href="efm.php">EFM — Executive Fellow in Management</a></li>
+                        <li><a href="applied-research.php">Applied Research</a></li>
                     </ul>
                 </li>
                 <li><a href="research.php" class="main">Research</a></li>

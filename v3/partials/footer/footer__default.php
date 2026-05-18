@@ -96,9 +96,7 @@ require_once __DIR__ . '/../../iifr-config.php';
     <div class="iifr-footer__bottom">
         <div class="iifr-footer__inner">
             <div class="iifr-footer__legal">
-                <p class="iifr-footer__copy">&copy; <?= date('Y'); ?> IIFR — International Institute for Faculty &amp; Research. All rights reserved.</p>
-                <p class="iifr-footer__credit">Made with <span aria-label="love">&#x2764;&#xfe0f;</span> by <a href="https://marketingmojito.com/" target="_blank" rel="noopener noreferrer">Marketing Mojito</a></p>
-            </div>
+                <p class="iifr-footer__copy">&copy; <?= date('Y'); ?> IIFR — International Institute for Faculty &amp; Research. All rights reserved.</p>            </div>
         </div>
     </div>
 

@@ -40,13 +40,6 @@ require_once __DIR__ . '/../../iifr-config.php';
                         </li>
                     </ul>
 
-                    <span class="iifr-footer__connect-label">Connect with us</span>
-                    <ul class="iifr-footer__social" aria-label="Social channels">
-                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-                    </ul>
                 </div>
 
                 <!-- Explore -->
@@ -75,7 +68,7 @@ require_once __DIR__ . '/../../iifr-config.php';
                     </ul>
                 </div>
 
-                <!-- Newsletter -->
+                <!-- Stay In The Loop -->
                 <div class="iifr-footer__col--newsletter">
                     <h6 class="iifr-footer__title">Stay In The Loop</h6>
                     <p class="iifr-footer__cta-text">
@@ -86,7 +79,14 @@ require_once __DIR__ . '/../../iifr-config.php';
                         <input type="email" id="iifr-footer-email" name="email" placeholder="Your email address" required>
                         <button type="submit" aria-label="Subscribe">Subscribe</button>
                     </form>
-                    <p class="iifr-footer__subscribe-note">No spam. Unsubscribe anytime.</p>
+
+                    <span class="iifr-footer__connect-label" style="margin-top:14px;">Connect with us</span>
+                    <ul class="iifr-footer__social" aria-label="Social channels">
+                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
                 </div>
 
             </div>

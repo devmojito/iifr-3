@@ -23,13 +23,13 @@ body.iifr-redesign-scope { zoom: 0.9; }
   --iifr-bar-h:        var(--iifr-nav-h);
 
   /* ── LOCKED TYPE SCALE — only these sizes on the entire site ── */
-  --iifr-fs-display:   42px;   /* hero h1 (one and only one) */
-  --iifr-fs-h2:        36px;   /* every section title */
-  --iifr-fs-h3:        22px;   /* every card title (no exceptions) */
-  --iifr-fs-eyebrow:   14px;   /* uppercase tags / labels / roles / dates */
-  --iifr-fs-lead:      18px;   /* intro paragraphs under titles, hero p */
-  --iifr-fs-body:      16px;   /* every body paragraph everywhere */
-  --iifr-fs-small:     14px;   /* stat labels, copyright */
+  --iifr-fs-display:   46px;   /* hero h1 (one and only one) */
+  --iifr-fs-h2:        40px;   /* every section title */
+  --iifr-fs-h3:        26px;   /* every card title (no exceptions) */
+  --iifr-fs-eyebrow:   18px;   /* uppercase tags / labels / roles / dates */
+  --iifr-fs-lead:      22px;   /* intro paragraphs under titles, hero p */
+  --iifr-fs-body:      20px;   /* every body paragraph everywhere */
+  --iifr-fs-small:     18px;   /* stat labels, copyright */
 
   --iifr-lh-tight:     1.2;    /* headings */
   --iifr-lh-body:      1.65;   /* body */
@@ -642,7 +642,7 @@ body {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding-top: 24px;
+  padding-top: 16px;
 }
 /* Centred gold accent at the top of the footer */
 .iifr-footer::before {
@@ -721,7 +721,7 @@ body {
 }
 
 /* ── Main grid ── */
-.iifr-footer__main { padding: 20px 0 16px; }
+.iifr-footer__main { padding: 14px 0 10px; }
 .iifr-footer__grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1.4fr;

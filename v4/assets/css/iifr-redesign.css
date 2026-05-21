@@ -5,6 +5,8 @@
    Layered AFTER style.css so it wins.
    ================================================================ */
 
+body.iifr-redesign-scope { zoom: 0.9; }
+
 :root {
   --iifr-navy:        #0d1b3e;
   --iifr-gold:        #c9900c;
@@ -640,6 +642,7 @@ body {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  padding-top: 24px;
 }
 /* Centred gold accent at the top of the footer */
 .iifr-footer::before {
@@ -1371,17 +1374,19 @@ body {
   max-width: 460px;
 }
 .iifr-programme__more {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: #e3b85a;
-  font-weight: 700;
+  display: inline-block;
+  background: var(--iifr-gold);
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: 600;
   font-size: var(--iifr-fs-body);
   text-decoration: none;
   width: fit-content;
+  transition: background 0.2s;
 }
-.iifr-programme__more::after { content: "→"; transition: transform 0.28s; }
-.iifr-programme:hover .iifr-programme__more::after { transform: translateX(6px); }
+.iifr-programme__more::after { content: none; }
+.iifr-programme:hover .iifr-programme__more { background: #b07d0a; }
 @media (max-width: 767.98px) { .iifr-programmes { grid-template-columns: 1fr; } }
 
 /* ── Quote band ("Where the boardroom meets the lectern") ── */
@@ -2700,6 +2705,19 @@ body {
   .iifr-programmes--three { grid-template-columns: 1fr; }
 }
 
+/* Programmes 4-card variant */
+.iifr-programmes--four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+@media (max-width: 1199.98px) {
+  .iifr-programmes--four { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767.98px) {
+  .iifr-programmes--four { grid-template-columns: 1fr; }
+}
+
 /* News (insight) card — block layout to avoid colliding with existing .iifr-insight-card flex layout */
 .iifr-news-grid {
   display: grid;
@@ -2747,11 +2765,17 @@ body {
   flex: 1;
 }
 .iifr-news-card__more {
-  font-size: var(--iifr-fs-body);
-  font-weight: 700;
-  color: var(--iifr-gold);
+  display: inline-block;
+  background: var(--iifr-navy);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: var(--iifr-fs-small);
+  font-weight: 600;
   letter-spacing: 0.02em;
+  transition: background 0.2s;
 }
+.iifr-news-card:hover .iifr-news-card__more { background: #1a2a55; }
 @media (max-width: 991.98px) {
   .iifr-news-grid { grid-template-columns: 1fr; }
 }

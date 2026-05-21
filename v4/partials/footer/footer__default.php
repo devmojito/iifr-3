@@ -69,8 +69,9 @@ require_once __DIR__ . '/../../iifr-config.php';
                     <ul class="iifr-footer__menu">
                         <li><a href="ecp.php">ECP</a></li>
                         <li><a href="efm.php">EFM</a></li>
+                        <li><a href="programmes.php#alp">ALP</a></li>
+                        <li><a href="programmes.php#rfdp">RFDP</a></li>
                         <li><a href="programmes.php">All Programmes</a></li>
-                        <li><a href="apply.php">Apply Now</a></li>
                     </ul>
                 </div>
 

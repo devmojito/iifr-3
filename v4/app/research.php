@@ -21,7 +21,7 @@ include_once 'partials/header/transparent-header.php';
 
 <!-- ============ OUR FACULTY ============ -->
 <section class="iifr-section">
-    <div class="iifr-about iifr-about--reverse">
+    <div class="iifr-about">
         <div class="iifr-about__media">
             <img src="assets/images/academy/4.jpeg" alt="IIFR faculty community">
         </div>
@@ -107,13 +107,13 @@ include_once 'partials/header/transparent-header.php';
             <div class="iifr-partner-card__logo"><i class="fa-light fa-book-open" style="font-size:42px;color:#c9900c;" aria-hidden="true"></i></div>
             <h3 class="iifr-partner-card__name">Research</h3>
             <p class="iifr-partner-card__desc">Partner with IIFR to co-create applied research that solves organisational, educational, and policy challenges.</p>
-            <a href="contact.php" class="iifr-partner-card__more">Engage With Us →</a>
+            <a href="contact.php" class="iifr-btn-dark" style="margin-top:12px;">Engage With Us</a>
         </article>
         <article class="iifr-partner-card">
             <div class="iifr-partner-card__logo"><i class="fa-light fa-users" style="font-size:42px;color:#c9900c;" aria-hidden="true"></i></div>
             <h3 class="iifr-partner-card__name">Teaching</h3>
             <p class="iifr-partner-card__desc">Engage with our faculty to design executive learning, pedagogy innovation, and capability-building initiatives.</p>
-            <a href="programmes.php" class="iifr-partner-card__more">Know More About Programmes →</a>
+            <a href="programmes.php" class="iifr-btn-dark" style="margin-top:12px;">Explore Programmes</a>
         </article>
     </div>
 </section>

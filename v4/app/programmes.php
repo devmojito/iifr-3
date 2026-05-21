@@ -11,7 +11,7 @@ include_once 'partials/header/transparent-header.php';
     <div class="iifr-page-hero__inner">
         <span class="iifr-page-hero__eyebrow">Programmes</span>
         <h1>Our Programmes</h1>
-        <p>Two flagship pathways: an intensive certificate for educators bridging industry and academia, and a doctoral-equivalent fellowship for senior practitioners who want scholarly rigour without leaving practice.</p>
+        <p>Four distinct pathways for educators, researchers, and academic leaders — from intensive certification to doctoral fellowship to specialised development programmes.</p>
         <div class="iifr-page-hero__cta">
             <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply Now</a>
             <a href="contact.php" class="iifr-btn-outline">Talk to Admissions</a>
@@ -19,19 +19,18 @@ include_once 'partials/header/transparent-header.php';
     </div>
 </div>
 
-<!-- ============ TWO FLAGSHIP CARDS ============ -->
+<!-- ============ PROGRAMME CARDS ============ -->
 <section class="iifr-section iifr-cream">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Two Flagship Pathways</span>
+        <span class="iifr-eyebrow">Our Pathways</span>
         <h2>Choose the path that fits your trajectory.</h2>
         <hr class="iifr-gold-line-center">
     </div>
 
-    <div class="iifr-programmes">
+    <div class="iifr-programmes iifr-programmes--four">
         <a href="#ecp" class="iifr-programme">
             <img src="assets/images/academy/5.jpeg" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
-            <span class="iifr-programme__tag">8-Day Intensive · Flagship</span>
             <h3 class="iifr-programme__title">Educators' Certificate Programme (ECP)</h3>
             <p class="iifr-programme__desc">Build a new category of educators who move seamlessly between industry and academia. AI-powered course design, case writing, and academic leadership.</p>
             <span class="iifr-programme__more">Read about ECP</span>
@@ -39,10 +38,23 @@ include_once 'partials/header/transparent-header.php';
         <a href="#efm" class="iifr-programme">
             <img src="assets/images/academy/6.jpeg" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
-            <span class="iifr-programme__tag">3-Year Doctoral · Fellowship</span>
             <h3 class="iifr-programme__title">Executive Fellow in Management (EFM)</h3>
             <p class="iifr-programme__desc">India's most ambitious academic credential for senior executives. Earn a doctoral-equivalent degree certified by BVB, IIFR, and EFMD.</p>
             <span class="iifr-programme__more">Read about EFM</span>
+        </a>
+        <a href="#alp" class="iifr-programme">
+            <img src="assets/images/academy/3.jpeg" alt="" class="iifr-programme__img">
+            <span class="iifr-programme__overlay" aria-hidden="true"></span>
+            <h3 class="iifr-programme__title">Academic Leadership Programme (ALP)</h3>
+            <p class="iifr-programme__desc">For Deans, Directors, and senior academic administrators ready to lead institutional transformation with strategic vision and operational excellence.</p>
+            <span class="iifr-programme__more">Read about ALP</span>
+        </a>
+        <a href="#rfdp" class="iifr-programme">
+            <img src="assets/images/academy/4.jpeg" alt="" class="iifr-programme__img">
+            <span class="iifr-programme__overlay" aria-hidden="true"></span>
+            <h3 class="iifr-programme__title">Research &amp; Faculty Development Programme (RFDP)</h3>
+            <p class="iifr-programme__desc">Intensive workshops designed to sharpen research methodology, publication skills, and teaching pedagogy for faculty at all career stages.</p>
+            <span class="iifr-programme__more">Read about RFDP</span>
         </a>
     </div>
 </section>
@@ -76,7 +88,7 @@ include_once 'partials/header/transparent-header.php';
 
             <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
                 <a href="ecp.php" class="iifr-btn-dark">Full ECP Details</a>
-                <a href="#" class="iifr-btn-ghost" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply Now</a>
+                <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply Now</a>
             </div>
         </div>
     </div>
@@ -171,7 +183,7 @@ include_once 'partials/header/transparent-header.php';
 
             <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
                 <a href="efm.php" class="iifr-btn-dark">Full EFM Details</a>
-                <a href="#" class="iifr-btn-ghost" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply Now</a>
+                <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply Now</a>
             </div>
         </div>
 
@@ -221,13 +233,140 @@ include_once 'partials/header/transparent-header.php';
     </div>
 </section>
 
+<!-- ============ ALP — ACADEMIC LEADERSHIP PROGRAMME ============ -->
+<section class="iifr-section iifr-cream" id="alp">
+    <div class="iifr-about">
+        <div class="iifr-about__media">
+            <img src="assets/images/academy/3.jpeg" alt="Academic Leadership Programme">
+            <div class="iifr-about__media-tag">
+                <strong>ALP</strong>
+                <span style="display:flex;flex-direction:column;line-height:1.2;">
+                    <span style="font-size:var(--iifr-fs-eyebrow);color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.14em;">Leadership</span>
+                    <span>Development Programme</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="iifr-about__content">
+            <span class="iifr-eyebrow">Programme · ALP</span>
+            <h2>Academic Leadership Programme.</h2>
+            <hr class="iifr-gold-line">
+            <p>The ALP is designed for senior academic administrators — Deans, Directors, Department Heads, and aspiring institutional leaders — who want to lead transformation in higher education with strategic clarity, governance excellence, and innovation.</p>
+
+            <p style="margin-top:8px;"><strong style="color:var(--iifr-navy);">Consider the ALP if you are:</strong></p>
+            <ul class="iifr-list" style="margin-top:14px;">
+                <li><p>A Dean, Director, or Department Head seeking to drive institutional strategy and change</p></li>
+                <li><p>A senior faculty member aspiring to academic leadership and administrative roles</p></li>
+                <li><p>An academic administrator looking to strengthen governance, accreditation readiness, and stakeholder management</p></li>
+            </ul>
+
+            <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+                <a href="#" class="iifr-btn-dark" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply Now</a>
+                <a href="contact.php" class="iifr-btn-primary">Talk to Admissions</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ ALP — KEY FOCUS AREAS ============ -->
+<section class="iifr-section">
+    <div class="iifr-section__head iifr-section__head--center">
+        <span class="iifr-eyebrow">Key Focus Areas</span>
+        <h2>What the ALP covers.</h2>
+        <hr class="iifr-gold-line-center">
+    </div>
+
+    <div class="iifr-pathways-rich iifr-grid--4">
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">Strategic Planning</h3>
+            <p class="iifr-pathway__body">Institutional vision-setting, long-range academic planning, and resource allocation for sustainable growth.</p>
+        </article>
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">Governance &amp; Accreditation</h3>
+            <p class="iifr-pathway__body">Navigating regulatory frameworks, quality assurance systems, and national/international accreditation standards.</p>
+        </article>
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">Change Management</h3>
+            <p class="iifr-pathway__body">Leading organisational transformation, building consensus among diverse stakeholders, and managing institutional culture.</p>
+        </article>
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">Innovation in Education</h3>
+            <p class="iifr-pathway__body">Leveraging technology, interdisciplinary approaches, and global best practices for academic innovation and impact.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ============ RFDP — RESEARCH & FACULTY DEVELOPMENT PROGRAMME ============ -->
+<section class="iifr-section iifr-paper" id="rfdp">
+    <div class="iifr-about iifr-about--reverse">
+        <div class="iifr-about__content">
+            <span class="iifr-eyebrow">Programme · RFDP</span>
+            <h2>Research &amp; Faculty Development Programme.</h2>
+            <hr class="iifr-gold-line">
+            <p>The RFDP is a series of intensive workshops and structured interventions designed to sharpen research capability, publication skills, and teaching pedagogy for faculty at all career stages — from early-career academics to senior professors seeking to renew their practice.</p>
+
+            <p style="margin-top:8px;"><strong style="color:var(--iifr-navy);">Consider the RFDP if you are:</strong></p>
+            <ul class="iifr-list" style="margin-top:14px;">
+                <li><p>A faculty member looking to publish in high-impact journals and strengthen research methodology</p></li>
+                <li><p>An early-career academic seeking mentorship, structured guidance, and peer networks</p></li>
+                <li><p>A senior professor wanting to refresh teaching techniques, integrate AI tools, and stay current</p></li>
+                <li><p>An institution seeking faculty development interventions for your team</p></li>
+            </ul>
+
+            <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+                <a href="#" class="iifr-btn-dark" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply Now</a>
+                <a href="contact.php" class="iifr-btn-primary">Talk to Admissions</a>
+            </div>
+        </div>
+
+        <div class="iifr-about__media">
+            <img src="assets/images/academy/4.jpeg" alt="Research & Faculty Development Programme">
+            <div class="iifr-about__media-tag">
+                <strong>RFDP</strong>
+                <span style="display:flex;flex-direction:column;line-height:1.2;">
+                    <span style="font-size:var(--iifr-fs-eyebrow);color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.14em;">Workshops</span>
+                    <span>Faculty Development</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ RFDP — KEY FOCUS AREAS ============ -->
+<section class="iifr-section">
+    <div class="iifr-section__head iifr-section__head--center">
+        <span class="iifr-eyebrow">Workshop Tracks</span>
+        <h2>What the RFDP covers.</h2>
+        <hr class="iifr-gold-line-center">
+    </div>
+
+    <div class="iifr-pathways-rich iifr-grid--4">
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">Research Methodology</h3>
+            <p class="iifr-pathway__body">Qualitative and quantitative methods, research design, data analysis, and emerging methodological approaches.</p>
+        </article>
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">Publishing &amp; Dissemination</h3>
+            <p class="iifr-pathway__body">Writing for high-impact journals, navigating peer review, conference presentations, and building a scholarly portfolio.</p>
+        </article>
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">Teaching Excellence</h3>
+            <p class="iifr-pathway__body">Modern pedagogical techniques, experiential learning design, assessment innovation, and student engagement strategies.</p>
+        </article>
+        <article class="iifr-pathway">
+            <h3 class="iifr-pathway__title">AI &amp; Digital Tools</h3>
+            <p class="iifr-pathway__body">Integrating AI into research workflows, digital classroom tools, and technology-enhanced learning environments.</p>
+        </article>
+    </div>
+</section>
+
 <!-- ============ FINAL CTA ============ -->
 <section class="iifr-cta-final">
     <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
     <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Pracademic Pathway</span>
-        <h2>ECP is the stepping stone. EFM is the pinnacle.</h2>
-        <p>Begin your journey towards the Pracademic identity. Whether you're an industry leader entering academia or a faculty member seeking deeper relevance, IIFR has a pathway for you.</p>
+        <span class="iifr-eyebrow" style="color:#e3b85a;">Your Pathway Starts Here</span>
+        <h2>From certification to fellowship to leadership — IIFR has a programme for every stage of your academic journey.</h2>
+        <p>Whether you're an industry leader entering academia, a faculty member seeking deeper relevance, or an administrator driving institutional change — begin your transformation with IIFR.</p>
         <div class="iifr-cta-final__buttons">
             <a href="contact.php" class="iifr-btn-primary">Contact Us</a>
             <a href="ecp.php" class="iifr-btn-outline">Explore ECP</a>

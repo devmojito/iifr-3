@@ -42,7 +42,7 @@ include_once 'partials/header/transparent-header.php';
 
             <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
                 <a href="about.php" class="iifr-btn-dark">Our Vision</a>
-                <a href="faculty.php" class="iifr-btn-ghost">Meet Our Faculty</a>
+                <a href="faculty.php" class="iifr-btn-dark">Meet Our Faculty</a>
             </div>
         </div>
     </div>
@@ -127,7 +127,7 @@ include_once 'partials/header/transparent-header.php';
             <span class="iifr-programme__tag">Flagship</span>
             <h3 class="iifr-programme__title">Educator Certification Programme (ECP)</h3>
             <p class="iifr-programme__desc">For professionals and aspiring educators preparing for impactful academic careers, integrating theory &amp; practice, AI-led pedagogy, and meta-frameworks for multi-disciplinary orientation.</p>
-            <span class="iifr-programme__more">Learn more →</span>
+            <span class="iifr-programme__more">Learn More</span>
         </a>
         <a href="efm.php" class="iifr-programme">
             <img src="assets/images/academy/6.jpeg" alt="" class="iifr-programme__img">
@@ -135,7 +135,7 @@ include_once 'partials/header/transparent-header.php';
             <span class="iifr-programme__tag">Fellowship</span>
             <h3 class="iifr-programme__title">Executive Fellow in Management (EFM)</h3>
             <p class="iifr-programme__desc">For CXOs and senior leaders seeking to contribute via applied research, teaching, mentoring, and thought leadership.</p>
-            <span class="iifr-programme__more">Learn more →</span>
+            <span class="iifr-programme__more">Learn More</span>
         </a>
         <a href="programmes.php" class="iifr-programme">
             <img src="assets/images/academy/4.jpeg" alt="" class="iifr-programme__img">
@@ -143,12 +143,12 @@ include_once 'partials/header/transparent-header.php';
             <span class="iifr-programme__tag">Workshops</span>
             <h3 class="iifr-programme__title">Research &amp; Faculty Workshops</h3>
             <p class="iifr-programme__desc">Short-format programmes focused on teaching excellence, research capability, and leadership development.</p>
-            <span class="iifr-programme__more">Learn more →</span>
+            <span class="iifr-programme__more">Learn More</span>
         </a>
     </div>
 
     <div style="text-align:center;margin-top:40px;">
-        <a href="programmes.php" class="iifr-btn-ghost">Explore All Programmes</a>
+        <a href="programmes.php" class="iifr-btn-dark">Explore All Programmes</a>
     </div>
 </section>
 
@@ -166,24 +166,24 @@ include_once 'partials/header/transparent-header.php';
             <span class="iifr-news-card__date">May 15, 2026</span>
             <h3 class="iifr-news-card__title">Rethinking Faculty Development in India</h3>
             <p class="iifr-news-card__desc">Why continuous learning, mentoring, and capability building are essential for the future of higher education.</p>
-            <span class="iifr-news-card__more">Read More →</span>
+            <span class="iifr-news-card__more">Read More</span>
         </a>
         <a href="insights.php" class="iifr-news-card">
             <span class="iifr-news-card__date">April 28, 2026</span>
             <h3 class="iifr-news-card__title">Bridging Academia and Industry</h3>
             <p class="iifr-news-card__desc">Building meaningful partnerships to create relevant learning and real-world impact.</p>
-            <span class="iifr-news-card__more">Read More →</span>
+            <span class="iifr-news-card__more">Read More</span>
         </a>
         <a href="insights.php" class="iifr-news-card">
             <span class="iifr-news-card__date">April 10, 2026</span>
             <h3 class="iifr-news-card__title">The Future of Applied Research</h3>
             <p class="iifr-news-card__desc">How applied research can address real-world challenges and shape societal progress.</p>
-            <span class="iifr-news-card__more">Read More →</span>
+            <span class="iifr-news-card__more">Read More</span>
         </a>
     </div>
 
     <div style="text-align:center;margin-top:40px;">
-        <a href="insights.php" class="iifr-btn-ghost">View All Insights</a>
+        <a href="insights.php" class="iifr-btn-dark">View All Insights</a>
     </div>
 </section>
 

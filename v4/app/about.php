@@ -269,21 +269,21 @@ include_once 'partials/header/transparent-header.php';
             <div class="iifr-partner-card__logo"><img src="assets/images/logo/bvb.png" alt="BVB"></div>
             <h3 class="iifr-partner-card__name">BVB</h3>
             <p class="iifr-partner-card__desc">Since 1938, Bharatiya Vidya Bhavan has been one of India's foremost institutions shaping education and society — the home and host institution for IIFR.</p>
-            <a href="#" class="iifr-partner-card__more">Learn more →</a>
+            <a href="#" class="iifr-btn-dark" style="margin-top:12px;">Learn More</a>
         </article>
 
         <article class="iifr-partner-card">
             <div class="iifr-partner-card__logo"><img src="assets/images/logo/efmd.png" alt="EFMD"></div>
             <h3 class="iifr-partner-card__name">EFMD</h3>
             <p class="iifr-partner-card__desc">EFMD is a global association fostering excellence in management development through accreditation, research, and collaboration.</p>
-            <a href="#" class="iifr-partner-card__more">Learn more →</a>
+            <a href="#" class="iifr-btn-dark" style="margin-top:12px;">Learn More</a>
         </article>
 
         <article class="iifr-partner-card">
             <div class="iifr-partner-card__logo"><img src="assets/images/logo/latticed.png" alt="LatticeEd" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=&quot;font-family:Playfair Display,Georgia,serif;font-size:28px;color:#0d1b3e;font-weight:700;&quot;>LatticeEd</div>';"></div>
             <h3 class="iifr-partner-card__name">LatticeEd</h3>
             <p class="iifr-partner-card__desc">LatticeEd empowers institutions with innovative solutions for learning, research, and academic transformation.</p>
-            <a href="#" class="iifr-partner-card__more">Learn more →</a>
+            <a href="#" class="iifr-btn-dark" style="margin-top:12px;">Learn More</a>
         </article>
     </div>
 </section>

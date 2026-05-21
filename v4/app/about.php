@@ -24,13 +24,6 @@ include_once 'partials/header/transparent-header.php';
     <div class="iifr-about">
         <div class="iifr-about__media">
             <img src="assets/images/academy/1.jpeg" alt="IIFR institute context">
-            <div class="iifr-about__media-tag">
-                <strong>2026</strong>
-                <span style="display:flex;flex-direction:column;line-height:1.2;">
-                    <span style="font-size:var(--iifr-fs-eyebrow);color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.14em;">Established</span>
-                    <span>Bharatiya Vidya Bhavan</span>
-                </span>
-            </div>
         </div>
 
         <div class="iifr-about__content">

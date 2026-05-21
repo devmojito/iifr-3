@@ -64,13 +64,6 @@ include_once 'partials/header/transparent-header.php';
     <div class="iifr-about">
         <div class="iifr-about__media">
             <img src="assets/images/academy/1.jpeg" alt="ECP — Educators' Certificate Programme">
-            <div class="iifr-about__media-tag">
-                <strong>ECP</strong>
-                <span style="display:flex;flex-direction:column;line-height:1.2;">
-                    <span style="font-size:var(--iifr-fs-eyebrow);color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.14em;">8-Day Intensive</span>
-                    <span>Flagship Programme</span>
-                </span>
-            </div>
         </div>
 
         <div class="iifr-about__content">
@@ -189,13 +182,6 @@ include_once 'partials/header/transparent-header.php';
 
         <div class="iifr-about__media">
             <img src="assets/images/academy/6.jpeg" alt="EFM — Executive Fellow in Management">
-            <div class="iifr-about__media-tag">
-                <strong>EFM</strong>
-                <span style="display:flex;flex-direction:column;line-height:1.2;">
-                    <span style="font-size:var(--iifr-fs-eyebrow);color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.14em;">3-Year Doctoral</span>
-                    <span>Executive Fellowship</span>
-                </span>
-            </div>
         </div>
     </div>
 </section>
@@ -238,13 +224,6 @@ include_once 'partials/header/transparent-header.php';
     <div class="iifr-about">
         <div class="iifr-about__media">
             <img src="assets/images/academy/3.jpeg" alt="Academic Leadership Programme">
-            <div class="iifr-about__media-tag">
-                <strong>ALP</strong>
-                <span style="display:flex;flex-direction:column;line-height:1.2;">
-                    <span style="font-size:var(--iifr-fs-eyebrow);color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.14em;">Leadership</span>
-                    <span>Development Programme</span>
-                </span>
-            </div>
         </div>
 
         <div class="iifr-about__content">
@@ -321,13 +300,6 @@ include_once 'partials/header/transparent-header.php';
 
         <div class="iifr-about__media">
             <img src="assets/images/academy/4.jpeg" alt="Research & Faculty Development Programme">
-            <div class="iifr-about__media-tag">
-                <strong>RFDP</strong>
-                <span style="display:flex;flex-direction:column;line-height:1.2;">
-                    <span style="font-size:var(--iifr-fs-eyebrow);color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.14em;">Workshops</span>
-                    <span>Faculty Development</span>
-                </span>
-            </div>
         </div>
     </div>
 </section>

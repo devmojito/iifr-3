@@ -22,18 +22,18 @@ body.iifr-redesign-scope { zoom: 0.9; }
   --iifr-nav-h:        80px;
   --iifr-bar-h:        var(--iifr-nav-h);
 
-  /* ── LOCKED TYPE SCALE — only these sizes on the entire site ── */
-  --iifr-fs-display:   46px;   /* hero h1 (one and only one) */
-  --iifr-fs-h2:        40px;   /* every section title */
-  --iifr-fs-h3:        26px;   /* every card title (no exceptions) */
-  --iifr-fs-eyebrow:   16px;   /* uppercase tags / labels / roles / dates */
-  --iifr-fs-lead:      22px;   /* intro paragraphs under titles, hero p */
-  --iifr-fs-body:      20px;   /* every body paragraph everywhere */
-  --iifr-fs-small:     18px;   /* stat labels, copyright */
+  /* ── LOCKED TYPE SCALE — balanced middle path (v4 tightened) ── */
+  --iifr-fs-display:   40px;   /* hero h1 (one and only one) */
+  --iifr-fs-h2:        32px;   /* every section title */
+  --iifr-fs-h3:        21px;   /* every card title (no exceptions) */
+  --iifr-fs-eyebrow:   13px;   /* uppercase tags / labels / roles / dates */
+  --iifr-fs-lead:      18px;   /* intro paragraphs under titles, hero p */
+  --iifr-fs-body:      16.5px; /* every body paragraph everywhere */
+  --iifr-fs-small:     14.5px; /* stat labels, copyright */
 
   --iifr-lh-tight:     1.2;    /* headings */
-  --iifr-lh-body:      1.65;   /* body */
-  --iifr-lh-relaxed:   1.75;   /* lead */
+  --iifr-lh-body:      1.55;   /* body */
+  --iifr-lh-relaxed:   1.6;    /* lead */
 }
 
 /* ── Reset + body ── */
@@ -247,7 +247,7 @@ body {
    ============================================================ */
 .iifr-hero {
   position: relative;
-  min-height: 380px;
+  min-height: 340px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -324,7 +324,7 @@ body {
 /* ============================================================
    COMMON SECTIONS — exact mockup spec
    ============================================================ */
-.iifr-section { padding: 40px 80px; background: #ffffff; }
+.iifr-section { padding: 30px 80px; background: #ffffff; }
 .iifr-section.light { background: var(--iifr-light-bg); }
 
 .iifr-section-label {
@@ -358,14 +358,14 @@ body {
   color: var(--iifr-text-mid);
   font-size: var(--iifr-fs-lead);
   line-height: var(--iifr-lh-relaxed);
-  margin-bottom: 44px;
+  margin-bottom: 30px;
   font-family: 'Source Sans 3', sans-serif;
 }
 .iifr-gold-line {
   width: 48px;
   height: 3px;
   background: var(--iifr-gold);
-  margin: 12px 0 24px;
+  margin: 10px 0 18px;
   border: 0;
   display: block;
 }
@@ -373,7 +373,7 @@ body {
   width: 48px;
   height: 3px;
   background: var(--iifr-gold);
-  margin: 10px auto 40px;
+  margin: 10px auto 28px;
   border: 0;
   display: block;
 }
@@ -384,7 +384,7 @@ body {
 .iifr-home-intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 44px;
   align-items: start;
 }
 .iifr-home-intro-text h2 {
@@ -451,7 +451,7 @@ body {
   background: #ffffff;
   border: 1px solid var(--iifr-border);
   border-radius: 8px;
-  padding: 28px 24px;
+  padding: 22px 22px;
 }
 .iifr-partners-box h4 {
   font-weight: 700;
@@ -478,7 +478,7 @@ body {
 .iifr-pathway-card {
   border: 1px solid var(--iifr-border);
   border-radius: 8px;
-  padding: 28px 24px;
+  padding: 24px 22px;
   background: #ffffff;
 }
 .iifr-pathway-num {
@@ -608,7 +608,7 @@ body {
 
 .iifr-cta-bar {
   background: var(--iifr-navy);
-  padding: 44px 80px;
+  padding: 32px 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -639,6 +639,11 @@ body {
     linear-gradient(180deg, #0a1c3d 0%, #050d20 100%);
   color: #ffffff;
   font-family: 'Source Sans 3', sans-serif;
+  --iifr-fs-h3:      20px;
+  --iifr-fs-eyebrow: 12px;
+  --iifr-fs-lead:    16px;
+  --iifr-fs-body:    15px;
+  --iifr-fs-small:   13.5px;
   position: relative;
   isolation: isolate;
   overflow: hidden;
@@ -1487,7 +1492,7 @@ body {
 /* ── Mission band — centered intro + 4 pillars ── */
 .iifr-mission {
   position: relative;
-  padding: clamp(40px, 4vw, 48px) 80px;
+  padding: clamp(32px, 3.5vw, 40px) 80px;
   background: var(--iifr-navy);
   color: #ffffff;
   overflow: hidden;
@@ -1612,7 +1617,7 @@ body {
 }
 
 @media (max-width: 991.98px) {
-  .iifr-mission { padding: 56px 24px; }
+  .iifr-mission { padding: 40px 24px; }
   .iifr-mission__pillars { grid-template-columns: repeat(2, 1fr); gap: 14px; }
 }
 @media (max-width: 575.98px) {
@@ -1666,7 +1671,7 @@ body {
 /* ── Final CTA ── */
 .iifr-cta-final {
   position: relative;
-  padding: clamp(48px, 6vw, 64px) 80px;
+  padding: clamp(36px, 4vw, 48px) 80px;
   text-align: center;
   background: #06122a;
   color: #ffffff;
@@ -1727,7 +1732,7 @@ body {
 /* ── Page hero ── tighter, content sits naturally below the nav */
 .iifr-page-hero {
   position: relative;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1761,7 +1766,7 @@ body {
 .iifr-page-hero__inner {
   position: relative;
   width: 100%;
-  padding: 56px 80px;
+  padding: 40px 80px;
 }
 .iifr-page-hero__eyebrow {
   display: inline-block;

@@ -3,12 +3,20 @@
     "api/v3.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "excludeFiles": "{v1/**,v2/**,v3/assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf}"
+      "excludeFiles": "{v1/**,v2/**,v4/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
+    },
+    "api/v4.php": {
+      "runtime": "vercel-php@0.9.0",
+      "maxDuration": 60,
+      "excludeFiles": "{v1/**,v2/**,v3/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
     }
   },
   "rewrites": [
     { "source": "/v3",        "destination": "/api/v3.php" },
     { "source": "/v3/",       "destination": "/api/v3.php" },
-    { "source": "/v3/:path*", "destination": "/api/v3.php" }
+    { "source": "/v3/:path*", "destination": "/api/v3.php" },
+    { "source": "/v4",        "destination": "/api/v4.php" },
+    { "source": "/v4/",       "destination": "/api/v4.php" },
+    { "source": "/v4/:path*", "destination": "/api/v4.php" }
   ]
 }

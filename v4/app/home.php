@@ -124,7 +124,6 @@ include_once 'partials/header/transparent-header.php';
         <a href="ecp.php" class="iifr-programme">
             <img src="assets/images/academy/5.jpeg" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
-            <span class="iifr-programme__tag">Flagship</span>
             <h3 class="iifr-programme__title">Educator Certification Programme (ECP)</h3>
             <p class="iifr-programme__desc">For professionals and aspiring educators preparing for impactful academic careers, integrating theory &amp; practice, AI-led pedagogy, and meta-frameworks for multi-disciplinary orientation.</p>
             <span class="iifr-programme__more">Learn More</span>
@@ -132,7 +131,6 @@ include_once 'partials/header/transparent-header.php';
         <a href="efm.php" class="iifr-programme">
             <img src="assets/images/academy/6.jpeg" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
-            <span class="iifr-programme__tag">Fellowship</span>
             <h3 class="iifr-programme__title">Executive Fellow in Management (EFM)</h3>
             <p class="iifr-programme__desc">For CXOs and senior leaders seeking to contribute via applied research, teaching, mentoring, and thought leadership.</p>
             <span class="iifr-programme__more">Learn More</span>
@@ -140,7 +138,6 @@ include_once 'partials/header/transparent-header.php';
         <a href="programmes.php" class="iifr-programme">
             <img src="assets/images/academy/4.jpeg" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
-            <span class="iifr-programme__tag">Workshops</span>
             <h3 class="iifr-programme__title">Research &amp; Faculty Workshops</h3>
             <p class="iifr-programme__desc">Short-format programmes focused on teaching excellence, research capability, and leadership development.</p>
             <span class="iifr-programme__more">Learn More</span>

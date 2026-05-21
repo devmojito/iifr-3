@@ -1314,7 +1314,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 36px;
+  padding: 180px 36px 36px;
   text-decoration: none;
   transition: transform 0.28s, box-shadow 0.28s;
 }
@@ -1372,6 +1372,7 @@ body {
   color: rgba(255, 255, 255, 0.82);
   margin: 0 0 24px;
   max-width: 460px;
+  flex: 1;
 }
 .iifr-programme__more {
   display: inline-block;

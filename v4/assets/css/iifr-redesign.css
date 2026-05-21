@@ -26,7 +26,7 @@ body.iifr-redesign-scope { zoom: 0.9; }
   --iifr-fs-display:   46px;   /* hero h1 (one and only one) */
   --iifr-fs-h2:        40px;   /* every section title */
   --iifr-fs-h3:        26px;   /* every card title (no exceptions) */
-  --iifr-fs-eyebrow:   18px;   /* uppercase tags / labels / roles / dates */
+  --iifr-fs-eyebrow:   16px;   /* uppercase tags / labels / roles / dates */
   --iifr-fs-lead:      22px;   /* intro paragraphs under titles, hero p */
   --iifr-fs-body:      20px;   /* every body paragraph everywhere */
   --iifr-fs-small:     18px;   /* stat labels, copyright */
@@ -67,7 +67,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 48px;
+  padding: 0 80px;
   height: var(--iifr-nav-h);
   background: #0D1B3E;
   border-bottom: 1px solid rgba(255,255,255,0.08);

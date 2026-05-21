@@ -14,7 +14,7 @@ require_once __DIR__ . '/../../iifr-config.php';
                 <!-- Brand column -->
                 <div class="iifr-footer__brand-col">
                     <a href="<?= IIFR_BASE ?>" class="iifr-footer__brand" aria-label="IIFR — Home">
-                        <img src="assets/logo.png" alt="IIFR" class="iifr-footer__logo">
+                        <img src="assets/main-horizontal.png" alt="IIFR" class="iifr-footer__logo">
                     </a>
 
                     <p class="iifr-footer__tagline">
@@ -67,8 +67,8 @@ require_once __DIR__ . '/../../iifr-config.php';
                 <div>
                     <h6 class="iifr-footer__title">Programmes</h6>
                     <ul class="iifr-footer__menu">
-                        <li><a href="ecp.php">ECP <span class="iifr-footer__menu-sub">Educators' Certificate Programme</span></a></li>
-                        <li><a href="efm.php">EFM <span class="iifr-footer__menu-sub">Executive Fellow in Management</span></a></li>
+                        <li><a href="ecp.php">ECP</a></li>
+                        <li><a href="efm.php">EFM</a></li>
                         <li><a href="programmes.php">All Programmes</a></li>
                         <li><a href="apply.php">Apply Now</a></li>
                     </ul>

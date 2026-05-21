@@ -67,9 +67,9 @@ body {
   justify-content: space-between;
   padding: 0 48px;
   height: var(--iifr-nav-h);
-  background: #ffffff;
-  border-bottom: 1px solid var(--iifr-border);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  background: #0D1B3E;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Logo — IIFR image lockup, sized to fit comfortably in the 80px bar */
@@ -80,7 +80,7 @@ body {
   line-height: 0;
 }
 .iifr-nav-logo-img {
-  height: 64px;
+  height: 74px;
   width: auto;
   display: block;
 }
@@ -94,7 +94,7 @@ body {
 }
 .iifr-nav-links a {
   text-decoration: none;
-  color: var(--iifr-text-dark);
+  color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   padding-bottom: 4px;
@@ -104,7 +104,7 @@ body {
 }
 .iifr-nav-links a.active,
 .iifr-nav-links a:hover {
-  color: var(--iifr-navy);
+  color: #ffffff;
   border-bottom-color: var(--iifr-gold);
 }
 
@@ -182,10 +182,10 @@ body {
 
 /* Navy variant — used for the second CTA in the navbar */
 .iifr-btn-engage--dark {
-  background: var(--iifr-navy);
-  color: #ffffff;
+  background: #ffffff;
+  color: #0D1B3E;
 }
-.iifr-btn-engage--dark:hover { background: #1a2a55; color: #ffffff; }
+.iifr-btn-engage--dark:hover { background: #e8e8e8; color: #0D1B3E; }
 
 /* Wrapper for the two CTAs in the navbar */
 .iifr-nav-ctas {
@@ -261,7 +261,7 @@ body {
 .iifr-hero-content {
   position: relative;
   z-index: 1;
-  padding: 56px 80px;
+  padding: 40px 80px;
   max-width: 580px;
 }
 .iifr-hero-label {
@@ -322,7 +322,7 @@ body {
 /* ============================================================
    COMMON SECTIONS — exact mockup spec
    ============================================================ */
-.iifr-section { padding: 64px 80px; background: #ffffff; }
+.iifr-section { padding: 40px 80px; background: #ffffff; }
 .iifr-section.light { background: var(--iifr-light-bg); }
 
 .iifr-section-label {
@@ -672,7 +672,7 @@ body {
 
 /* ── Tier 1: trusted-partners strip ── */
 .iifr-footer__partners {
-  padding: 32px 0;
+  padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 .iifr-footer__partners-inner {
@@ -718,23 +718,23 @@ body {
 }
 
 /* ── Main grid ── */
-.iifr-footer__main { padding: 48px 0 40px; }
+.iifr-footer__main { padding: 20px 0 16px; }
 .iifr-footer__grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
-  gap: clamp(32px, 4vw, 48px);
+  gap: clamp(16px, 2.5vw, 24px);
   align-items: start;
 }
 
 /* Brand column */
 .iifr-footer__brand {
   display: inline-block;
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   text-decoration: none;
   line-height: 0;
 }
 .iifr-footer__logo {
-  height: 72px;
+  height: 48px;
   width: auto;
   display: block;
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.35));
@@ -750,7 +750,7 @@ body {
 /* Contact card with gold-bordered icon tiles */
 .iifr-footer__contact {
   list-style: none;
-  margin: 0 0 22px;
+  margin: 0 0 10px;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -829,9 +829,9 @@ body {
   font-size: var(--iifr-fs-h3);
   font-weight: 700;
   color: #ffffff;
-  margin: 0 0 16px;
+  margin: 0 0 10px;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   line-height: var(--iifr-lh-tight);
 }
 .iifr-footer__title::after {
@@ -851,7 +851,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 6px;
 }
 .iifr-footer__menu a {
   display: inline-flex;
@@ -886,7 +886,7 @@ body {
   font-size: var(--iifr-fs-body);
   line-height: 1.55;
   color: rgba(255, 255, 255, 0.78);
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 }
 /* Stacked: input on top, full-width button below */
 .iifr-footer__subscribe {
@@ -941,7 +941,7 @@ body {
 /* ── Legal bar ── */
 .iifr-footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 16px 0;
+  padding: 8px 0;
   background: rgba(0, 0, 0, 0.22);
 }
 .iifr-footer__legal {
@@ -1014,13 +1014,13 @@ body {
 }
 
 @media (max-width: 1199.98px) {
-  .iifr-footer__grid { grid-template-columns: 1fr 1fr; gap: 48px 40px; }
+  .iifr-footer__grid { grid-template-columns: 1fr 1fr; gap: 28px 24px; }
   .iifr-footer__brand-col { grid-column: 1 / -1; }
   .iifr-footer__col--newsletter { grid-column: 1 / -1; }
 }
 @media (max-width: 767.98px) {
   .iifr-footer__inner { padding: 0 24px; }
-  .iifr-footer__main { padding: 36px 0 28px; }
+  .iifr-footer__main { padding: 18px 0 14px; }
   .iifr-footer__legal { justify-content: flex-start; }
   .iifr-footer__top-btn { right: 16px; top: -22px; width: 44px; height: 44px; }
 }
@@ -1034,11 +1034,11 @@ body {
 @media (max-width: 991.98px) {
   :root { --iifr-nav-h: 68px; }
   .iifr-nav { padding: 0 24px; }
-  .iifr-nav-logo-img { height: 52px; }
+  .iifr-nav-logo-img { height: 58px; }
   .iifr-nav-links { display: none; }
   .iifr-btn-engage { display: none; }
   .iifr-nav__burger { display: inline-flex; }
-  .iifr-hero-content { padding: 48px 24px; }
+  .iifr-hero-content { padding: 32px 24px; }
   .iifr-hero h1 { font-size: 32px; }
   .iifr-section-title-center, .iifr-section-title { font-size: 28px; }
   .iifr-section__head h2,
@@ -1048,7 +1048,7 @@ body {
   .iifr-cta-final h2,
   .iifr-about__content h2,
   .iifr-home-intro-text h2 { font-size: 28px; }
-  .iifr-section { padding: 48px 24px; }
+  .iifr-section { padding: 32px 24px; }
   .iifr-home-intro { grid-template-columns: 1fr; gap: 32px; }
   .iifr-pathways { grid-template-columns: 1fr; }
   .iifr-programmes-grid { grid-template-columns: 1fr; }
@@ -1408,7 +1408,7 @@ body {
   color: #e3b85a;
   border: 0;
   padding: 0;
-  margin: 24px 0 32px;
+  margin: 16px 0 20px;
 }
 .iifr-quote-band blockquote::before { content: "\201C"; }
 .iifr-quote-band blockquote::after  { content: "\201D"; }
@@ -1481,7 +1481,7 @@ body {
 /* ── Mission band — centered intro + 4 pillars ── */
 .iifr-mission {
   position: relative;
-  padding: clamp(56px, 6vw, 80px) 80px;
+  padding: clamp(40px, 4vw, 48px) 80px;
   background: var(--iifr-navy);
   color: #ffffff;
   overflow: hidden;
@@ -1660,7 +1660,7 @@ body {
 /* ── Final CTA ── */
 .iifr-cta-final {
   position: relative;
-  padding: clamp(80px, 10vw, 120px) 80px;
+  padding: clamp(48px, 6vw, 64px) 80px;
   text-align: center;
   background: #06122a;
   color: #ffffff;
@@ -1691,17 +1691,17 @@ body {
   font-size: var(--iifr-fs-lead);
   line-height: var(--iifr-lh-relaxed);
   color: rgba(255, 255, 255, 0.82);
-  margin: 0 0 32px;
+  margin: 0 0 20px;
 }
 .iifr-cta-final__buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 .iifr-cta-final__buttons .iifr-btn-outline,
 .iifr-cta-final__buttons .iifr-btn-primary { width: auto; flex: 0 0 auto; white-space: nowrap; }
-@media (max-width: 767.98px) { .iifr-cta-final { padding: 64px 24px; } }
+@media (max-width: 767.98px) { .iifr-cta-final { padding: 40px 24px; } }
 
 /* Section head helper */
 .iifr-section__head {
   max-width: 760px;
-  margin: 0 0 clamp(40px, 5vw, 56px);
+  margin: 0 0 clamp(24px, 3vw, 32px);
 }
 .iifr-section__head--center { margin-left: auto; margin-right: auto; text-align: center; }
 .iifr-section__head h2 {

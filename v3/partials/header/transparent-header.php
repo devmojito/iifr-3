@@ -17,7 +17,7 @@ $active = function ($p) use ($iifr_nav_active) {
 
     <nav class="iifr-nav" aria-label="Primary">
         <a href="<?= IIFR_BASE ?>" class="iifr-nav-logo" aria-label="IIFR — Home">
-            <img src="assets/logo.png" alt="IIFR" class="iifr-nav-logo-img">
+            <img src="assets/main-horizontal.png" alt="IIFR" class="iifr-nav-logo-img">
         </a>
 
         <ul class="iifr-nav-links">

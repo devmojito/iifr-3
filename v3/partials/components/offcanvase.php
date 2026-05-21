@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../iifr-config.php';
     <!-- inner menu area desktop start -->
     <div class="inner-main-wrapper-desk">
         <div class="thumbnail">
-            <a href="<?= IIFR_BASE ?>"><img src="assets/logo.png" alt="IIFR" style="height:150px;width:auto;"></a>
+            <a href="<?= IIFR_BASE ?>"><img src="assets/main-horizontal.png" alt="IIFR" style="height:150px;width:auto;"></a>
         </div>
         <div class="inner-content">
             <p class="disc">

@@ -1,0 +1,2 @@
+# Add machine-specific paths here if needed (e.g. IDE).
+# iifr-config.local.php is committed so Hostinger git deploy receives Resend config.

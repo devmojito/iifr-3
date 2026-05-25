@@ -17,7 +17,7 @@ include_once 'partials/header/transparent-header.php';
 <div class="iifr-page-hero">
     <div class="iifr-page-hero__bg" style="background-image:url('assets/images/academy/2.jpeg');"></div>
     <div class="iifr-page-hero__inner">
-        <span class="iifr-page-hero__eyebrow">Apply</span>
+        <span class="iifr-page-hero__eyebrow">Admissions</span>
         <h1>Apply to IIFR</h1>
         <p>Programme-specific application information, eligibility checklists, upcoming cohort dates, and how to reach us. Choose your pathway below to get started.</p>
         <div class="iifr-page-hero__cta">
@@ -116,32 +116,17 @@ include_once 'partials/header/transparent-header.php';
         </article>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final" id="apply-cta">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
+<?php if ($apply_form_success || $apply_form_error !== '') : ?>
+<section class="iifr-section" id="apply-cta">
+    <div style="max-width:640px;margin:0 auto;">
         <?php if ($apply_form_success) : ?>
-            <div class="iifr-form-notice iifr-form-notice--success mb--30" role="status" style="max-width:640px;margin:0 auto 28px;text-align:left;">Thank you — your application enquiry has been sent to <?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>. We will reply soon.</div>
-        <?php elseif ($apply_form_error !== '') : ?>
-            <div class="iifr-form-notice iifr-form-notice--error mb--30" role="alert" style="max-width:640px;margin:0 auto 28px;text-align:left;"><?= htmlspecialchars($apply_form_error, ENT_QUOTES, 'UTF-8'); ?></div>
+            <div class="iifr-form-notice iifr-form-notice--success" role="status">Thank you — your application enquiry has been sent to <?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>. We will reply soon.</div>
+        <?php else : ?>
+            <div class="iifr-form-notice iifr-form-notice--error" role="alert"><?= htmlspecialchars($apply_form_error, ENT_QUOTES, 'UTF-8'); ?></div>
         <?php endif; ?>
-
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Get Started</span>
-        <h2>Download · Apply · Schedule a conversation.</h2>
-        <p>Request the latest programme brochure, start your application enquiry, or speak with our team about fit and cohort timing.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="mailto:<?= rawurlencode(IIFR_INFO_EMAIL); ?>?subject=IIFR%20%E2%80%94%20Programme%20Brochure%20Request" class="iifr-btn-primary">Download brochure</a>
-            <a href="#" class="iifr-btn-outline" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply now</a>
-            <a href="contact.php" class="iifr-btn-outline">Schedule a conversation</a>
-        </div>
-
-        <p style="margin-top:32px;font-size:var(--iifr-fs-small);color:rgba(255,255,255,0.65);">
-            Bharatiya Vidya Bhavan, KG Marg, Copernicus Marg, New Delhi, Delhi 110001 ·
-            <a href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>" style="color:#e3b85a;text-decoration:none;"><?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?></a>
-        </p>
     </div>
 </section>
+<?php endif; ?>
 
 <?php
     $class = 'v__1';

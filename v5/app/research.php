@@ -41,7 +41,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ RESEARCH THAT SOLVES REAL PROBLEMS ============ -->
 <section class="iifr-section iifr-cream">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Research</span>
+        <span class="iifr-eyebrow">Our Approach</span>
         <h2>Research that Solves Real Problems</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">IIFR advances applied, interdisciplinary research shaped by contemporary organisational and societal challenges.</p>
@@ -74,7 +74,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ ADVANCING TEACHING EXCELLENCE ============ -->
 <section class="iifr-section">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Teaching Excellence</span>
+        <span class="iifr-eyebrow">Innovation in the Classroom</span>
         <h2>Advancing Teaching Excellence Through Innovation</h2>
         <hr class="iifr-gold-line-center">
     </div>
@@ -117,21 +117,6 @@ include_once 'partials/header/transparent-header.php';
         </article>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Engage with IIFR</span>
-        <h2>Let's Build the Future of Education, Together.</h2>
-        <p>Partner, learn, collaborate, and lead transformation with IIFR.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="contact.php" class="iifr-btn-primary">Engage with Us</a>
-            <a href="programmes.php" class="iifr-btn-outline">Explore Programmes</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

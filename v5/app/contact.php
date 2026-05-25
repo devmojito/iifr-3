@@ -113,21 +113,6 @@ include_once 'partials/header/transparent-header.php';
         </div>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Programmes</span>
-        <h2>Explore what IIFR has to offer.</h2>
-        <p>From the 8-day ECP to the 3-year EFM fellowship — find the right pathway for your career.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="ecp.php" class="iifr-btn-primary">Explore ECP</a>
-            <a href="efm.php" class="iifr-btn-outline">Explore EFM</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

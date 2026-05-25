@@ -149,21 +149,6 @@ include_once 'partials/header/transparent-header.php';
         </article>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Join Our Network</span>
-        <h2>Want to be part of the IIFR ecosystem?</h2>
-        <p>IIFR brings together academic leaders, industry experts, and institution builders. Explore how you can contribute.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="contact.php" class="iifr-btn-primary">Contact Us</a>
-            <a href="programmes.php" class="iifr-btn-outline">Explore Programmes</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

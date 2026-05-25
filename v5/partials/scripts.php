@@ -1,6 +1,7 @@
     <!-- offcanvase menu -->
     <?php include_once 'partials/components/offcanvase.php'; ?>
     <?php include_once 'partials/components/search.php'; ?>
+    <?php include_once 'partials/components/float-cta.php'; ?>
     <!-- rts backto top start -->
     <div class="progress-wrap">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">

@@ -9,7 +9,7 @@ include_once 'partials/header/transparent-header.php';
 <div class="iifr-page-hero">
     <div class="iifr-page-hero__bg" style="background-image:url('assets/images/academy/3.jpeg');"></div>
     <div class="iifr-page-hero__inner">
-        <span class="iifr-page-hero__eyebrow">Insights</span>
+        <span class="iifr-page-hero__eyebrow">Thought Leadership</span>
         <h1>Insights</h1>
         <p>IIFR is committed to generating and disseminating knowledge that influences education, industry, and policy.</p>
         <div class="iifr-page-hero__cta">
@@ -22,7 +22,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ INSIGHTS RESOURCES ============ -->
 <section class="iifr-section">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Resources</span>
+        <span class="iifr-eyebrow">Explore</span>
         <h2>Insights Resources.</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">Articles, white papers, case studies, webinars, and research from IIFR faculty and the broader pracademic community.</p>
@@ -89,20 +89,6 @@ include_once 'partials/header/transparent-header.php';
         Content for the Insights hub is currently being developed. Check back soon for articles, white papers, and research from the IIFR community.
     </p>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Contribute</span>
-        <h2>Have a research idea or want to contribute?</h2>
-        <p>IIFR welcomes contributions from faculty, practitioners, and researchers. Get in touch to explore collaboration opportunities.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="contact.php" class="iifr-btn-primary">Contact Us</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

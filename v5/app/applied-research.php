@@ -140,21 +140,6 @@ include_once 'partials/header/transparent-header.php';
         include dirname(__DIR__) . '/partials/components/inquiry-form.php';
     ?>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Build Capability</span>
-        <h2>Short-format impact for faculty and research teams.</h2>
-        <p>Partner, learn, collaborate, and lead transformation with IIFR.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="contact.php" class="iifr-btn-primary">Talk to Us</a>
-            <a href="programmes.php" class="iifr-btn-outline">All Programmes</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

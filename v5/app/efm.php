@@ -204,21 +204,6 @@ include_once 'partials/header/transparent-header.php';
         </aside>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Pracademic Pathway</span>
-        <h2>Start your journey with the ECP.</h2>
-        <p>The 8-day Educators' Certificate Programme is the gateway to the Pracademic identity. Build your teaching foundations before pursuing the EFM fellowship.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="ecp.php" class="iifr-btn-primary">Explore ECP</a>
-            <a href="#" class="iifr-btn-outline" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Register Now</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

@@ -167,21 +167,6 @@ include_once 'partials/header/transparent-header.php';
         include dirname(__DIR__) . '/partials/components/inquiry-form.php';
     ?>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">From Stepping Stone to Pinnacle</span>
-        <h2>Ready for the next step?</h2>
-        <p>The Executive Fellow in Management (EFM) is a 3-year doctoral-equivalent fellowship for those ready to take the next step in academic leadership.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="efm.php" class="iifr-btn-primary">Explore EFM</a>
-            <a href="#" class="iifr-btn-outline" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Register Now</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

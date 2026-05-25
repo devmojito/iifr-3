@@ -1,106 +1,56 @@
 <?php
 require_once __DIR__ . '/../../iifr-config.php';
 ?>
-<!-- ================================================================
-     IIFR footer — compact 2-tier (main grid + legal bar)
-     ================================================================ -->
-<footer class="iifr-footer">
-
-    <!-- Main grid -->
-    <div class="iifr-footer__main">
-        <div class="iifr-footer__inner">
-            <div class="iifr-footer__grid">
-
-                <!-- Brand column -->
-                <div class="iifr-footer__brand-col">
-                    <a href="<?= IIFR_BASE ?>" class="iifr-footer__brand" aria-label="IIFR — Home">
-                        <img src="assets/main-dark.png" alt="IIFR" class="iifr-footer__logo">
-                    </a>
-
-                    <p class="iifr-footer__tagline">
-                        India's institute dedicated to faculty research, teaching excellence, and academic leadership — for India and the Global South.
-                    </p>
-
-                    <ul class="iifr-footer__contact">
-                        <li>
-                            <span class="iifr-footer__icon"><i class="fa-light fa-location-dot" aria-hidden="true"></i></span>
-                            <a href="https://www.google.com/maps?q=Bharatiya+Vidya+Bhavan%2C+KG+Marg%2C+New+Delhi" target="_blank" rel="noopener">
-                                Bharatiya Vidya Bhavan,<br>KG Marg, New Delhi 110001
-                            </a>
-                        </li>
-                        <li>
-                            <span class="iifr-footer__icon"><i class="fa-light fa-envelope" aria-hidden="true"></i></span>
-                            <a href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>">
-                                <?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="iifr-footer__icon"><i class="fa-light fa-phone" aria-hidden="true"></i></span>
-                            <a href="tel:+911161200000">+91 11 6120 0000</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <!-- Explore -->
-                <div>
-                    <h6 class="iifr-footer__title">Explore</h6>
-                    <ul class="iifr-footer__menu">
-                        <li><a href="<?= IIFR_BASE ?>">Home</a></li>
-                        <li><a href="about.php">About Us</a></li>
-                        <li><a href="programmes.php">Programmes</a></li>
-                        <li><a href="research.php">Research</a></li>
-                        <li><a href="faculty.php">Faculty</a></li>
-                        <li><a href="insights.php">Insights</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Programmes -->
-                <div>
-                    <h6 class="iifr-footer__title">Programmes</h6>
-                    <ul class="iifr-footer__menu">
-                        <li><a href="ecp.php">ECP</a></li>
-                        <li><a href="efm.php">EFM</a></li>
-                        <li><a href="programmes.php#alp">ALP</a></li>
-                        <li><a href="programmes.php#rfdp">RFDP</a></li>
-                        <li><a href="programmes.php">All Programmes</a></li>
-                    </ul>
-                </div>
-
-                <!-- Stay In The Loop -->
-                <div class="iifr-footer__col--newsletter">
-                    <h6 class="iifr-footer__title">Stay In The Loop</h6>
-                    <p class="iifr-footer__cta-text">
-                        Insights on faculty development, research, and academic leadership — delivered occasionally.
-                    </p>
-                    <form class="iifr-footer__subscribe" action="#" method="post" onsubmit="event.preventDefault();">
-                        <label for="iifr-footer-email" class="visually-hidden">Email address</label>
-                        <input type="email" id="iifr-footer-email" name="email" placeholder="Your email address" required>
-                        <button type="submit" aria-label="Subscribe">Subscribe</button>
-                    </form>
-
-                    <span class="iifr-footer__connect-label" style="margin-top:14px;">Connect with us</span>
-                    <ul class="iifr-footer__social" aria-label="Social channels">
-                        <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-
-            </div>
+<!-- Footer — v1 layout -->
+<footer class="iifr-v1-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo-mark">IIFR<span class="dot">.</span></div>
+        <p>IIFR is India's first institute dedicated exclusively to faculty research, teaching excellence, and academic leadership — for India and the Global South.</p>
+        <address class="meta">
+          <a href="https://www.google.com/maps?q=Bharatiya+Vidya+Bhavan%2C+KG+Marg%2C+Copernicus+Marg%2C+New+Delhi%2C+Delhi+110001" target="_blank" rel="noopener"><b>Bharatiya Vidya Bhavan</b>, KG Marg, Copernicus Marg,<br/>New Delhi, Delhi 110001, India</a><br/>
+          <a href="tel:+917981895005">+91-79818-95005</a> · <a href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>"><?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?></a>
+        </address>
+        <div class="socials" aria-label="Social links">
+          <a class="soc" href="#" aria-label="LinkedIn">in</a>
+          <a class="soc" href="#" aria-label="X / Twitter">𝕏</a>
+          <a class="soc" href="#" aria-label="YouTube">▶</a>
+          <a class="soc" href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>" aria-label="Email"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
         </div>
-    </div>
-
-    <!-- Legal bar -->
-    <div class="iifr-footer__bottom">
-        <div class="iifr-footer__inner">
-            <div class="iifr-footer__legal">
-                <p class="iifr-footer__copy">&copy; <?= date('Y'); ?> IIFR — International Institute for Faculty &amp; Research. All rights reserved.</p>            </div>
+      </div>
+      <div>
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="<?= IIFR_BASE ?>">Home</a></li>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="faculty.php">Faculty</a></li>
+          <li><a href="programmes.php">Programmes</a></li>
+          <li><a href="insights.php">Insights</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Programmes</h5>
+        <ul>
+          <li><a href="ecp.php">ECP — Educators' Certificate</a></li>
+          <li><a href="efm.php">EFM — Executive Fellow</a></li>
+          <li><a href="applied-research.php">Research &amp; Faculty Workshops</a></li>
+          <li><a href="programmes.php">Custom Programmes</a></li>
+        </ul>
+      </div>
+      <div class="foot-newscol">
+        <h5>Get Started</h5>
+        <p>Speak with our team about programmes, partnerships, and admissions.</p>
+        <div class="iifr-v1-footer__ctas">
+          <a class="btn btn-out-white" href="contact.php">Contact Us</a>
+          <a class="btn btn-gold" href="programmes.php">Explore Programmes</a>
         </div>
+      </div>
     </div>
-
+    <div class="foot-credits">
+      <span>Copyright © <?= date('Y'); ?> IIFR — International Institute for Faculty &amp; Research. All Rights Reserved.</span>
+    </div>
+  </div>
 </footer>
 <!-- footer end -->
 

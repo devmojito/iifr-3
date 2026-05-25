@@ -9,7 +9,7 @@ include_once 'partials/header/transparent-header.php';
 <div class="iifr-page-hero">
     <div class="iifr-page-hero__bg" style="background-image:url('assets/images/academy/5.jpeg');"></div>
     <div class="iifr-page-hero__inner">
-        <span class="iifr-page-hero__eyebrow">Programmes</span>
+        <span class="iifr-page-hero__eyebrow">Explore</span>
         <h1>Our Programmes</h1>
         <p>Four distinct pathways for educators, researchers, and academic leaders — from intensive certification to doctoral fellowship to specialised development programmes.</p>
         <div class="iifr-page-hero__cta">
@@ -331,21 +331,6 @@ include_once 'partials/header/transparent-header.php';
         </article>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Your Pathway Starts Here</span>
-        <h2>From certification to fellowship to leadership — IIFR has a programme for every stage of your academic journey.</h2>
-        <p>Whether you're an industry leader entering academia, a faculty member seeking deeper relevance, or an administrator driving institutional change — begin your transformation with IIFR.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="contact.php" class="iifr-btn-primary">Contact Us</a>
-            <a href="ecp.php" class="iifr-btn-outline">Explore ECP</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

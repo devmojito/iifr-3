@@ -7,7 +7,7 @@ include_once 'partials/header/transparent-header.php';
 
 <!-- ============ HERO ============ -->
 <div class="iifr-page-hero">
-    <div class="iifr-page-hero__bg" style="background-image:url('assets/images/academy/3.jpeg');"></div>
+    <div class="iifr-page-hero__bg" style="background-image:url('assets/images/about-hero.jpeg');"></div>
     <div class="iifr-page-hero__inner">
         <span class="iifr-page-hero__eyebrow">About</span>
         <h1>About Us</h1>
@@ -72,47 +72,41 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ VISION ============ -->
 <section class="iifr-section">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Our Vision</span>
         <h2>Our Vision</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">To be a multidisciplinary global institute integrating academic and industry perspectives to advance education and professional practice.</p>
     </div>
 </section>
 
-<!-- ============ MISSION (4 numbered priorities) ============ -->
-<section class="iifr-mission">
-    <div class="iifr-mission__bg" style="background-image:url('assets/images/academy/4.jpeg');" aria-hidden="true"></div>
+<!-- ============ MISSION (4 priorities) ============ -->
+<section class="iifr-section iifr-cream">
+    <div class="iifr-section__head iifr-section__head--center">
+        <h2>Our Mission</h2>
+        <hr class="iifr-gold-line-center">
+        <p class="iifr-lead">To realise our vision, IIFR is committed to four enduring priorities that guide everything we do.</p>
+    </div>
 
-    <div class="iifr-mission__inner">
-        <div class="iifr-mission__intro">
-            <span class="iifr-mission__eyebrow">Our Mission</span>
-            <h2 class="iifr-mission__title">Four enduring priorities.</h2>
-            <hr class="iifr-mission__divider">
-            <p class="iifr-mission__desc">To realise our vision, IIFR is committed to four enduring priorities that guide everything we do.</p>
-        </div>
-
-        <div class="iifr-mission__pillars">
-            <div class="iifr-mission__pillar">
-                <span class="iifr-mission__pillar-num">01</span>
-                <h3>Cultivating Academic Leaders</h3>
-                <p>Cultivating a new generation of faculty and academic leaders equipped to integrate theory &amp; practice and drive pedagogical innovation and institutional transformation.</p>
-            </div>
-            <div class="iifr-mission__pillar">
-                <span class="iifr-mission__pillar-num">02</span>
-                <h3>Advancing Applied Scholarship</h3>
-                <p>Advancing interdisciplinary applied research that transcends boundaries to solve complex real-world challenges and shape global policy.</p>
-            </div>
-            <div class="iifr-mission__pillar">
-                <span class="iifr-mission__pillar-num">03</span>
-                <h3>Developing Scholar-Practitioners</h3>
-                <p>Developing pracademics — scholar-practitioners who navigate and influence the fluid intersection of classroom, boardroom, and government.</p>
-            </div>
-            <div class="iifr-mission__pillar">
-                <span class="iifr-mission__pillar-num">04</span>
-                <h3>Building a Global Network</h3>
-                <p>Building a high-impact global network that fosters seamless collaboration between the world's leading scholars and industry practitioners.</p>
-            </div>
-        </div>
+    <div class="iifr-pathways-rich iifr-grid--4 iifr-pathways-rich--icons-only">
+        <article class="iifr-pathway">
+            <div class="iifr-pathway__icon"><i class="fa-light fa-chalkboard-user" aria-hidden="true"></i></div>
+            <h3 class="iifr-pathway__title">Cultivating Academic Leaders</h3>
+            <p class="iifr-pathway__body">Cultivating a new generation of faculty and academic leaders equipped to integrate theory &amp; practice and drive pedagogical innovation and institutional transformation.</p>
+        </article>
+        <article class="iifr-pathway">
+            <div class="iifr-pathway__icon"><i class="fa-light fa-book-open" aria-hidden="true"></i></div>
+            <h3 class="iifr-pathway__title">Advancing Applied Scholarship</h3>
+            <p class="iifr-pathway__body">Advancing interdisciplinary applied research that transcends boundaries to solve complex real-world challenges and shape global policy.</p>
+        </article>
+        <article class="iifr-pathway">
+            <div class="iifr-pathway__icon"><i class="fa-light fa-user-tie" aria-hidden="true"></i></div>
+            <h3 class="iifr-pathway__title">Developing Scholar-Practitioners</h3>
+            <p class="iifr-pathway__body">Developing pracademics — scholar-practitioners who navigate and influence the fluid intersection of classroom, boardroom, and government.</p>
+        </article>
+        <article class="iifr-pathway">
+            <div class="iifr-pathway__icon"><i class="fa-light fa-globe" aria-hidden="true"></i></div>
+            <h3 class="iifr-pathway__title">Building a Global Network</h3>
+            <p class="iifr-pathway__body">Building a high-impact global network that fosters seamless collaboration between the world's leading scholars and industry practitioners.</p>
+        </article>
     </div>
 </section>
 
@@ -175,7 +169,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ ACADEMIC COUNCIL (9 members from spec) ============ -->
 <section class="iifr-section">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Academic Council</span>
+        <span class="iifr-eyebrow">Advisory Body</span>
         <h2>Academic Council</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">The Academic Council is central to IIFR's vision, offering strategic guidance on academic excellence, research priorities, and long-term institutional development.</p>
@@ -251,7 +245,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ STRATEGIC PARTNERS ============ -->
 <section class="iifr-section iifr-paper">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Strategic Partners</span>
+        <span class="iifr-eyebrow">Collaborations</span>
         <h2>Strategic Partners</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">Built in collaboration with trusted academic and institutional partners.</p>
@@ -280,21 +274,6 @@ include_once 'partials/header/transparent-header.php';
         </article>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Engage with IIFR</span>
-        <h2>Let's Build the Future of Education, Together.</h2>
-        <p>Partner, learn, collaborate, and lead transformation with IIFR.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="contact.php" class="iifr-btn-primary">Engage with Us</a>
-            <a href="programmes.php" class="iifr-btn-outline">Explore Programmes</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

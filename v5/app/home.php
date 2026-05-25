@@ -7,7 +7,7 @@ include_once 'partials/header/transparent-header.php';
 
 <!-- ============ HERO — Welcome to IIFR ============ -->
 <div class="iifr-page-hero">
-    <div class="iifr-page-hero__bg" style="background-image:url('assets/images/faculty/Lamp%20Lighting.jpeg');"></div>
+    <div class="iifr-page-hero__bg iifr-page-hero__bg--home" style="background-image:url('assets/images/hero-home.png');"></div>
     <div class="iifr-page-hero__inner">
         <span class="iifr-page-hero__eyebrow">Welcome to IIFR</span>
         <h1>Building the Future of Faculty, Research, and Academic Leadership</h1>
@@ -79,7 +79,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ THREE PATHWAYS (rich) ============ -->
 <section class="iifr-section">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Three Pathways</span>
+        <span class="iifr-eyebrow">Your Journey</span>
         <h2>Three Pathways to Transform Your Impact</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">Designed for leaders in academia, industry, and research seeking to create lasting influence.</p>
@@ -107,7 +107,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ PROGRAMMES (3 cards) ============ -->
 <section class="iifr-section iifr-cream">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Our Programmes</span>
+        <span class="iifr-eyebrow">Excellence Pathways</span>
         <h2>Programmes Designed for Academic and Professional Excellence</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">Practice-oriented learning experiences for educators, leaders, and researchers.</p>
@@ -145,7 +145,7 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ INSIGHTS FROM IIFR ============ -->
 <section class="iifr-section">
     <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Insights</span>
+        <span class="iifr-eyebrow">Latest</span>
         <h2>Insights from IIFR</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">Perspectives on higher education, faculty development, research, leadership, and professional practice.</p>
@@ -176,21 +176,6 @@ include_once 'partials/header/transparent-header.php';
         <a href="insights.php" class="iifr-btn-dark">View All Insights</a>
     </div>
 </section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="iifr-cta-final">
-    <div class="iifr-cta-final__bg" style="background-image:url('assets/images/course/event-bg.jpg');"></div>
-    <div class="iifr-cta-final__inner">
-        <span class="iifr-eyebrow" style="color:#e3b85a;">Engage with IIFR</span>
-        <h2>Let's Build the Future of Education, Together.</h2>
-        <p>Partner, learn, collaborate, and lead transformation with IIFR.</p>
-        <div class="iifr-cta-final__buttons">
-            <a href="contact.php" class="iifr-btn-primary">Engage with Us</a>
-            <a href="programmes.php" class="iifr-btn-outline">Explore Programmes</a>
-        </div>
-    </div>
-</section>
-
 <?php
     $class = 'v__1';
     include_once 'partials/footer/footer__default.php';

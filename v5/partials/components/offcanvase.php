@@ -44,7 +44,7 @@ require_once __DIR__ . '/../../iifr-config.php';
                         <li><a href="applied-research.php">Applied Research</a></li>
                     </ul>
                 </li>
-                <li><a href="research.php" class="main">Research</a></li>
+                <li><a href="research.php" class="main">Research and Faculty</a></li>
                 <li><a href="insights.php" class="main">Insights</a></li>
                 <li><a href="apply.php" class="main">Apply</a></li>
                 <li><a href="contact.php" class="main iifr-nav-contact">Contact</a></li>

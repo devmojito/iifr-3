@@ -32,7 +32,7 @@ $active = function ($p) use ($iifr_nav_active) {
                     <li><a href="applied-research.php">Applied Research</a></li>
                 </ul>
             </li>
-            <li><a href="research.php" class="<?= trim($active('research')); ?>">Research</a></li>
+            <li><a href="research.php" class="<?= trim($active('research')); ?>">Research and Faculty</a></li>
             <li><a href="insights.php" class="<?= trim($active('insights')); ?>">Insights</a></li>
         </ul>
 

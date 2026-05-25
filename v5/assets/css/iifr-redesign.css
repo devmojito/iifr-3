@@ -2662,3 +2662,263 @@ footer.iifr-v1-footer .visually-hidden {
   .iifr-float-cta { right: 14px; bottom: 14px; }
   .iifr-float-btn { padding: 10px 18px; font-size: 14px; width: 160px; }
 }
+
+/* ================================================================
+   ECP PAGE — dedicated redesign (v5)
+   ================================================================ */
+
+/* ── Quick-facts bar (overlaps the standard page hero) ── */
+.ecp-facts-wrap {
+  padding: 0 80px;
+  margin-top: -44px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 5;
+}
+.ecp-facts {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(13,27,62,0.10);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.ecp-fact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 26px;
+  border-right: 1px solid var(--iifr-border);
+}
+.ecp-fact:last-child { border-right: none; }
+.ecp-fact__icon {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: #fbf3e0;
+  color: var(--iifr-gold);
+  display: flex; align-items: center; justify-content: center;
+}
+.ecp-fact__icon svg { width: 24px; height: 24px; }
+.ecp-fact__body { display: flex; flex-direction: column; }
+.ecp-fact__label {
+  font-size: var(--iifr-fs-eyebrow);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--iifr-text-light);
+  font-weight: 700;
+}
+.ecp-fact__value {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--iifr-navy);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+.ecp-fact__sub {
+  font-size: var(--iifr-fs-small);
+  color: var(--iifr-text-mid);
+  margin-top: 2px;
+}
+
+/* ── Overview (text + media) ── */
+.ecp-overview {
+  display: grid;
+  grid-template-columns: 1.02fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.ecp-overview__title {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--iifr-fs-h2);
+  color: var(--iifr-navy);
+  font-weight: 700;
+  line-height: var(--iifr-lh-tight);
+  margin-bottom: 4px;
+}
+.ecp-overview__text p {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-body);
+  color: var(--iifr-text-mid);
+  margin-bottom: 14px;
+}
+.ecp-overview__media {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--iifr-light-bg);
+}
+.ecp-overview__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ecp-overview--reverse .ecp-overview__media { order: -1; }
+.ecp-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.ecp-tag {
+  font-size: var(--iifr-fs-small);
+  font-weight: 600;
+  color: var(--iifr-navy);
+  background: #ffffff;
+  border: 1px solid var(--iifr-gold);
+  border-radius: 999px;
+  padding: 7px 16px;
+}
+
+/* ── Who should attend ── */
+.ecp-audience {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+.ecp-aud-card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ecp-aud-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--iifr-gold);
+  box-shadow: 0 12px 30px rgba(13,27,62,0.08);
+}
+.ecp-aud-card__icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: #fbf3e0;
+  color: var(--iifr-gold);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 18px;
+}
+.ecp-aud-card__icon svg { width: 30px; height: 30px; }
+.ecp-aud-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--iifr-fs-h3);
+  font-weight: 700;
+  color: var(--iifr-navy);
+  line-height: var(--iifr-lh-tight);
+  margin-bottom: 10px;
+}
+.ecp-aud-card__desc {
+  font-size: var(--iifr-fs-small);
+  line-height: var(--iifr-lh-body);
+  color: var(--iifr-text-mid);
+}
+
+/* ── What participants will learn (cards) ── */
+.ecp-learn-band { background: #eef1f8; }
+.ecp-learn {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+.ecp-learn-card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 12px;
+  padding: 26px 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ecp-learn-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--iifr-gold);
+  box-shadow: 0 12px 30px rgba(13,27,62,0.08);
+}
+.ecp-learn-card__icon {
+  display: inline-flex;
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  background: #fbf3e0;
+  color: var(--iifr-gold);
+  align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.ecp-learn-card__icon svg { width: 28px; height: 28px; }
+.ecp-learn-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--iifr-fs-h3);
+  font-weight: 700;
+  color: var(--iifr-navy);
+  line-height: var(--iifr-lh-tight);
+  margin-bottom: 10px;
+}
+.ecp-learn-card__desc {
+  font-size: var(--iifr-fs-small);
+  line-height: var(--iifr-lh-body);
+  color: var(--iifr-text-mid);
+}
+
+/* ── Programme journey (connected cards) ── */
+.ecp-journey {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px 28px;
+  position: relative;
+}
+.ecp-journey--three { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.ecp-step {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 12px;
+  padding: 34px 24px 24px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ecp-step:hover {
+  transform: translateY(-3px);
+  border-color: var(--iifr-gold);
+  box-shadow: 0 12px 30px rgba(13,27,62,0.08);
+}
+.ecp-step__node {
+  position: absolute;
+  top: -26px; left: 50%; transform: translateX(-50%);
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--iifr-navy);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 6px var(--iifr-light-bg);
+}
+.ecp-step__num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; color: var(--iifr-gold); }
+.ecp-step__title {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--iifr-fs-h3);
+  font-weight: 700;
+  color: var(--iifr-navy);
+  line-height: var(--iifr-lh-tight);
+  margin: 6px 0 8px;
+}
+.ecp-step__desc {
+  font-size: var(--iifr-fs-small);
+  line-height: var(--iifr-lh-body);
+  color: var(--iifr-text-mid);
+}
+
+/* ── ECP responsive ── */
+@media (max-width: 1024px) {
+  .ecp-audience { grid-template-columns: repeat(2, 1fr); }
+  .ecp-learn { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .ecp-overview, .ecp-overview--reverse { grid-template-columns: 1fr; gap: 28px; }
+  .ecp-overview--reverse .ecp-overview__media { order: 0; }
+  .ecp-facts { grid-template-columns: repeat(2, 1fr); }
+  .ecp-fact:nth-child(2) { border-right: none; }
+  .ecp-fact:nth-child(1), .ecp-fact:nth-child(2) { border-bottom: 1px solid var(--iifr-border); }
+  .ecp-journey { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 767.98px) {
+  .ecp-facts-wrap { padding: 0 24px; }
+  .ecp-audience { grid-template-columns: 1fr; }
+  .ecp-learn { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .ecp-facts { grid-template-columns: 1fr; }
+  .ecp-fact { border-right: none; border-bottom: 1px solid var(--iifr-border); }
+  .ecp-fact:last-child { border-bottom: none; }
+  .ecp-journey { grid-template-columns: 1fr; }
+}

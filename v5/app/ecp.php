@@ -5,167 +5,289 @@ ob_start();
 include_once 'partials/header/transparent-header.php';
 ?>
 
-<!-- ============ HERO ============ -->
+<!-- ============ HERO (standardised page hero) ============ -->
 <div class="iifr-page-hero">
-    <div class="iifr-page-hero__bg" style="background-image:url('assets/images/academy/4.jpeg');"></div>
+    <div class="iifr-page-hero__bg" style="background-image:url('assets/images/ecp/ecp-hero.png');"></div>
     <div class="iifr-page-hero__inner">
-        <span class="iifr-page-hero__eyebrow">Programme · ECP</span>
+        <span class="iifr-page-hero__eyebrow">Educators' Certificate Programme</span>
         <h1>Educators' Certificate Programme (ECP)</h1>
-        <p>An 8-day intensive programme designed to build a new category of educators — one that moves seamlessly between industry and academia.</p>
+        <p>Become an impactful educator and shape the future of learning — an 8-day intensive, in-person programme designed to help professionals and faculty move seamlessly between industry and academia.</p>
         <div class="iifr-page-hero__cta">
-            <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply for ECP</a>
-            <a href="efm.php" class="iifr-btn-outline">Compare with EFM</a>
+            <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply for June 2026 Cohort</a>
+            <a href="assets/files/document.pdf" class="iifr-btn-outline" target="_blank" rel="noopener">Download Brochure</a>
         </div>
     </div>
 </div>
 
-<!-- ============ DETAIL LAYOUT (main + sticky sidebar) ============ -->
-<section class="iifr-section">
-    <div class="iifr-detail-layout">
-
-        <!-- ── MAIN COLUMN ── -->
-        <div class="iifr-detail-main">
-
-            <div class="iifr-detail-hero">
-                <img src="assets/images/academy/3.jpeg" alt="ECP Programme">
-            </div>
-
-            <div class="iifr-detail-section" id="curriculum">
-                <h2 class="iifr-detail-section__title">About the Programme</h2>
-                <p>The ECP is designed to build a new category of educators, one that moves seamlessly between industry and academia. ECP bridges the gap between what industry knows and what academia teaches.</p>
-                <p>Whether you are a senior executive transitioning into academic roles, a faculty member seeking to deepen practical relevance, or a corporate trainer seeking upskilling — the ECP equips you with the tools, frameworks, and AI-powered methods to transform your teaching and leadership.</p>
-            </div>
-
-            <div class="iifr-detail-section" id="eligibility">
-                <h2 class="iifr-detail-section__title">Consider the ECP if you are:</h2>
-                <ul class="iifr-list">
-                    <li><p>A senior executive transitioning into academic roles as visiting faculty or Professor of Practice</p></li>
-                    <li><p>An academic or faculty seeking to deepen practical relevance and climb the capability ladder</p></li>
-                    <li><p>A corporate trainer or L&amp;D professional seeking internal training and upskilling at the organisational level</p></li>
-                </ul>
-            </div>
-
-            <div class="iifr-detail-section">
-                <h2 class="iifr-detail-section__title">Primary Audience</h2>
-                <ul class="iifr-list">
-                    <li><p>C-Suite Executives</p></li>
-                    <li><p>Global Capability Center (GCC) Senior Managers</p></li>
-                    <li><p>Corporate HR and L&amp;D Leadership</p></li>
-                    <li><p>"Second Career" Aspirants</p></li>
-                </ul>
-            </div>
-
-            <div class="iifr-detail-section">
-                <h2 class="iifr-detail-section__title">Additional Audience</h2>
-                <p>Junior faculty at newer institutions (e.g., Junior IIMs) and government and national service organisations.</p>
-            </div>
-
-            <div class="iifr-detail-section" id="modules">
-                <h2 class="iifr-detail-section__title">Programme Modules — 8 Days</h2>
-                <p style="margin-bottom:24px;">Four intensive modules covering the full spectrum of modern academic practice:</p>
-
-                <div class="iifr-grid iifr-grid--2" style="gap:20px;">
-                    <article class="iifr-module-card">
-                        <span class="iifr-module-card__num">Module 01</span>
-                        <h3 class="iifr-module-card__title">Curriculum Development</h3>
-                        <ul class="iifr-module-card__topics">
-                            <li><span>Architecting a course from scratch</span></li>
-                            <li><span>Learning-objective setting</span></li>
-                            <li><span>Module sequencing</span></li>
-                        </ul>
-                    </article>
-
-                    <article class="iifr-module-card">
-                        <span class="iifr-module-card__num">Module 02</span>
-                        <h3 class="iifr-module-card__title">Pedagogy &amp; Case Writing</h3>
-                        <ul class="iifr-module-card__topics">
-                            <li><span>Writing cases using AI and web resources</span></li>
-                            <li><span>Case-teaching technique</span></li>
-                            <li><span>Facilitating case discussions</span></li>
-                            <li><span>Storytelling for the classroom</span></li>
-                        </ul>
-                    </article>
-
-                    <article class="iifr-module-card">
-                        <span class="iifr-module-card__num">Module 03</span>
-                        <h3 class="iifr-module-card__title">Advanced Tools in AI</h3>
-                        <ul class="iifr-module-card__topics">
-                            <li><span>Using LLMs for case development</span></li>
-                            <li><span>AI-powered course design</span></li>
-                            <li><span>AI-integrated teaching materials and assessments</span></li>
-                        </ul>
-                    </article>
-
-                    <article class="iifr-module-card">
-                        <span class="iifr-module-card__num">Module 04</span>
-                        <h3 class="iifr-module-card__title">Academic Leadership</h3>
-                        <ul class="iifr-module-card__topics">
-                            <li><span>Major business frameworks across strategy, marketing, operations, digital systems, organisational change, and finance</span></li>
-                            <li><span>Managing academic enterprises</span></li>
-                            <li><span>Integrating multiple disciplinary lenses</span></li>
-                            <li><span>Four days of intensive leadership training</span></li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-
-            <div class="iifr-detail-section" id="ai-focus">
-                <h2 class="iifr-detail-section__title">Key Focus: AI in Learning &amp; Teaching</h2>
-                <p>AI is not one tool in the kit. It is a new mode of pedagogical delivery running through every module. At the ECP, you will learn how to reduce the 12-month traditional case-study development cycle to days through:</p>
-                <ul class="iifr-list" style="margin-top:18px;">
-                    <li><p><strong>Assisted case writing</strong> — AI-assisted case development using LLMs and web resources.</p></li>
-                    <li><p><strong>Course design</strong> — AI-powered curriculum architecture and learning-objective setting.</p></li>
-                    <li><p><strong>Content creation</strong> — AI-integrated teaching materials and assessments.</p></li>
-                    <li><p><strong>Student engagement</strong> — AI-enabled personalised learning pathways and classroom analytics.</p></li>
-                </ul>
+<!-- ============ QUICK FACTS BAR ============ -->
+<div class="ecp-facts-wrap">
+    <div class="ecp-facts wow fadeInUp" data-wow-duration="0.7s">
+        <div class="ecp-fact">
+            <span class="ecp-fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+            </span>
+            <div class="ecp-fact__body">
+                <span class="ecp-fact__label">Duration</span>
+                <span class="ecp-fact__value">8 Days</span>
+                <span class="ecp-fact__sub">Modular over 4 weekends</span>
             </div>
         </div>
-
-        <!-- ── SIDEBAR ── -->
-        <aside class="iifr-detail-aside">
-            <div class="iifr-detail-aside__card">
-                <h3 class="iifr-detail-aside__title">ECP Details</h3>
-                <ul class="iifr-detail-aside__list">
-                    <li><strong>Format</strong>8 days modular — 4 weekends (3 × 2 days + 1 × 2 days)</li>
-                    <li><strong>Duration</strong>2 months</li>
-                    <li><strong>Mode</strong>Hybrid / Weekend</li>
-                    <li><strong>Cohort Size</strong>25–30 participants</li>
-                    <li><strong>Fee</strong>₹5 lakh</li>
-                    <li><strong>Programme Starts</strong>June 2026</li>
-                    <li><strong>Certification</strong>IIFR + EFMD</li>
-                </ul>
-                <div class="iifr-detail-aside__certs">
-                    <img src="assets/images/logo/bvb.png" alt="BVB">
-                    <img src="assets/images/logo/efmd.png" alt="EFMD">
-                </div>
+        <div class="ecp-fact">
+            <span class="ecp-fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </span>
+            <div class="ecp-fact__body">
+                <span class="ecp-fact__label">Mode</span>
+                <span class="ecp-fact__value">Hybrid / Weekend</span>
+                <span class="ecp-fact__sub">Classroom &amp; immersive</span>
             </div>
-
-            <div class="iifr-detail-aside__card">
-                <h3 class="iifr-detail-aside__title">Contact</h3>
-                <p class="iifr-detail-aside__contact">
-                    <a href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>"><?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?></a><br>
-                    <span style="color:var(--iifr-text-light);font-size:var(--iifr-fs-small);">Subsidised access (interest-free loans) available for junior faculty at newer institutions and government/national service organisations.</span>
-                </p>
+        </div>
+        <div class="ecp-fact">
+            <span class="ecp-fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="9" r="6"/><path d="M9 14.5L8 22l4-2 4 2-1-7.5"/></svg>
+            </span>
+            <div class="ecp-fact__body">
+                <span class="ecp-fact__label">Certification</span>
+                <span class="ecp-fact__value">IIFR + EFMD</span>
+                <span class="ecp-fact__sub">Globally recognised</span>
             </div>
-
-            <div class="iifr-detail-aside__card iifr-detail-aside__card--cta">
-                <h3 class="iifr-detail-aside__title">Register Now</h3>
-                <p class="iifr-detail-aside__cta-text">Ready to bridge the gap between industry and academia? Reserve your seat in the next ECP cohort.</p>
-                <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button" style="width:100%;">Register for ECP</a>
+        </div>
+        <div class="ecp-fact">
+            <span class="ecp-fact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg>
+            </span>
+            <div class="ecp-fact__body">
+                <span class="ecp-fact__label">Cohort</span>
+                <span class="ecp-fact__value">June 2026</span>
+                <span class="ecp-fact__sub">25–30 participants</span>
             </div>
-        </aside>
+        </div>
+    </div>
+</div>
+
+<!-- ============ PROGRAMME OVERVIEW ============ -->
+<section class="iifr-section">
+    <div class="ecp-overview">
+        <div class="ecp-overview__text wow fadeInUp">
+            <span class="iifr-eyebrow">Programme Overview</span>
+            <h2 class="ecp-overview__title">Build Teaching Excellence for Modern Classrooms</h2>
+            <hr class="iifr-gold-line">
+            <p>The Educators' Certificate Programme helps participants design effective courses, deliver engaging sessions, create relevant teaching material, and integrate industry experience into academic learning.</p>
+            <p>The programme focuses on curriculum design, case development, teaching methods, AI-enabled pedagogy, and applied classroom practice.</p>
+            <div class="ecp-tags">
+                <span class="ecp-tag">Practical</span>
+                <span class="ecp-tag">Industry-Relevant</span>
+                <span class="ecp-tag">Interactive</span>
+                <span class="ecp-tag">Impactful</span>
+            </div>
+        </div>
+        <div class="ecp-overview__media wow fadeIn" data-wow-delay="0.15s">
+            <img src="assets/images/ecp/ecp-overview.png" alt="IIFR faculty and participants in discussion">
+        </div>
     </div>
 </section>
 
-<!-- ============ ENQUIRY FORM ============ -->
-<section class="iifr-section iifr-paper" id="inquiry-form">
-    <?php
-        $iifr_form_context = 'ECP';
-        $iifr_form_return = 'ecp.php';
-        $iifr_form_heading = 'Enquire about ECP';
-        $iifr_form_intro = 'Interested in the Educators\' Certificate Programme? Leave your details and we will respond with cohort dates and next steps.';
-        include dirname(__DIR__) . '/partials/components/inquiry-form.php';
-    ?>
+<!-- ============ WHO SHOULD ATTEND ============ -->
+<section class="iifr-section iifr-paper">
+    <div class="iifr-section__head iifr-section__head--center wow fadeInUp">
+        <h2>Who Should Attend?</h2>
+        <hr class="iifr-gold-line-center">
+    </div>
+    <div class="ecp-audience">
+        <article class="ecp-aud-card wow fadeInUp" data-wow-delay="0s">
+            <span class="ecp-aud-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
+            </span>
+            <h3 class="ecp-aud-card__title">Faculty &amp; Educators</h3>
+            <p class="ecp-aud-card__desc">Faculty members and educators looking to elevate their teaching effectiveness and classroom impact.</p>
+        </article>
+        <article class="ecp-aud-card wow fadeInUp" data-wow-delay="0.1s">
+            <span class="ecp-aud-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+            </span>
+            <h3 class="ecp-aud-card__title">Senior Industry Professionals</h3>
+            <p class="ecp-aud-card__desc">Professionals seeking to transition into academia and contribute as faculty or guest educators.</p>
+        </article>
+        <article class="ecp-aud-card wow fadeInUp" data-wow-delay="0.2s">
+            <span class="ecp-aud-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 2 8l10 5 10-5-10-5zM6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></svg>
+            </span>
+            <h3 class="ecp-aud-card__title">Professors of Practice Aspirants</h3>
+            <p class="ecp-aud-card__desc">Industry experts aspiring to become Professors of Practice and bridge the industry–academia gap.</p>
+        </article>
+        <article class="ecp-aud-card wow fadeInUp" data-wow-delay="0.3s">
+            <span class="ecp-aud-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M3 10l9-6 9 6z"/></svg>
+            </span>
+            <h3 class="ecp-aud-card__title">Academic Leaders &amp; L&amp;D Professionals</h3>
+            <p class="ecp-aud-card__desc">Leaders involved in faculty development, learning strategy, and institutional capacity building.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ============ WHAT PARTICIPANTS WILL LEARN ============ -->
+<section class="iifr-section ecp-learn-band">
+    <div class="iifr-section__head iifr-section__head--center wow fadeInUp">
+        <span class="iifr-eyebrow">Learning Outcomes</span>
+        <h2>What Participants Will Learn</h2>
+        <hr class="iifr-gold-line-center">
+    </div>
+    <div class="ecp-learn">
+        <article class="ecp-learn-card wow fadeInUp" data-wow-delay="0s">
+            <span class="ecp-learn-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </span>
+            <h3 class="ecp-learn-card__title">Modern Teaching &amp; Classroom Engagement</h3>
+            <p class="ecp-learn-card__desc">Apply contemporary teaching methods to create engaging and meaningful learning experiences.</p>
+        </article>
+        <article class="ecp-learn-card wow fadeInUp" data-wow-delay="0.08s">
+            <span class="ecp-learn-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19.5V6a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2zM18 4v16"/></svg>
+            </span>
+            <h3 class="ecp-learn-card__title">Curriculum &amp; Course Design</h3>
+            <p class="ecp-learn-card__desc">Design relevant and outcome-driven curricula aligned with academic and industry needs.</p>
+        </article>
+        <article class="ecp-learn-card wow fadeInUp" data-wow-delay="0.16s">
+            <span class="ecp-learn-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h6M8 16h4"/></svg>
+            </span>
+            <h3 class="ecp-learn-card__title">Case Writing &amp; Case-based Teaching</h3>
+            <p class="ecp-learn-card__desc">Develop and use cases that encourage critical thinking and real-world decision making.</p>
+        </article>
+        <article class="ecp-learn-card wow fadeInUp" data-wow-delay="0s">
+            <span class="ecp-learn-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM12 1v3M12 20v3M1 12h3M20 12h3"/></svg>
+            </span>
+            <h3 class="ecp-learn-card__title">AI-enabled Pedagogy &amp; Research Support</h3>
+            <p class="ecp-learn-card__desc">Leverage AI tools to enhance teaching, assessment, and research productivity.</p>
+        </article>
+        <article class="ecp-learn-card wow fadeInUp" data-wow-delay="0.08s">
+            <span class="ecp-learn-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M6 21V9l4 3 4-6 4 8M5 5h3"/></svg>
+            </span>
+            <h3 class="ecp-learn-card__title">Translating Industry Experience into Academic Value</h3>
+            <p class="ecp-learn-card__desc">Convert real-world insights into relevant content and impactful learning.</p>
+        </article>
+        <article class="ecp-learn-card wow fadeInUp" data-wow-delay="0.16s">
+            <span class="ecp-learn-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="5"/><path d="M9 13l-1 8 4-2 4 2-1-8"/></svg>
+            </span>
+            <h3 class="ecp-learn-card__title">Building Educator Confidence &amp; Academic Credibility</h3>
+            <p class="ecp-learn-card__desc">Strengthen teaching presence, classroom facilitation, and academic credibility.</p>
+        </article>
+    </div>
+</section>
+
+<!-- ============ PROGRAMME JOURNEY ============ -->
+<section class="iifr-section iifr-cream">
+    <div class="iifr-section__head iifr-section__head--center wow fadeInUp">
+        <span class="iifr-eyebrow">Step by Step</span>
+        <h2>Programme Journey</h2>
+        <hr class="iifr-gold-line-center">
+    </div>
+    <ol class="ecp-journey">
+        <li class="ecp-step wow fadeInUp" data-wow-delay="0s">
+            <span class="ecp-step__node"><span class="ecp-step__num">1</span></span>
+            <h3 class="ecp-step__title">Foundations of Teaching Excellence</h3>
+            <p class="ecp-step__desc">Core principles, roles and mindset of an educator.</p>
+        </li>
+        <li class="ecp-step wow fadeInUp" data-wow-delay="0.08s">
+            <span class="ecp-step__node"><span class="ecp-step__num">2</span></span>
+            <h3 class="ecp-step__title">Curriculum &amp; Learning Design</h3>
+            <p class="ecp-step__desc">Designing outcome-based curricula and learning experiences.</p>
+        </li>
+        <li class="ecp-step wow fadeInUp" data-wow-delay="0.16s">
+            <span class="ecp-step__node"><span class="ecp-step__num">3</span></span>
+            <h3 class="ecp-step__title">Case Method &amp; Experiential Learning</h3>
+            <p class="ecp-step__desc">Developing cases and using experiential pedagogies.</p>
+        </li>
+        <li class="ecp-step wow fadeInUp" data-wow-delay="0s">
+            <span class="ecp-step__node"><span class="ecp-step__num">4</span></span>
+            <h3 class="ecp-step__title">AI in Teaching &amp; Research</h3>
+            <p class="ecp-step__desc">Integrating AI tools for teaching, assessment, and research.</p>
+        </li>
+        <li class="ecp-step wow fadeInUp" data-wow-delay="0.08s">
+            <span class="ecp-step__node"><span class="ecp-step__num">5</span></span>
+            <h3 class="ecp-step__title">Classroom Practice &amp; Peer Feedback</h3>
+            <p class="ecp-step__desc">Apply learnings through practice sessions and peer review.</p>
+        </li>
+        <li class="ecp-step wow fadeInUp" data-wow-delay="0.16s">
+            <span class="ecp-step__node"><span class="ecp-step__num">6</span></span>
+            <h3 class="ecp-step__title">Certification &amp; Educator Portfolio</h3>
+            <p class="ecp-step__desc">Build your portfolio and receive IIFR + EFMD certification.</p>
+        </li>
+    </ol>
+</section>
+
+<!-- ============ PROGRAMME MODULES (retained detail) ============ -->
+<section class="iifr-section" id="modules">
+    <div class="iifr-section__head iifr-section__head--center wow fadeInUp">
+        <span class="iifr-eyebrow">The Curriculum</span>
+        <h2>Programme Modules — 8 Days</h2>
+        <hr class="iifr-gold-line-center">
+        <p class="iifr-lead">Four intensive modules covering the full spectrum of modern academic practice.</p>
+    </div>
+    <div class="iifr-grid iifr-grid--2" style="gap:20px;max-width:1080px;margin:0 auto;">
+        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0s">
+            <span class="iifr-module-card__num">Module 01</span>
+            <h3 class="iifr-module-card__title">Curriculum Development</h3>
+            <ul class="iifr-module-card__topics">
+                <li><span>Architecting a course from scratch</span></li>
+                <li><span>Learning-objective setting</span></li>
+                <li><span>Module sequencing</span></li>
+            </ul>
+        </article>
+        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0.1s">
+            <span class="iifr-module-card__num">Module 02</span>
+            <h3 class="iifr-module-card__title">Pedagogy &amp; Case Writing</h3>
+            <ul class="iifr-module-card__topics">
+                <li><span>Writing cases using AI and web resources</span></li>
+                <li><span>Case-teaching technique</span></li>
+                <li><span>Facilitating case discussions</span></li>
+                <li><span>Storytelling for the classroom</span></li>
+            </ul>
+        </article>
+        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0s">
+            <span class="iifr-module-card__num">Module 03</span>
+            <h3 class="iifr-module-card__title">Advanced Tools in AI</h3>
+            <ul class="iifr-module-card__topics">
+                <li><span>Using LLMs for case development</span></li>
+                <li><span>AI-powered course design</span></li>
+                <li><span>AI-integrated teaching materials and assessments</span></li>
+            </ul>
+        </article>
+        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0.1s">
+            <span class="iifr-module-card__num">Module 04</span>
+            <h3 class="iifr-module-card__title">Academic Leadership</h3>
+            <ul class="iifr-module-card__topics">
+                <li><span>Major business frameworks across strategy, marketing, operations, digital systems, organisational change, and finance</span></li>
+                <li><span>Managing academic enterprises</span></li>
+                <li><span>Integrating multiple disciplinary lenses</span></li>
+                <li><span>Four days of intensive leadership training</span></li>
+            </ul>
+        </article>
+    </div>
+</section>
+
+<!-- ============ KEY FOCUS: AI ============ -->
+<section class="iifr-section iifr-paper" id="ai-focus">
+    <div class="ecp-overview ecp-overview--reverse">
+        <div class="ecp-overview__media wow fadeIn">
+            <img src="assets/images/ecp/ecp-ai.png" alt="AI-enabled pedagogy at IIFR">
+        </div>
+        <div class="ecp-overview__text wow fadeInUp" data-wow-delay="0.1s">
+            <span class="iifr-eyebrow">Key Focus</span>
+            <h2 class="ecp-overview__title">AI in Learning &amp; Teaching</h2>
+            <hr class="iifr-gold-line">
+            <p>AI is not one tool in the kit. It is a new mode of pedagogical delivery running through every module. At the ECP, you will learn how to reduce the 12-month traditional case-study development cycle to days through:</p>
+            <ul class="iifr-list" style="margin-top:18px;">
+                <li><p><strong>Assisted case writing</strong> — AI-assisted case development using LLMs and web resources.</p></li>
+                <li><p><strong>Course design</strong> — AI-powered curriculum architecture and learning-objective setting.</p></li>
+                <li><p><strong>Content creation</strong> — AI-integrated teaching materials and assessments.</p></li>
+                <li><p><strong>Student engagement</strong> — AI-enabled personalised learning pathways and classroom analytics.</p></li>
+            </ul>
+        </div>
+    </div>
 </section>
 <?php
     $class = 'v__1';

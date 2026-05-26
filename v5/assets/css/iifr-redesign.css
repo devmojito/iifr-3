@@ -449,6 +449,89 @@ body {
 }
 .iifr-btn-ghost:hover { background: var(--iifr-navy); color: #ffffff; }
 
+/* ── What is IIFR + Strategic Partners (two-column) ── */
+.iifr-whatis {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+.iifr-whatis__main h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h2);
+  line-height: var(--iifr-lh-tight);
+  color: var(--iifr-navy);
+  margin: 10px 0 14px;
+}
+.iifr-whatis__main p { font-size: var(--iifr-fs-body); line-height: var(--iifr-lh-relaxed); color: var(--iifr-text-mid); margin: 0 0 18px; max-width: 620px; }
+.iifr-whatis__main p:last-of-type { margin-bottom: 0; }
+.iifr-whatis__cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
+.iifr-whatis__partners { padding-top: 6px; }
+.iifr-whatis__partners-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h3);
+  color: var(--iifr-navy);
+  margin: 0 0 10px;
+}
+.iifr-whatis__partners-sub {
+  font-size: var(--iifr-fs-small);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-light);
+  margin: 0 0 8px;
+}
+.iifr-partner-list { list-style: none; margin: 0; padding: 0; }
+.iifr-partner-list__item {
+  display: flex;
+  align-items: center;
+  min-height: 78px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--iifr-border);
+}
+.iifr-partner-list__item:last-child { border-bottom: none; }
+.iifr-partner-list__item img {
+  max-height: 52px;
+  max-width: 240px;
+  width: auto;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+/* EFMD is a near-square logo, so it reads small at the others' height —
+   give it a larger height so its visual size matches the wide logos. */
+.iifr-partner-list__item--efmd img {
+  max-height: 110px;
+  max-width: 230px;
+}
+@media (max-width: 900px) {
+  .iifr-whatis { grid-template-columns: 1fr; gap: 48px; }
+  .iifr-whatis__partners { border-top: 1px solid var(--iifr-border); padding-top: 32px; }
+}
+
+/* ── Insights blog cards + article body ── */
+.iifr-prog-date {
+  display: block;
+  font-size: var(--iifr-fs-small);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--iifr-gold);
+  margin-bottom: 8px;
+}
+.iifr-article { max-width: 760px; margin: 0 auto; }
+.iifr-article > p { font-size: var(--iifr-fs-lead); line-height: var(--iifr-lh-relaxed); color: var(--iifr-text-mid); margin: 0 0 22px; }
+.iifr-article > p.iifr-article__lead { font-size: var(--iifr-fs-lead); color: var(--iifr-navy); font-weight: 600; }
+.iifr-article h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h2);
+  color: var(--iifr-navy);
+  margin: 42px 0 16px;
+}
+.iifr-article ul { margin: 0 0 22px; padding-left: 22px; }
+.iifr-article li { font-size: var(--iifr-fs-body); line-height: var(--iifr-lh-relaxed); color: var(--iifr-text-mid); margin-bottom: 10px; }
+
 .iifr-partners-box {
   background: #ffffff;
   border: 1px solid var(--iifr-border);
@@ -639,9 +722,35 @@ body {
 footer.iifr-v1-footer {
   background: #0a1c3d;
   color: #fff;
-  padding: 80px 0 0;
+  padding: 0 0 40px;
   border-top: 1px solid rgba(227, 184, 90, 0.18);
   font-family: 'Source Sans 3', sans-serif;
+}
+.iifr-foot-cta { padding: 30px 0; border-bottom: 1px solid rgba(227, 184, 90, 0.18); }
+.iifr-foot-cta__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.iifr-foot-cta__left { display: flex; align-items: center; gap: 24px; }
+.iifr-foot-cta__icon { color: #e3b85a; flex: none; line-height: 1; }
+.iifr-foot-cta__icon i { font-size: 44px; }
+.iifr-foot-cta__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h3);
+  color: #fff;
+  margin: 0 0 5px;
+  line-height: 1.2;
+}
+.iifr-foot-cta__title span { color: #e3b85a; }
+.iifr-foot-cta__sub { color: #cfd5e6; font-size: var(--iifr-fs-body); margin: 0; }
+.iifr-foot-cta__btn { white-space: nowrap; flex: none; }
+footer.iifr-v1-footer .foot-grid { padding-top: 44px; }
+@media (max-width: 700px) {
+  .iifr-foot-cta__inner { flex-direction: column; align-items: flex-start; gap: 20px; }
 }
 footer.iifr-v1-footer .wrap {
   width: 100%;
@@ -652,7 +761,7 @@ footer.iifr-v1-footer .wrap {
 }
 footer.iifr-v1-footer .foot-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
+  grid-template-columns: 1.4fr 1fr 1.3fr;
   gap: 48px;
   align-items: start;
 }
@@ -698,12 +807,15 @@ footer.iifr-v1-footer .soc {
   font-size: 13px;
   text-decoration: none;
 }
-footer.iifr-v1-footer .soc:hover { background: rgba(227, 184, 90, 0.1); }
+footer.iifr-v1-footer .soc:hover { background: rgba(227, 184, 90, 0.1); color: #fff; border-color: #e3b85a; }
+footer.iifr-v1-footer .soc svg,
 footer.iifr-v1-footer .soc .icon {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   color: currentColor;
 }
+footer.iifr-v1-footer .foot-logo { display: inline-block; line-height: 0; }
+footer.iifr-v1-footer .foot-logo-img { height: 88px; width: auto; display: block; }
 footer.iifr-v1-footer h5 {
   font-family: 'Source Sans 3', sans-serif;
   font-size: var(--iifr-fs-eyebrow);
@@ -805,7 +917,7 @@ footer.iifr-v1-footer .news button {
 footer.iifr-v1-footer .news button:hover { background: #e8a81a; }
 footer.iifr-v1-footer .foot-credits {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 18px 0;
+  padding: 14px 0;
   font-size: var(--iifr-fs-small);
   color: #9aa3bd;
   display: flex;
@@ -813,7 +925,7 @@ footer.iifr-v1-footer .foot-credits {
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
-  margin-top: 48px;
+  margin-top: 28px;
 }
 footer.iifr-v1-footer .visually-hidden {
   position: absolute !important;
@@ -1488,6 +1600,213 @@ footer.iifr-v1-footer .visually-hidden {
   .iifr-leader__media { min-height: 320px; }
 }
 
+/* ── Academic Council photo cards ── */
+.iifr-council-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+@media (max-width: 1100px) { .iifr-council-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 760px)  { .iifr-council-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px)  { .iifr-council-grid { grid-template-columns: 1fr; } }
+.iifr-council-card {
+  border: 1px solid var(--iifr-border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.28s, box-shadow 0.28s, border-color 0.28s;
+}
+.iifr-council-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--iifr-gold);
+  box-shadow: 0 12px 32px rgba(13, 27, 62, 0.10);
+}
+.iifr-council-card:focus-visible { outline: 2px solid var(--iifr-gold); outline-offset: 2px; }
+.iifr-council-card__photo { position: relative; aspect-ratio: 1 / 1; background: #f6f2e9; flex: 1; }
+.iifr-council-card__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; display: block; }
+.iifr-council-card__ph {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-weight: 700; font-size: 44px;
+  color: #0d1b3e; background: linear-gradient(135deg, #efe7d4, #f6f2e9);
+}
+.iifr-council-card__overlay {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 16px 16px 14px;
+  background: linear-gradient(to top, rgba(6,12,28,0.93) 0%, rgba(6,12,28,0.62) 55%, rgba(6,12,28,0) 100%);
+}
+.iifr-council-card__name { font-family: 'Playfair Display', serif; font-weight: 700; font-size: var(--iifr-fs-h3); color: #fff; margin: 0 0 3px; line-height: 1.22; }
+.iifr-council-card__role { font-size: var(--iifr-fs-small); color: #e9c877; line-height: 1.3; display: block; }
+
+/* ── Leadership & Governance — two separate cards ── */
+.iifr-govern { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; align-items: start; }
+.iifr-govern__card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+}
+.iifr-govern__heading {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h3);
+  color: var(--iifr-navy);
+  margin: 0 0 12px;
+}
+.iifr-govern__intro {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 0 auto;
+  max-width: 480px;
+  min-height: 5em;
+}
+.iifr-govern__label {
+  display: block;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: var(--iifr-fs-eyebrow);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--iifr-gold);
+  margin: 30px 0 16px;
+}
+.iifr-gov-grid { display: flex; flex-wrap: wrap; gap: 22px 16px; justify-content: center; }
+.iifr-gov-grid--2 > * { flex: 0 1 calc(50% - 8px); }
+.iifr-gov-grid--3 > * { flex: 0 1 calc(33.333% - 11px); }
+.iifr-gov-grid--4 > * { flex: 0 1 calc(25% - 12px); }
+
+/* Profile card: photo with name + designation centered below */
+.iifr-gov-person { text-align: center; }
+.iifr-gov-person--clickable { cursor: pointer; }
+.iifr-gov-person__photo {
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f6f2e9;
+  border: 1px solid var(--iifr-border);
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+}
+.iifr-gov-person__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.iifr-gov-person__ph {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-weight: 700; font-size: 30px;
+  color: #0d1b3e; background: linear-gradient(135deg, #efe7d4, #f6f2e9);
+}
+.iifr-gov-person--clickable:hover .iifr-gov-person__photo {
+  border-color: var(--iifr-gold);
+  box-shadow: 0 8px 20px rgba(13, 27, 62, 0.12);
+  transform: translateY(-3px);
+}
+.iifr-gov-person__name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-body);
+  color: var(--iifr-navy);
+  margin: 12px 0 3px;
+  line-height: 1.25;
+}
+.iifr-gov-person__role { font-size: var(--iifr-fs-small); color: var(--iifr-text-mid); display: block; line-height: 1.35; }
+@media (max-width: 1024px) {
+  .iifr-govern { grid-template-columns: 1fr; gap: 24px; }
+}
+@media (max-width: 560px) {
+  .iifr-gov-grid--3 > *, .iifr-gov-grid--4 > * { flex: 0 1 calc(50% - 8px); }
+}
+
+/* ── Why IIFR Was Created — heading + icon points ── */
+.iifr-why { display: grid; grid-template-columns: 0.85fr 1.55fr; gap: 56px; align-items: center; }
+.iifr-why__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h2);
+  color: var(--iifr-navy);
+  margin: 0 0 4px;
+  line-height: var(--iifr-lh-tight);
+}
+.iifr-why__intro p { font-size: var(--iifr-fs-body); line-height: var(--iifr-lh-relaxed); color: var(--iifr-text-mid); margin: 14px 0 0; }
+.iifr-why__points { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.iifr-why__icon { color: var(--iifr-navy); display: block; margin-bottom: 14px; }
+.iifr-why__icon i { font-size: 30px; }
+.iifr-why__point-title {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-body);
+  color: var(--iifr-navy);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+.iifr-why__point-text { font-size: var(--iifr-fs-body); line-height: var(--iifr-lh-relaxed); color: var(--iifr-text-mid); margin: 0; }
+@media (max-width: 900px) {
+  .iifr-why { grid-template-columns: 1fr; gap: 36px; }
+  .iifr-why__points { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) { .iifr-why__points { grid-template-columns: 1fr; } }
+
+/* ── Our Mission — centered icon cards ── */
+.iifr-mission-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.iifr-mission-card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 14px;
+  padding: 34px 24px;
+  text-align: center;
+}
+.iifr-mission-card__top { display: flex; justify-content: center; margin-bottom: 18px; }
+.iifr-mission-card__icon { color: var(--iifr-navy); }
+.iifr-mission-card__icon i { font-size: 48px; }
+.iifr-mission-card__title {
+  font-family: 'Playfair Display', serif; font-weight: 700;
+  font-size: var(--iifr-fs-h3); color: var(--iifr-navy);
+  margin: 0 0 8px; line-height: 1.25;
+}
+.iifr-mission-card__body { font-size: var(--iifr-fs-body); line-height: var(--iifr-lh-relaxed); color: var(--iifr-text-mid); margin: 0; }
+@media (max-width: 900px) { .iifr-mission-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .iifr-mission-grid { grid-template-columns: 1fr; } }
+
+/* ── Light brand-blue tint background ── */
+.iifr-section.iifr-tint-blue { background: #eef2f9; }
+
+/* ── Our Vision — dark band ── */
+.iifr-vision { background: #0a1c3d; }
+.iifr-vision .iifr-section__head h2 { color: #ffffff; }
+.iifr-vision .iifr-section__head .iifr-lead { color: rgba(255, 255, 255, 0.92); max-width: 760px; margin-left: auto; margin-right: auto; }
+
+/* ── Profile modal / popup ── */
+.iifr-profile-modal { position: fixed; inset: 0; z-index: 10000; display: none; align-items: center; justify-content: center; padding: 24px; }
+.iifr-profile-modal.is-open { display: flex; }
+.iifr-profile-modal__backdrop { position: absolute; inset: 0; background: rgba(6, 12, 28, 0.62); }
+.iifr-profile-modal__dialog {
+  position: relative; z-index: 1; width: min(640px, 100%);
+  background: #fff; border-radius: 18px; overflow: hidden;
+  max-height: 90vh; display: flex; flex-direction: column;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+}
+.iifr-profile-modal__close {
+  position: absolute; top: 14px; right: 14px; z-index: 2;
+  width: 34px; height: 34px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(255,255,255,0.92); color: var(--iifr-navy); font-size: 20px; line-height: 1;
+}
+.iifr-profile-modal__close:hover { background: #fff; }
+.iifr-profile-modal__head { display: flex; gap: 18px; align-items: center; padding: 26px 26px 18px; }
+.iifr-profile-modal__avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; object-position: center top; flex: none; background: #f6f2e9; }
+.iifr-profile-modal__avatar-ph {
+  width: 88px; height: 88px; border-radius: 50%; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-weight: 700; font-size: 30px;
+  color: #0d1b3e; background: linear-gradient(135deg, #efe7d4, #f6f2e9);
+}
+.iifr-profile-modal__name { font-family: 'Playfair Display', serif; font-size: var(--iifr-fs-h2); font-weight: 700; color: var(--iifr-navy); margin: 0 0 4px; line-height: 1.2; }
+.iifr-profile-modal__role { font-size: var(--iifr-fs-small); letter-spacing: 1px; text-transform: uppercase; color: var(--iifr-gold); font-weight: 700; }
+.iifr-profile-modal__body { padding: 4px 26px 26px; overflow: auto; }
+.iifr-profile-modal__bio { color: var(--iifr-text-mid); line-height: 1.7; margin: 0 0 22px; font-size: var(--iifr-fs-body); }
+.iifr-profile-modal__li {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  background: #0a66c2; color: #fff; font-weight: 700; font-size: var(--iifr-fs-small);
+  padding: 11px 20px; border-radius: 9px;
+}
+.iifr-profile-modal__li:hover { background: #08529b; }
+
 /* ── Final CTA ── */
 .iifr-cta-final {
   position: relative;
@@ -1562,27 +1881,29 @@ footer.iifr-v1-footer .visually-hidden {
 }
 .iifr-page-hero__bg {
   position: absolute;
-  inset: 0;
+  inset: 0;            /* full-bleed so the overlay blends over continuous image — no seam */
   background-size: cover;
-  background-position: center 30%;
+  background-position: center;
   opacity: 1;
   z-index: -2;
 }
 .iifr-page-hero__bg--home {
   background-position: center 48%;
 }
-/* Soft navy tint — heavier on the left where text sits, lighter on the right
-   so the image stays visible. Matches the About-page reference look. */
+.iifr-page-hero__bg--research {
+  background-position: center 22%;   /* lift image up so faces aren't cropped */
+}
+/* Solid brand-blue panel on the left third holding the text, softly blending
+   into the clean (untinted) image on the right — no hard division. */
 .iifr-page-hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(13, 27, 62, 0.78) 0%,
-    rgba(13, 27, 62, 0.55) 35%,
-    rgba(13, 27, 62, 0.35) 70%,
-    rgba(13, 27, 62, 0.30) 100%
+    var(--iifr-navy) 0%,
+    var(--iifr-navy) 32%,
+    rgba(13, 27, 62, 0) 64%
   );
   z-index: -1;
 }
@@ -1608,14 +1929,14 @@ footer.iifr-v1-footer .visually-hidden {
   line-height: var(--iifr-lh-tight);
   color: #ffffff;
   margin: 0 0 16px;
-  max-width: 600px;
+  max-width: 440px;
 }
 .iifr-page-hero p {
   font-size: var(--iifr-fs-lead);
   line-height: var(--iifr-lh-relaxed);
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.88);
   margin: 0;
-  max-width: 600px;
+  max-width: 440px;
 }
 .iifr-page-hero__cta {
   display: flex;
@@ -1627,6 +1948,16 @@ footer.iifr-v1-footer .visually-hidden {
   .iifr-page-hero { min-height: 380px; }
   .iifr-page-hero__inner { padding: 40px 24px; }
   .iifr-page-hero h1 { font-size: 32px; }
+  .iifr-page-hero h1, .iifr-page-hero p { max-width: none; }
+  .iifr-page-hero__bg { left: 0; }   /* full-bleed image behind heavier tint on mobile */
+  .iifr-page-hero::before {
+    background: linear-gradient(
+      90deg,
+      var(--iifr-navy) 0%,
+      rgba(13, 27, 62, 0.86) 55%,
+      rgba(13, 27, 62, 0.55) 100%
+    );
+  }
 }
 
 /* ── Generic grid utility ── */
@@ -2662,6 +2993,11 @@ footer.iifr-v1-footer .visually-hidden {
   .iifr-float-cta { right: 14px; bottom: 14px; }
   .iifr-float-btn { padding: 10px 18px; font-size: 14px; width: 160px; }
 }
+/* Lift the scroll-to-top button above the floating Apply/Email CTA so they don't overlap */
+.progress-wrap { right: 24px; bottom: 196px; }
+@media (max-width: 767.98px) {
+  .progress-wrap { right: 14px; bottom: 156px; }
+}
 
 /* ================================================================
    ECP PAGE — dedicated redesign (v5)
@@ -2670,7 +3006,7 @@ footer.iifr-v1-footer .visually-hidden {
 /* ── Quick-facts bar (overlaps the standard page hero) ── */
 .ecp-facts-wrap {
   padding: 0 80px;
-  margin-top: -44px;
+  margin-top: -12px;
   margin-bottom: 30px;
   position: relative;
   z-index: 5;

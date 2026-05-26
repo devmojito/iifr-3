@@ -3,20 +3,44 @@ require_once __DIR__ . '/../../iifr-config.php';
 ?>
 <!-- Footer — v1 layout -->
 <footer class="iifr-v1-footer">
+  <div class="iifr-foot-cta">
+    <div class="wrap iifr-foot-cta__inner">
+      <div class="iifr-foot-cta__left">
+        <span class="iifr-foot-cta__icon" aria-hidden="true">
+          <i class="fa-light fa-building-columns"></i>
+        </span>
+        <div>
+          <h3 class="iifr-foot-cta__title">Let's Build the Future of Education, <span>Together.</span></h3>
+          <p class="iifr-foot-cta__sub">Partner, learn, collaborate, and lead transformation with IIFR.</p>
+        </div>
+      </div>
+      <a href="contact.php" class="btn btn-gold iifr-foot-cta__btn">Engage with Us</a>
+    </div>
+  </div>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <div class="logo-mark">IIFR<span class="dot">.</span></div>
+        <a href="<?= IIFR_BASE ?>" class="foot-logo" aria-label="IIFR — Home">
+          <img src="assets/main-dark.png" alt="IIFR — International Institute for Faculty &amp; Research" class="foot-logo-img">
+        </a>
         <p>IIFR is India's first institute dedicated exclusively to faculty research, teaching excellence, and academic leadership — for India and the Global South.</p>
         <address class="meta">
           <a href="https://www.google.com/maps?q=Bharatiya+Vidya+Bhavan%2C+KG+Marg%2C+Copernicus+Marg%2C+New+Delhi%2C+Delhi+110001" target="_blank" rel="noopener"><b>Bharatiya Vidya Bhavan</b>, KG Marg, Copernicus Marg,<br/>New Delhi, Delhi 110001, India</a><br/>
           <a href="tel:+917981895005">+91-79818-95005</a> · <a href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>"><?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?></a>
         </address>
         <div class="socials" aria-label="Social links">
-          <a class="soc" href="#" aria-label="LinkedIn">in</a>
-          <a class="soc" href="#" aria-label="X / Twitter">𝕏</a>
-          <a class="soc" href="#" aria-label="YouTube">▶</a>
-          <a class="soc" href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>" aria-label="Email"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></a>
+          <a class="soc" href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a class="soc" href="#" aria-label="X / Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26L22.84 21.75h-6.66l-5.21-6.82-5.96 6.82H1.69l7.73-8.84L1.16 2.25h6.83l4.71 6.23 5.54-6.23zm-1.16 17.52h1.83L7.01 4.13H5.05l12.03 15.64z"/></svg>
+          </a>
+          <a class="soc" href="#" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+          </a>
+          <a class="soc" href="mailto:<?= htmlspecialchars(IIFR_INFO_EMAIL, ENT_QUOTES, 'UTF-8'); ?>" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
         </div>
       </div>
       <div>
@@ -29,15 +53,6 @@ require_once __DIR__ . '/../../iifr-config.php';
           <li><a href="insights.php">Insights</a></li>
         </ul>
       </div>
-      <div>
-        <h5>Programmes</h5>
-        <ul>
-          <li><a href="ecp.php">ECP — Educators' Certificate</a></li>
-          <li><a href="efm.php">EFM — Executive Fellow</a></li>
-          <li><a href="applied-research.php">Research &amp; Faculty Workshops</a></li>
-          <li><a href="programmes.php">Custom Programmes</a></li>
-        </ul>
-      </div>
       <div class="foot-newscol">
         <h5>Get Started</h5>
         <p>Speak with our team about programmes, partnerships, and admissions.</p>
@@ -46,9 +61,6 @@ require_once __DIR__ . '/../../iifr-config.php';
           <a class="btn btn-gold" href="programmes.php">Explore Programmes</a>
         </div>
       </div>
-    </div>
-    <div class="foot-credits">
-      <span>Copyright © <?= date('Y'); ?> IIFR — International Institute for Faculty &amp; Research. All Rights Reserved.</span>
     </div>
   </div>
 </footer>

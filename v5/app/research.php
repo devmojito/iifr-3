@@ -7,7 +7,7 @@ include_once 'partials/header/transparent-header.php';
 
 <!-- ============ HERO ============ -->
 <div class="iifr-page-hero">
-    <div class="iifr-page-hero__bg" style="background-image:url('assets/images/research/research-banner.jpg');"></div>
+    <div class="iifr-page-hero__bg iifr-page-hero__bg--research" style="background-image:url('assets/images/research/research-banner.jpg');"></div>
     <div class="iifr-page-hero__inner">
         <span class="iifr-page-hero__eyebrow">Research</span>
         <h1>Faculty &amp; Research for Real-World Impact</h1>

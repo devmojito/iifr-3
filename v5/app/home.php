@@ -19,60 +19,37 @@ include_once 'partials/header/transparent-header.php';
     </div>
 </div>
 
-<!-- ============ WHAT IS IIFR ============ -->
+<!-- ============ WHAT IS IIFR + STRATEGIC PARTNERS ============ -->
 <section class="iifr-section">
-    <div class="iifr-about">
-        <div class="iifr-about__media">
-            <img src="assets/images/academy/1.jpeg" alt="IIFR campus">
-        </div>
-
-        <div class="iifr-about__content">
+    <div class="iifr-whatis">
+        <div class="iifr-whatis__main">
             <span class="iifr-eyebrow">About IIFR</span>
             <h2>What is IIFR</h2>
             <hr class="iifr-gold-line">
             <p>The International Institute for Faculty &amp; Research (IIFR) is an autonomous academic institute established to strengthen faculty capability, research excellence, and academic leadership across India and the Global South.</p>
             <p>Designed for the evolving needs of higher education and professional practice, IIFR brings practitioners &amp; academicians together and integrates relevance &amp; rigor to support impactful pedagogy and applied research.</p>
 
-            <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
-                <a href="about.php" class="iifr-btn-dark">Our Vision</a>
-                <a href="faculty.php" class="iifr-btn-dark">Meet Our Faculty</a>
+            <div class="iifr-whatis__cta">
+                <a href="about.php" class="iifr-btn-dark">About IIFR</a>
+                <a href="about.php" class="iifr-btn-ghost">Our Vision</a>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- ============ STRATEGIC PARTNERS ============ -->
-<section class="iifr-section iifr-paper">
-    <div class="iifr-section__head iifr-section__head--center">
-        <span class="iifr-eyebrow">Strategic Partners</span>
-        <h2>Built in collaboration with trusted academic and institutional partners.</h2>
-        <hr class="iifr-gold-line-center">
-    </div>
-
-    <div class="iifr-partners-rich">
-        <article class="iifr-partner-card">
-            <div class="iifr-partner-card__logo">
-                <img src="assets/images/logo/bvb.png" alt="Bharatiya Vidya Bhavan">
-            </div>
-            <h3 class="iifr-partner-card__name">Bharatiya Vidya Bhavan</h3>
-            <p class="iifr-partner-card__desc">Since 1938 — Shaping Education &amp; Society.</p>
-        </article>
-
-        <article class="iifr-partner-card">
-            <div class="iifr-partner-card__logo">
-                <img src="assets/images/logo/efmd.png" alt="EFMD Global Network">
-            </div>
-            <h3 class="iifr-partner-card__name">EFMD Global Network</h3>
-            <p class="iifr-partner-card__desc">Advancing Excellence in Management Development.</p>
-        </article>
-
-        <article class="iifr-partner-card">
-            <div class="iifr-partner-card__logo">
-                <img src="assets/images/logo/latticed.png" alt="LatticEd" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=&quot;font-family:Playfair Display,Georgia,serif;font-size:28px;color:#0d1b3e;font-weight:700;&quot;>LatticEd</div>';">
-            </div>
-            <h3 class="iifr-partner-card__name">LatticEd</h3>
-            <p class="iifr-partner-card__desc">Pioneering Learning Impact &amp; Academic Innovation.</p>
-        </article>
+        <aside class="iifr-whatis__partners">
+            <h3 class="iifr-whatis__partners-title">Strategic Partners</h3>
+            <p class="iifr-whatis__partners-sub">Built in collaboration with trusted academic and institutional partners.</p>
+            <ul class="iifr-partner-list">
+                <li class="iifr-partner-list__item">
+                    <img src="assets/images/logo/bvb.png" alt="Bharatiya Vidya Bhavan">
+                </li>
+                <li class="iifr-partner-list__item iifr-partner-list__item--efmd">
+                    <img src="assets/images/logo/efmd.png" alt="EFMD Global Network">
+                </li>
+                <li class="iifr-partner-list__item">
+                    <img src="assets/images/logo/latticed.png" alt="LatticEd" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=&quot;font-family:Playfair Display,Georgia,serif;font-size:24px;color:#0d1b3e;font-weight:700;&quot;>LatticEd</div>';">
+                </li>
+            </ul>
+        </aside>
     </div>
 </section>
 
@@ -115,21 +92,21 @@ include_once 'partials/header/transparent-header.php';
 
     <div class="iifr-programmes iifr-programmes--three">
         <a href="ecp.php" class="iifr-programme">
-            <img src="assets/images/academy/5.jpeg" alt="" class="iifr-programme__img">
+            <img src="assets/images/ecp/ecp-card.png" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
             <h3 class="iifr-programme__title">Educator Certification Programme (ECP)</h3>
             <p class="iifr-programme__desc">For professionals and aspiring educators preparing for impactful academic careers, integrating theory &amp; practice, AI-led pedagogy, and meta-frameworks for multi-disciplinary orientation.</p>
             <span class="iifr-programme__more">Learn More</span>
         </a>
         <a href="efm.php" class="iifr-programme">
-            <img src="assets/images/academy/6.jpeg" alt="" class="iifr-programme__img">
+            <img src="assets/images/efm/efm-card.png" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
             <h3 class="iifr-programme__title">Executive Fellow in Management (EFM)</h3>
             <p class="iifr-programme__desc">For CXOs and senior leaders seeking to contribute via applied research, teaching, mentoring, and thought leadership.</p>
             <span class="iifr-programme__more">Learn More</span>
         </a>
         <a href="programmes.php" class="iifr-programme">
-            <img src="assets/images/academy/4.jpeg" alt="" class="iifr-programme__img">
+            <img src="assets/images/research/workshops-card.png" alt="" class="iifr-programme__img">
             <span class="iifr-programme__overlay" aria-hidden="true"></span>
             <h3 class="iifr-programme__title">Research &amp; Faculty Workshops</h3>
             <p class="iifr-programme__desc">Short-format programmes focused on teaching excellence, research capability, and leadership development.</p>
@@ -152,19 +129,19 @@ include_once 'partials/header/transparent-header.php';
     </div>
 
     <div class="iifr-news-grid">
-        <a href="insights.php" class="iifr-news-card">
+        <a href="insight/blog/faculty-development.php" class="iifr-news-card">
             <span class="iifr-news-card__date">May 15, 2026</span>
             <h3 class="iifr-news-card__title">Rethinking Faculty Development in India</h3>
             <p class="iifr-news-card__desc">Why continuous learning, mentoring, and capability building are essential for the future of higher education.</p>
             <span class="iifr-news-card__more">Read More</span>
         </a>
-        <a href="insights.php" class="iifr-news-card">
+        <a href="insight/blog/academia-industry.php" class="iifr-news-card">
             <span class="iifr-news-card__date">April 28, 2026</span>
             <h3 class="iifr-news-card__title">Bridging Academia and Industry</h3>
             <p class="iifr-news-card__desc">Building meaningful partnerships to create relevant learning and real-world impact.</p>
             <span class="iifr-news-card__more">Read More</span>
         </a>
-        <a href="insights.php" class="iifr-news-card">
+        <a href="insight/blog/applied-research.php" class="iifr-news-card">
             <span class="iifr-news-card__date">April 10, 2026</span>
             <h3 class="iifr-news-card__title">The Future of Applied Research</h3>
             <p class="iifr-news-card__desc">How applied research can address real-world challenges and shape societal progress.</p>

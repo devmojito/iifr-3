@@ -90,6 +90,18 @@ if ($path !== '/' && !preg_match('#\.php$#i', $path)) {
     }
 }
 
+// Nested app pages, e.g. /insight/blog/faculty-development.php
+if ($path !== '/' && preg_match('#\.php$#i', $path)) {
+    $candidate = $appDir . str_replace('/', DIRECTORY_SEPARATOR, $path);
+    $resolved = realpath($candidate);
+    if ($resolved !== false
+        && str_starts_with($resolved, $appDir . DIRECTORY_SEPARATOR)
+        && is_file($resolved)) {
+        require $resolved;
+        exit;
+    }
+}
+
 iifr_serve404($appDir);
 
 function iifr_serve404(string $appDir): void

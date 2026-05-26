@@ -19,75 +19,52 @@ include_once 'partials/header/transparent-header.php';
     </div>
 </div>
 
-<!-- ============ INSIGHTS RESOURCES ============ -->
+<!-- ============ INSIGHTS — ARTICLES ============ -->
 <section class="iifr-section">
     <div class="iifr-section__head iifr-section__head--center">
         <span class="iifr-eyebrow">Explore</span>
-        <h2>Insights Resources.</h2>
+        <h2>Insights from IIFR</h2>
         <hr class="iifr-gold-line-center">
-        <p class="iifr-lead">Articles, white papers, case studies, webinars, and research from IIFR faculty and the broader pracademic community.</p>
+        <p class="iifr-lead">Articles and essays on faculty development, applied research, academic leadership, and the evolving intersection of industry and academia.</p>
     </div>
 
     <div class="iifr-grid iifr-grid--3">
-        <a href="#" class="iifr-prog-card">
+        <a href="insight/blog/faculty-development.php" class="iifr-prog-card">
             <div class="iifr-prog-img">
-                <img src="assets/images/academy/1.jpeg" alt="">
+                <img src="assets/images/insights/rethinking.png" alt="Rethinking Faculty Development in India">
             </div>
             <div class="iifr-prog-body">
-                <h3>Blog / IIFR Journal</h3>
-                <p>Perspectives on faculty development, pedagogy, research, and the changing landscape of higher education in India and the Global South.</p>
-                <div class="iifr-prog-arrow">→</div>
+                <span class="iifr-prog-date">May 15, 2026</span>
+                <h3>Rethinking Faculty Development in India</h3>
+                <p>Why continuous learning, mentoring, and capability building are essential for the future of higher education.</p>
+                <div class="iifr-prog-arrow">Read More →</div>
             </div>
         </a>
 
-        <a href="#" class="iifr-prog-card">
+        <a href="insight/blog/academia-industry.php" class="iifr-prog-card">
             <div class="iifr-prog-img">
-                <img src="assets/images/academy/5.jpeg" alt="">
+                <img src="assets/images/insights/academia.png" alt="Bridging Academia and Industry">
             </div>
             <div class="iifr-prog-body">
-                <h3>White Papers</h3>
-                <p>Evidence-based analysis on the structural challenges in Indian higher education and the pracademic opportunity.</p>
-                <div class="iifr-prog-arrow">→</div>
+                <span class="iifr-prog-date">April 28, 2026</span>
+                <h3>Bridging Academia and Industry</h3>
+                <p>Building meaningful partnerships to create relevant learning and real-world impact.</p>
+                <div class="iifr-prog-arrow">Read More →</div>
             </div>
         </a>
 
-        <a href="#" class="iifr-prog-card">
+        <a href="insight/blog/applied-research.php" class="iifr-prog-card">
             <div class="iifr-prog-img">
-                <img src="assets/images/academy/4.jpeg" alt="">
+                <img src="assets/images/insights/future.png" alt="The Future of Applied Research">
             </div>
             <div class="iifr-prog-body">
-                <h3>Case Studies</h3>
-                <p>Applied research and case writing emerging from IIFR programmes and faculty collaboration.</p>
-                <div class="iifr-prog-arrow">→</div>
-            </div>
-        </a>
-
-        <a href="#" class="iifr-prog-card">
-            <div class="iifr-prog-img">
-                <img src="assets/images/academy/7.jpeg" alt="">
-            </div>
-            <div class="iifr-prog-body">
-                <h3>Webinar Archive</h3>
-                <p>Recordings from the Delhi Business &amp; Policy Dialogue, Doc-Ed series, and faculty development workshops.</p>
-                <div class="iifr-prog-arrow">→</div>
-            </div>
-        </a>
-
-        <a href="#" class="iifr-prog-card">
-            <div class="iifr-prog-img">
-                <img src="assets/images/academy/6.jpeg" alt="">
-            </div>
-            <div class="iifr-prog-body">
-                <h3>Research</h3>
-                <p>Publications and working papers from IIFR faculty and ECP/EFM participants.</p>
-                <div class="iifr-prog-arrow">→</div>
+                <span class="iifr-prog-date">April 10, 2026</span>
+                <h3>The Future of Applied Research</h3>
+                <p>How applied research can address real-world challenges and shape societal progress.</p>
+                <div class="iifr-prog-arrow">Read More →</div>
             </div>
         </a>
     </div>
-
-    <p style="text-align:center;margin-top:48px;font-size:var(--iifr-fs-body);color:var(--iifr-text-light);font-style:italic;">
-        Content for the Insights hub is currently being developed. Check back soon for articles, white papers, and research from the IIFR community.
-    </p>
 </section>
 <?php
     $class = 'v__1';

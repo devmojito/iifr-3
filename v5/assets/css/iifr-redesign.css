@@ -85,17 +85,17 @@ body {
   line-height: 1;
 }
 .iifr-nav .logo-emblem {
-  width: 72px;
-  height: 72px;
+  width: 80px;
+  height: 80px;
   display: block;
   flex-shrink: 0;
   object-fit: contain;
-  margin: -6px 0 -6px -10px;
+  margin: -8px 0 -8px -12px;
 }
 .iifr-nav .logo-mark {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 800;
-  font-size: 28px;
+  font-size: 30px;
   color: #ffffff;
   letter-spacing: -0.01em;
   line-height: 1;
@@ -778,12 +778,20 @@ footer.iifr-v1-footer .foot-grid {
   gap: 48px;
   align-items: start;
 }
+footer.iifr-v1-footer .foot-brand {
+  text-align: left;
+  overflow: visible;
+}
 footer.iifr-v1-footer .foot-brand .logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 4px;
+  margin: 0 0 6px;
+  padding: 0;
   text-decoration: none;
   line-height: 1;
+  overflow: visible;
 }
 footer.iifr-v1-footer .foot-brand .logo-emblem {
   width: 72px;
@@ -791,16 +799,18 @@ footer.iifr-v1-footer .foot-brand .logo-emblem {
   display: block;
   flex-shrink: 0;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  object-position: left center;
+  margin: 0 0 0 -12px;
 }
-footer.iifr-v1-footer .logo-mark {
+footer.iifr-v1-footer .foot-brand .logo-mark {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 800;
-  font-size: 32px;
+  font-size: 36px;
   letter-spacing: -0.01em;
   color: #fff;
+  line-height: 1;
 }
-footer.iifr-v1-footer .logo-mark .dot { color: #e3b85a; }
+footer.iifr-v1-footer .foot-brand .logo-mark .dot { color: #e3b85a; }
 footer.iifr-v1-footer .foot-brand p {
   color: #cfd5e6;
   font-size: var(--iifr-fs-body);
@@ -1027,8 +1037,8 @@ footer.iifr-v1-footer .visually-hidden {
 @media (max-width: 991.98px) {
   :root { --iifr-nav-h: 68px; }
   .iifr-nav { padding: 0 24px; }
-  .iifr-nav .logo-emblem { width: 56px; height: 56px; margin-left: -6px; }
-  .iifr-nav .logo-mark { font-size: 22px; }
+  .iifr-nav .logo-emblem { width: 60px; height: 60px; margin: -4px 0 -4px -8px; }
+  .iifr-nav .logo-mark { font-size: 24px; }
   .iifr-nav-links { display: none; }
   .iifr-btn-engage { display: none; }
   .iifr-nav__burger { display: inline-flex; }

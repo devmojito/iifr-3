@@ -76,18 +76,31 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Logo — IIFR image lockup, sized to fit comfortably in the 80px bar */
-.iifr-nav-logo {
+/* Logo — v1 emblem + wordmark */
+.iifr-nav-logo.logo {
   display: inline-flex;
   align-items: center;
+  gap: 2px;
   text-decoration: none;
-  line-height: 0;
+  line-height: 1;
 }
-.iifr-nav-logo-img {
-  height: 74px;
-  width: auto;
+.iifr-nav .logo-emblem {
+  width: 72px;
+  height: 72px;
   display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin: -6px 0 -6px -10px;
 }
+.iifr-nav .logo-mark {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.iifr-nav .logo-mark .dot { color: #e3b85a; }
 
 .iifr-nav-links {
   display: flex;
@@ -765,6 +778,21 @@ footer.iifr-v1-footer .foot-grid {
   gap: 48px;
   align-items: start;
 }
+footer.iifr-v1-footer .foot-brand .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  line-height: 1;
+}
+footer.iifr-v1-footer .foot-brand .logo-emblem {
+  width: 72px;
+  height: 72px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
 footer.iifr-v1-footer .logo-mark {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 800;
@@ -814,8 +842,29 @@ footer.iifr-v1-footer .soc .icon {
   height: 17px;
   color: currentColor;
 }
-footer.iifr-v1-footer .foot-logo { display: inline-block; line-height: 0; }
-footer.iifr-v1-footer .foot-logo-img { height: 88px; width: auto; display: block; }
+#side-bar .thumbnail .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+#side-bar .thumbnail .logo-emblem {
+  width: 56px !important;
+  height: 56px;
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin: 0 !important;
+}
+#side-bar .logo-mark {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 800;
+  font-size: 26px;
+  color: var(--iifr-navy);
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+#side-bar .logo-mark .dot { color: #e3b85a; }
 footer.iifr-v1-footer h5 {
   font-family: 'Source Sans 3', sans-serif;
   font-size: var(--iifr-fs-eyebrow);
@@ -978,7 +1027,8 @@ footer.iifr-v1-footer .visually-hidden {
 @media (max-width: 991.98px) {
   :root { --iifr-nav-h: 68px; }
   .iifr-nav { padding: 0 24px; }
-  .iifr-nav-logo-img { height: 58px; }
+  .iifr-nav .logo-emblem { width: 56px; height: 56px; margin-left: -6px; }
+  .iifr-nav .logo-mark { font-size: 22px; }
   .iifr-nav-links { display: none; }
   .iifr-btn-engage { display: none; }
   .iifr-nav__burger { display: inline-flex; }

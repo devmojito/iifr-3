@@ -20,8 +20,9 @@ require_once __DIR__ . '/../../iifr-config.php';
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="<?= IIFR_BASE ?>" class="foot-logo" aria-label="IIFR — Home">
-          <img src="assets/main-dark.png" alt="IIFR — International Institute for Faculty &amp; Research" class="foot-logo-img">
+        <a href="<?= IIFR_BASE ?>" class="logo" aria-label="IIFR — Home">
+          <img class="logo-emblem" src="assets/logo.png" alt="IIFR emblem">
+          <span class="logo-mark">IIFR<span class="dot">.</span></span>
         </a>
         <p>IIFR is India's first institute dedicated exclusively to faculty research, teaching excellence, and academic leadership — for India and the Global South.</p>
         <address class="meta">

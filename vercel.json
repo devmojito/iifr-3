@@ -1,62 +1,39 @@
 {
   "functions": {
-    "api/gone.php": {
-      "runtime": "vercel-php@0.9.0",
-      "maxDuration": 10
-    },
     "api/v3.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "excludeFiles": "{v1/**,v2/**,v4/**,v5/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
+      "excludeFiles": "{_v1/**,_v2/**,_v4/**,_v5/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
     },
     "api/v4.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "excludeFiles": "{v1/**,v2/**,v3/**,v5/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
+      "excludeFiles": "{_v1/**,_v2/**,_v3/**,_v5/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
     },
     "api/v5.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "excludeFiles": "{v1/**,v2/**,v3/**,v4/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
+      "excludeFiles": "{_v1/**,_v2/**,_v3/**,_v4/**,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
     }
   },
-  "rewrites": {
-    "beforeFiles": [
-      { "source": "/v1", "destination": "/api/gone.php" },
-      { "source": "/v1/", "destination": "/api/gone.php" },
-      { "source": "/v1/:path*", "destination": "/api/gone.php" },
-      { "source": "/v2", "destination": "/api/gone.php" },
-      { "source": "/v2/", "destination": "/api/gone.php" },
-      { "source": "/v2/:path*", "destination": "/api/gone.php" },
-      { "source": "/v3", "destination": "/api/gone.php" },
-      { "source": "/v3/", "destination": "/api/gone.php" },
-      { "source": "/v3/:path*", "destination": "/api/gone.php" },
-      { "source": "/v4", "destination": "/api/gone.php" },
-      { "source": "/v4/", "destination": "/api/gone.php" },
-      { "source": "/v4/:path*", "destination": "/api/gone.php" },
-      { "source": "/v5", "destination": "/api/gone.php" },
-      { "source": "/v5/", "destination": "/api/gone.php" },
-      { "source": "/v5/:path*", "destination": "/api/gone.php" }
-    ],
-    "afterFiles": [
-      { "source": "/v1.1", "destination": "/v1/index.html" },
-      { "source": "/v1.1/", "destination": "/v1/index.html" },
-      { "source": "/v1.1/:path*", "destination": "/v1/:path*" },
-      { "source": "/v2.1", "destination": "/v2/index.html" },
-      { "source": "/v2.1/", "destination": "/v2/index.html" },
-      { "source": "/v2.1/:path*", "destination": "/v2/:path*" },
-      { "source": "/v3.1/assets/:path*", "destination": "/v3/assets/:path*" },
-      { "source": "/v3.1", "destination": "/api/v3.php" },
-      { "source": "/v3.1/", "destination": "/api/v3.php" },
-      { "source": "/v3.1/:path*", "destination": "/api/v3.php" },
-      { "source": "/v4.1/assets/:path*", "destination": "/v4/assets/:path*" },
-      { "source": "/v4.1", "destination": "/api/v4.php" },
-      { "source": "/v4.1/", "destination": "/api/v4.php" },
-      { "source": "/v4.1/:path*", "destination": "/api/v4.php" },
-      { "source": "/v5.1/assets/:path*", "destination": "/v5/assets/:path*" },
-      { "source": "/v5.1", "destination": "/api/v5.php" },
-      { "source": "/v5.1/", "destination": "/api/v5.php" },
-      { "source": "/v5.1/:path*", "destination": "/api/v5.php" }
-    ]
-  }
+  "rewrites": [
+    { "source": "/v1.1", "destination": "/_v1/index.html" },
+    { "source": "/v1.1/", "destination": "/_v1/index.html" },
+    { "source": "/v1.1/:path*", "destination": "/_v1/:path*" },
+    { "source": "/v2.1", "destination": "/_v2/index.html" },
+    { "source": "/v2.1/", "destination": "/_v2/index.html" },
+    { "source": "/v2.1/:path*", "destination": "/_v2/:path*" },
+    { "source": "/v3.1/assets/:path*", "destination": "/_v3/assets/:path*" },
+    { "source": "/v3.1", "destination": "/api/v3.php" },
+    { "source": "/v3.1/", "destination": "/api/v3.php" },
+    { "source": "/v3.1/:path*", "destination": "/api/v3.php" },
+    { "source": "/v4.1/assets/:path*", "destination": "/_v4/assets/:path*" },
+    { "source": "/v4.1", "destination": "/api/v4.php" },
+    { "source": "/v4.1/", "destination": "/api/v4.php" },
+    { "source": "/v4.1/:path*", "destination": "/api/v4.php" },
+    { "source": "/v5.1/assets/:path*", "destination": "/_v5/assets/:path*" },
+    { "source": "/v5.1", "destination": "/api/v5.php" },
+    { "source": "/v5.1/", "destination": "/api/v5.php" },
+    { "source": "/v5.1/:path*", "destination": "/api/v5.php" }
+  ]
 }

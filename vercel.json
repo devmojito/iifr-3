@@ -3,17 +3,17 @@
     "api/v3.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "excludeFiles": "{sites/v1/**,sites/v2/**,sites/v4/**,sites/v5/**,sites/v3/assets/**,sites/v3/**/*.docx,sites/v3/**/*.zip,sites/v3/**/*.map,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
+      "excludeFiles": "{sites/v1/**,sites/v2/**,sites/v4/**,sites/v5/**,**/assets/**,**/fonts/**,**/*.docx,**/*.zip,**/*.map,**/*.mp4,**/*.png,**/*.jpg,**/*.jpeg,**/*.webp,**/*.gif,**/*.svg,**/*.avif,**/*.pdf,**/*.woff,**/*.woff2,**/*.eot,**/*.ttf,assets/**,.git/**}"
     },
     "api/v4.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "excludeFiles": "{sites/v1/**,sites/v2/**,sites/v3/**,sites/v5/**,sites/v4/assets/**,sites/v4/**/*.docx,sites/v4/**/*.zip,sites/v4/**/*.map,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
+      "excludeFiles": "{sites/v1/**,sites/v2/**,sites/v3/**,sites/v5/**,**/assets/**,**/fonts/**,**/*.docx,**/*.zip,**/*.map,**/*.mp4,**/*.png,**/*.jpg,**/*.jpeg,**/*.webp,**/*.gif,**/*.svg,**/*.avif,**/*.pdf,**/*.woff,**/*.woff2,**/*.eot,**/*.ttf,assets/**,.git/**}"
     },
     "api/v5.php": {
       "runtime": "vercel-php@0.9.0",
       "maxDuration": 60,
-      "excludeFiles": "{sites/v1/**,sites/v2/**,sites/v3/**,sites/v4/**,sites/v5/assets/**,sites/v5/v4/**,sites/v5/**/*.docx,sites/v5/**/*.zip,sites/v5/**/*.map,assets/**,.git/**,*.png,*.jpg,*.jpeg,*.webp,*.gif,*.mp4,*.svg,*.avif,*.docx,*.zip,*.pdf,*.woff,*.woff2,*.eot,*.ttf,*.map}"
+      "excludeFiles": "{sites/v1/**,sites/v2/**,sites/v3/**,sites/v4/**,sites/v5/v4/**,**/assets/**,**/fonts/**,**/*.docx,**/*.zip,**/*.map,**/*.mp4,**/*.png,**/*.jpg,**/*.jpeg,**/*.webp,**/*.gif,**/*.svg,**/*.avif,**/*.pdf,**/*.woff,**/*.woff2,**/*.eot,**/*.ttf,assets/**,.git/**}"
     }
   },
   "rewrites": [

@@ -1,3 +1,3 @@
 sites/v5/v4/**
-*.docx
+**/*.docx
 IIFR-v5-Changelog.md

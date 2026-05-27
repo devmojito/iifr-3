@@ -1,9 +1,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php if (!empty($base_href)): ?>
-    <base href="<?= htmlspecialchars($base_href, ENT_QUOTES, 'UTF-8') ?>">
-<?php endif; ?>
+<?php
+if (!defined('IIFR_BASE')) {
+    require_once dirname(__DIR__) . '/iifr-config.php';
+}
+$__iifr_base = IIFR_BASE;
+?>
+    <base href="<?= htmlspecialchars($__iifr_base, ENT_QUOTES, 'UTF-8') ?>">
     <title>IIFR - <?php echo htmlspecialchars($page_title) ?? 'International Institute for Faculty & Research'; ?></title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.svg">
     <!-- animate css -->

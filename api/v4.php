@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/iifr-mime.php';
+
 $root = dirname(__DIR__) . '/v4';
 $rootReal = realpath($root);
 if ($rootReal === false) {
@@ -18,7 +20,7 @@ chdir($rootReal);
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $path = is_string($path) && $path !== '' ? rawurldecode($path) : '/';
 if ($path === '/v4.1' || str_starts_with($path, '/v4.1/')) {
-    $path = substr($path, 5) ?: '/';
+    $path = iifr_strip_mount_prefix($path, '/v4.1');
 }
 if (str_contains($path, '..')) {
     iifr_serve404($appDir);
@@ -42,9 +44,7 @@ if ($path !== '/' && !str_starts_with($path, '/api/') && file_exists($fullPath) 
         require $resolved;
         exit;
     }
-    $mime = function_exists('mime_content_type') ? @mime_content_type($resolved) : null;
-    $contentType = (is_string($mime) && $mime !== '') ? $mime : 'application/octet-stream';
-    header('Content-Type: ' . $contentType);
+    header('Content-Type: ' . iifr_content_type_for_path($resolved));
     readfile($resolved);
     exit;
 }

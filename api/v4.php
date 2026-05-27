@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/iifr-mime.php';
 
-$root = dirname(__DIR__) . '/_v4';
+$root = dirname(__DIR__) . '/sites/v4';
 $rootReal = realpath($root);
 if ($rootReal === false) {
     http_response_code(500);

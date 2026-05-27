@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Primary inbox for website forms, mailto links, and enquiries.
  */
 if (!defined('IIFR_BASE')) {
-    define('IIFR_BASE', rtrim(getenv('IIFR_BASE_PATH') ?: '/v4', '/') . '/');
+    define('IIFR_BASE', rtrim(getenv('IIFR_BASE_PATH') ?: '/v4.1', '/') . '/');
 }
 
 if (!defined('IIFR_INFO_EMAIL')) {

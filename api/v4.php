@@ -17,8 +17,8 @@ chdir($rootReal);
 
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $path = is_string($path) && $path !== '' ? rawurldecode($path) : '/';
-if (str_starts_with($path, '/v4')) {
-    $path = substr($path, 3) ?: '/';
+if ($path === '/v4.1' || str_starts_with($path, '/v4.1/')) {
+    $path = substr($path, 5) ?: '/';
 }
 if (str_contains($path, '..')) {
     iifr_serve404($appDir);

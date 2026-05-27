@@ -35,11 +35,20 @@ $name = isset($_POST['name']) ? trim((string) $_POST['name']) : '';
 $email = isset($_POST['email']) ? trim((string) $_POST['email']) : '';
 $phone = isset($_POST['phone']) ? trim((string) $_POST['phone']) : '';
 $message = isset($_POST['message']) ? trim((string) $_POST['message']) : '';
+$organization = isset($_POST['organization']) ? trim((string) $_POST['organization']) : '';
+$role = isset($_POST['role']) ? trim((string) $_POST['role']) : '';
+$hearAbout = isset($_POST['hear_about']) ? trim((string) $_POST['hear_about']) : '';
 
 if ($name === '' || $email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $_SESSION['iifr_form_error'] = 'Please enter your name and a valid email address.';
     $errFrag = ($returnTo === 'apply.php') ? '#apply-cta' : '#inquiry-form';
     header('Location: ' . $returnTo . $errFrag, true, 303);
+    exit;
+}
+
+if ($safeContext === 'Apply' && $phone === '') {
+    $_SESSION['iifr_form_error'] = 'Please enter a phone number so our team can follow up.';
+    header('Location: ' . $returnTo . '#apply-cta', true, 303);
     exit;
 }
 
@@ -64,6 +73,9 @@ $lines = [
     'Name: ' . $name,
     'Email: ' . $email,
     'Phone: ' . ($phone !== '' ? $phone : '—'),
+    'Organization: ' . ($organization !== '' ? $organization : '—'),
+    'Current Role: ' . ($role !== '' ? $role : '—'),
+    'Heard about us via: ' . ($hearAbout !== '' ? $hearAbout : '—'),
 ];
 if ($message !== '') {
     $lines[] = '';

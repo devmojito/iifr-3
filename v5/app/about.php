@@ -40,7 +40,7 @@ include_once 'partials/header/transparent-header.php';
 <section class="iifr-section iifr-tint-blue">
     <div class="iifr-why">
         <div class="iifr-why__intro">
-            <h2 class="iifr-why__title">Why IIFR Was Created</h2>
+            <h2 class="iifr-why__title">Our Purpose</h2>
             <hr class="iifr-gold-line">
             <p>Higher education is evolving. IIFR was established to address critical gaps and create a future-ready ecosystem for faculty, research, and leadership development.</p>
         </div>
@@ -136,6 +136,7 @@ $iifr_council = [
     ['name' => 'Dr. Koen Vandenbempt', 'role' => 'Professor of Strategic Management, U. Antwerp', 'initials' => 'KV', 'img' => 'assets/images/faculty/koen-vandenbempt.png', 'linkedin' => 'https://www.linkedin.com/in/koenvandenbempt/', 'bio' => 'Prof. Koen Vandenbempt is professor of Strategic Management and Associate Dean for Internationalization. He is a former dean at the Faculty of Business and Economics, University of Antwerp. Koen serves on the EFMD programme accreditation board. He is a researcher, advisor and management trainer in the field of strategy formation and strategic marketing. His expertise includes business model innovation and organizational mindfulness.'],
     ['name' => 'Prof. Ashish Sinha', 'role' => 'Professor of Marketing, UQ Business School', 'initials' => 'AS', 'img' => 'assets/images/faculty/ashish-sinha.png', 'linkedin' => 'https://au.linkedin.com/in/ashish-sinha-7a021522', 'bio' => 'Prof. Ashish Sinha is Professor of Marketing at UQ Business School and Visiting Professor at the Indian School of Business. He has held several senior academic leadership roles, including Academic Dean of Executive Education at ISB. His career spans academia and industry, including leadership roles in analytics at IRI, Chicago. His expertise lies in marketing, analytics, and research. Prof. Sinha brings a strong blend of academic rigour and industry insight.'],
     ['name' => 'Dr. Bhimaraya Metri', 'role' => 'Director, IIM Nagpur', 'initials' => 'BM', 'img' => 'assets/images/faculty/bhimaraya.png', 'linkedin' => 'https://in.linkedin.com/in/bhimaraya-metri-26b42137', 'bio' => 'Dr. Bhimaraya Metri is the Director of IIM Nagpur and a distinguished academic leader in management education. He is widely recognised for his contributions as a teacher, researcher, and institutional builder. Over his career, he has held key leadership roles across premier academic institutions and industry. His work focuses on strengthening academic excellence and governance in higher education. Dr. Metri continues to shape management education through his strategic vision and leadership.'],
+    ['name' => 'Prof. Howard Hunter', 'role' => 'Academic Council', 'initials' => 'HH', 'img' => null, 'linkedin' => '', 'bio' => ''],
 ];
 ?>
 <?php
@@ -171,10 +172,11 @@ function iifr_board_card($img, $name, $role) {
             </div>
 
             <span class="iifr-govern__label">Members</span>
-            <div class="iifr-gov-grid iifr-gov-grid--3">
+            <div class="iifr-gov-grid iifr-gov-grid--2">
                 <?php iifr_board_card('assets/images/faculty/rohit-bansal.jpeg', 'Rohit Bansal', 'Member'); ?>
                 <?php iifr_board_card('assets/images/faculty/siva.jpeg', 'Siva Prasad', 'Member'); ?>
                 <?php iifr_board_card('assets/images/faculty/aruna-reddy.jpeg', 'Aruna Reddy', 'Member'); ?>
+                <?php iifr_board_card('assets/images/faculty/kaushik.jpeg', 'PR Kaushik', 'Member'); ?>
             </div>
         </div>
 
@@ -185,6 +187,7 @@ function iifr_board_card($img, $name, $role) {
             <span class="iifr-govern__label">Advisory Body</span>
             <div class="iifr-gov-grid iifr-gov-grid--4">
                 <?php foreach ($iifr_council as $m):
+                    $hasProfile = !empty($m['bio']);
                     $atts = 'data-name="' . htmlspecialchars($m['name'], ENT_QUOTES) . '"'
                           . ' data-role="' . htmlspecialchars($m['role'], ENT_QUOTES) . '"'
                           . ' data-bio="' . htmlspecialchars($m['bio'], ENT_QUOTES) . '"'
@@ -192,7 +195,11 @@ function iifr_board_card($img, $name, $role) {
                           . ' data-initials="' . htmlspecialchars($m['initials'], ENT_QUOTES) . '"'
                           . ' data-img="' . htmlspecialchars($m['img'] ?? '', ENT_QUOTES) . '"';
                 ?>
+                <?php if ($hasProfile): ?>
                 <article class="iifr-gov-person iifr-gov-person--clickable" data-profile <?= $atts ?> role="button" tabindex="0" aria-label="View profile of <?= htmlspecialchars($m['name'], ENT_QUOTES) ?>">
+                <?php else: ?>
+                <article class="iifr-gov-person">
+                <?php endif; ?>
                     <div class="iifr-gov-person__photo">
                         <?php if (!empty($m['img'])): ?>
                             <img src="<?= htmlspecialchars($m['img'], ENT_QUOTES) ?>" alt="<?= htmlspecialchars($m['name'], ENT_QUOTES) ?>">

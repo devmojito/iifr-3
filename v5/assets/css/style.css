@@ -26885,11 +26885,22 @@ button.rts-theme-btn {
   border: 1px solid #9ccc9c;
 }
 .iifr-inquiry-form .form-group input,
-.iifr-inquiry-form .form-group textarea {
+.iifr-inquiry-form .form-group textarea,
+.iifr-inquiry-form .form-group select {
   border: 1px solid var(--rt-primary);
 }
 .iifr-inquiry-form .form-group textarea {
   min-height: 140px;
+}
+.iifr-inquiry-form .form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: #fff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+  color: #0d1b3e;
+  appearance: auto;
 }
 
 /* Apply page — application modal */

@@ -24,20 +24,61 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="form-group mb-0">
-                                <label for="iifr-apply-name">Name <span class="text-danger">*</span></label>
+                                <label for="iifr-apply-name">Full Name <span class="text-danger">*</span></label>
                                 <input type="text" name="name" id="iifr-apply-name" required maxlength="200" autocomplete="name">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group mb-0">
-                                <label for="iifr-apply-email">Email <span class="text-danger">*</span></label>
+                                <label for="iifr-apply-email">Email Address <span class="text-danger">*</span></label>
                                 <input type="email" name="email" id="iifr-apply-email" required maxlength="320" autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-0">
+                                <label for="iifr-apply-phone">Phone <span class="text-danger">*</span> <span class="text-muted">(for WhatsApp follow-up)</span></label>
+                                <input type="tel" name="phone" id="iifr-apply-phone" required maxlength="40" autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-0">
+                                <label for="iifr-apply-org">Organization / Institution <span class="text-muted">(optional)</span></label>
+                                <input type="text" name="organization" id="iifr-apply-org" maxlength="200" autocomplete="organization">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-0">
+                                <label for="iifr-apply-role">Current Role <span class="text-danger">*</span></label>
+                                <select name="role" id="iifr-apply-role" required>
+                                    <option value="" selected disabled>Select…</option>
+                                    <option>Executive</option>
+                                    <option>Faculty</option>
+                                    <option>Administration</option>
+                                    <option>Government</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-0">
+                                <label for="iifr-apply-hear">How did you hear about us?</label>
+                                <select name="hear_about" id="iifr-apply-hear">
+                                    <option value="" selected disabled>Select…</option>
+                                    <option>Website</option>
+                                    <option>LinkedIn</option>
+                                    <option>Instagram</option>
+                                    <option>X</option>
+                                    <option>Facebook</option>
+                                    <option>Referral</option>
+                                    <option>Event</option>
+                                    <option>Other</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-group mb-0">
-                                <label for="iifr-apply-phone">Phone <span class="text-muted">(optional)</span></label>
-                                <input type="tel" name="phone" id="iifr-apply-phone" maxlength="40" autocomplete="tel">
+                                <label for="iifr-apply-message">Message / Query <span class="text-muted">(optional)</span></label>
+                                <textarea name="message" id="iifr-apply-message" maxlength="8000" placeholder="Anything you'd like us to know?"></textarea>
                             </div>
                         </div>
                         <div class="col-12 rt-center">

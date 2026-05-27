@@ -97,7 +97,7 @@ include_once 'partials/header/transparent-header.php';
 <section class="iifr-section iifr-paper">
     <div class="iifr-section__head iifr-section__head--center">
         <span class="iifr-eyebrow">Collaborate With IIFR</span>
-        <h2>Partner with our faculty and research ecosystem.</h2>
+        <h2>Partner with our faculty ecosystem.</h2>
         <hr class="iifr-gold-line-center">
         <p class="iifr-lead">Co-create knowledge, build capability, and make a meaningful impact.</p>
     </div>

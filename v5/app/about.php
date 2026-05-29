@@ -167,7 +167,7 @@ function iifr_board_card($img, $name, $role, $linkedin = '', $bio = '') {
        . '</article>';
 }
 ?>
-<section class="iifr-section iifr-paper">
+<section class="iifr-section iifr-paper" id="leadership">
     <div class="iifr-section__head iifr-section__head--center">
         <span class="iifr-eyebrow">Governance</span>
         <h2>Leadership &amp; Governance</h2>

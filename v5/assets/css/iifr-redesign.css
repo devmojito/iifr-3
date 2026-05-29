@@ -1258,6 +1258,144 @@ footer.iifr-v1-footer .visually-hidden {
   max-width: 480px;              /* match the implicit width from aspect-ratio + max-height cap */
 }
 
+/* ── Research — Advancing Teaching Excellence (2 horizontal items) ── */
+.iifr-teach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.iifr-teach-item { display: flex; gap: 24px; align-items: center; }
+.iifr-teach-item__icon {
+  flex: none;
+  width: 92px; height: 92px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--iifr-gold);
+}
+.iifr-teach-item__icon i { font-size: 44px; }
+.iifr-teach-item__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h3);
+  color: var(--iifr-navy);
+  line-height: 1.25;
+  margin: 0 0 8px;
+}
+.iifr-teach-item__desc {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 0;
+}
+@media (max-width: 760px) { .iifr-teach-grid { grid-template-columns: 1fr; } }
+
+/* ── Research — Collaborate With IIFR (intro left, items + CTA right) ── */
+.iifr-collab { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
+.iifr-collab__intro { display: flex; gap: 22px; align-items: flex-start; }
+.iifr-collab__text { flex: 1; min-width: 0; }
+.iifr-collab__lead-icon {
+  flex: none;
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--iifr-navy);
+}
+.iifr-collab__lead-icon i { font-size: 30px; }
+.iifr-collab__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h2);
+  color: var(--iifr-navy);
+  line-height: var(--iifr-lh-tight);
+  margin: 0 0 12px;
+}
+.iifr-collab__lead {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 0;
+  max-width: 460px;
+}
+.iifr-collab__items { display: flex; flex-direction: column; gap: 28px; }
+.iifr-collab__item { display: flex; gap: 20px; align-items: flex-start; }
+.iifr-collab__item-icon {
+  flex: none;
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--iifr-navy);
+}
+.iifr-collab__item-icon i { font-size: 26px; }
+.iifr-collab__item-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h3);
+  color: var(--iifr-navy);
+  line-height: 1.25;
+  margin: 0 0 6px;
+}
+.iifr-collab__item-desc {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 0;
+}
+.iifr-collab__cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; }
+@media (max-width: 900px) {
+  .iifr-collab { grid-template-columns: 1fr; gap: 36px; align-items: start; }
+}
+
+/* ── Research page — Our Faculty (intro left, profile cards right) ── */
+.iifr-faculty-row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
+.iifr-faculty-row__intro { display: flex; flex-direction: column; justify-content: center; }
+.iifr-faculty-row__intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h2);
+  color: var(--iifr-navy);
+  line-height: var(--iifr-lh-tight);
+  margin: 8px 0 14px;
+}
+.iifr-faculty-row__intro p {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 0 0 14px;
+}
+.iifr-faculty-row__cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; align-items: start; }
+.iifr-faculty-card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.iifr-faculty-card__photo { aspect-ratio: 1 / 1; background: #f6f2e9; }
+.iifr-faculty-card__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.iifr-faculty-card__body { padding: 8px 10px 8px; }
+.iifr-faculty-card__name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-small);
+  color: var(--iifr-navy);
+  line-height: 1.2;
+  margin: 0 0 2px;
+}
+.iifr-faculty-card__role {
+  display: block;
+  font-size: var(--iifr-fs-small);
+  font-weight: 700;
+  color: var(--iifr-gold);
+  line-height: 1.25;
+}
+@media (max-width: 1024px) {
+  .iifr-faculty-row { grid-template-columns: 1fr; gap: 32px; align-items: start; }
+}
+@media (max-width: 460px) { .iifr-faculty-row__cards { grid-template-columns: 1fr; } }
+
 /* Landscape variant — image rendered in a clearly landscape rectangle
    that stretches to match the text block height. Used on the About IIFR section. */
 .iifr-about--landscape { align-items: stretch; }

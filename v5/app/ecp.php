@@ -14,7 +14,7 @@ include_once 'partials/header/transparent-header.php';
         <p>Become an impactful educator and shape the future of learning — an 8-day intensive, in-person programme designed to help professionals and faculty move seamlessly between industry and academia.</p>
         <div class="iifr-page-hero__cta">
             <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply for August 2026 Cohort</a>
-            <a href="assets/files/document.pdf" class="iifr-btn-outline" target="_blank" rel="noopener">Download Brochure</a>
+            <a href="https://admissions.iifr.global/ecp/" class="iifr-btn-outline" target="_blank" rel="noopener">Download Brochure</a>
         </div>
     </div>
 </div>
@@ -181,7 +181,6 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ PROGRAMME JOURNEY ============ -->
 <section class="iifr-section iifr-cream">
     <div class="iifr-section__head iifr-section__head--center wow fadeInUp">
-        <span class="iifr-eyebrow">Step by Step</span>
         <h2>Programme Journey</h2>
         <hr class="iifr-gold-line-center">
     </div>
@@ -219,62 +218,9 @@ include_once 'partials/header/transparent-header.php';
     </ol>
 </section>
 
-<!-- ============ PROGRAMME MODULES (retained detail) ============ -->
-<section class="iifr-section" id="modules">
-    <div class="iifr-section__head iifr-section__head--center wow fadeInUp">
-        <span class="iifr-eyebrow">The Curriculum</span>
-        <h2>Programme Modules — 8 Days</h2>
-        <hr class="iifr-gold-line-center">
-        <p class="iifr-lead">Four intensive modules covering the full spectrum of modern academic practice.</p>
-    </div>
-    <div class="iifr-grid iifr-grid--2" style="gap:20px;max-width:1080px;margin:0 auto;">
-        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0s">
-            <span class="iifr-module-card__num">Module 01</span>
-            <h3 class="iifr-module-card__title">Curriculum Development</h3>
-            <ul class="iifr-module-card__topics">
-                <li><span>Architecting a course from scratch</span></li>
-                <li><span>Learning-objective setting</span></li>
-                <li><span>Module sequencing</span></li>
-            </ul>
-        </article>
-        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0.1s">
-            <span class="iifr-module-card__num">Module 02</span>
-            <h3 class="iifr-module-card__title">Pedagogy &amp; Case Writing</h3>
-            <ul class="iifr-module-card__topics">
-                <li><span>Writing cases using AI and web resources</span></li>
-                <li><span>Case-teaching technique</span></li>
-                <li><span>Facilitating case discussions</span></li>
-                <li><span>Storytelling for the classroom</span></li>
-            </ul>
-        </article>
-        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0s">
-            <span class="iifr-module-card__num">Module 03</span>
-            <h3 class="iifr-module-card__title">Advanced Tools in AI</h3>
-            <ul class="iifr-module-card__topics">
-                <li><span>Using LLMs for case development</span></li>
-                <li><span>AI-powered course design</span></li>
-                <li><span>AI-integrated teaching materials and assessments</span></li>
-            </ul>
-        </article>
-        <article class="iifr-module-card wow fadeInUp" data-wow-delay="0.1s">
-            <span class="iifr-module-card__num">Module 04</span>
-            <h3 class="iifr-module-card__title">Academic Leadership</h3>
-            <ul class="iifr-module-card__topics">
-                <li><span>Major business frameworks across strategy, marketing, operations, digital systems, organisational change, and finance</span></li>
-                <li><span>Managing academic enterprises</span></li>
-                <li><span>Integrating multiple disciplinary lenses</span></li>
-                <li><span>Four days of intensive leadership training</span></li>
-            </ul>
-        </article>
-    </div>
-</section>
-
 <!-- ============ KEY FOCUS: AI ============ -->
 <section class="iifr-section iifr-paper" id="ai-focus">
     <div class="ecp-overview ecp-overview--reverse">
-        <div class="ecp-overview__media wow fadeIn">
-            <img src="assets/images/ecp/ecp-ai.png" alt="AI-enabled pedagogy at IIFR">
-        </div>
         <div class="ecp-overview__text wow fadeInUp" data-wow-delay="0.1s">
             <span class="iifr-eyebrow">Key Focus</span>
             <h2 class="ecp-overview__title">AI in Learning &amp; Teaching</h2>

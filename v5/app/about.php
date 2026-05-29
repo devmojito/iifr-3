@@ -140,15 +140,20 @@ $iifr_council = [
 ?>
 <?php
 /* Reusable static photo card for Executive Board (no popup) */
-function iifr_board_card($img, $name, $role) {
+function iifr_board_card($img, $name, $role, $linkedin = null) {
     $img = htmlspecialchars($img, ENT_QUOTES);
     $name = htmlspecialchars($name, ENT_QUOTES);
     $role = htmlspecialchars($role, ENT_QUOTES);
-    echo '<article class="iifr-gov-person">'
+    $hasLi = !empty($linkedin);
+    $wrapOpen  = $hasLi
+        ? '<a class="iifr-gov-person iifr-gov-person--clickable" href="' . htmlspecialchars($linkedin, ENT_QUOTES) . '" target="_blank" rel="noopener" aria-label="' . $name . ' on LinkedIn">'
+        : '<article class="iifr-gov-person">';
+    $wrapClose = $hasLi ? '</a>' : '</article>';
+    echo $wrapOpen
        . '<div class="iifr-gov-person__photo"><img src="' . $img . '" alt="' . $name . '"></div>'
        . '<h4 class="iifr-gov-person__name">' . $name . '</h4>'
        . '<span class="iifr-gov-person__role">' . $role . '</span>'
-       . '</article>';
+       . $wrapClose;
 }
 ?>
 <section class="iifr-section iifr-paper">
@@ -167,14 +172,14 @@ function iifr_board_card($img, $name, $role) {
             <span class="iifr-govern__label">Leadership</span>
             <div class="iifr-gov-grid iifr-gov-grid--2">
                 <?php iifr_board_card('assets/images/faculty/Shri%20Purohit%20%282%29.jpg', 'Banwarilal Purohit', 'Chairman, IIFR'); ?>
-                <?php iifr_board_card('assets/images/faculty/rajendra-srivastava.png', 'Rajendra Srivastava', 'Vice Chairman, IIFR'); ?>
+                <?php iifr_board_card('assets/images/faculty/rajendra-srivastava.png', 'Rajendra Srivastava', 'Vice Chairman, IIFR', 'https://in.linkedin.com/in/rajendra-srivastava-816643118'); ?>
             </div>
 
             <span class="iifr-govern__label">Members</span>
             <div class="iifr-gov-grid iifr-gov-grid--2">
-                <?php iifr_board_card('assets/images/faculty/rohit-bansal.jpeg', 'Rohit Bansal', 'Member'); ?>
-                <?php iifr_board_card('assets/images/faculty/siva.jpeg', 'Siva Prasad', 'Member'); ?>
-                <?php iifr_board_card('assets/images/faculty/aruna-reddy.jpeg', 'Aruna Reddy', 'Member'); ?>
+                <?php iifr_board_card('assets/images/faculty/rohit-bansal.jpeg', 'Rohit Bansal', 'Member', 'https://www.linkedin.com/in/therohitbansal/'); ?>
+                <?php iifr_board_card('assets/images/faculty/siva.jpeg', 'Siva Prasad', 'Member', 'https://www.linkedin.com/in/gitaacharan/'); ?>
+                <?php iifr_board_card('assets/images/faculty/aruna-reddy.jpeg', 'Aruna Reddy', 'Member', 'https://www.linkedin.com/in/reddyaruna/'); ?>
                 <?php iifr_board_card('assets/images/faculty/kaushik.jpeg', 'PR Kaushik', 'Member'); ?>
             </div>
         </div>

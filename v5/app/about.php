@@ -140,20 +140,31 @@ $iifr_council = [
 ?>
 <?php
 /* Reusable static photo card for Executive Board (no popup) */
-function iifr_board_card($img, $name, $role, $linkedin = null) {
-    $img = htmlspecialchars($img, ENT_QUOTES);
-    $name = htmlspecialchars($name, ENT_QUOTES);
-    $role = htmlspecialchars($role, ENT_QUOTES);
-    $hasLi = !empty($linkedin);
-    $wrapOpen  = $hasLi
-        ? '<a class="iifr-gov-person iifr-gov-person--clickable" href="' . htmlspecialchars($linkedin, ENT_QUOTES) . '" target="_blank" rel="noopener" aria-label="' . $name . ' on LinkedIn">'
-        : '<article class="iifr-gov-person">';
-    $wrapClose = $hasLi ? '</a>' : '</article>';
-    echo $wrapOpen
-       . '<div class="iifr-gov-person__photo"><img src="' . $img . '" alt="' . $name . '"></div>'
-       . '<h4 class="iifr-gov-person__name">' . $name . '</h4>'
-       . '<span class="iifr-gov-person__role">' . $role . '</span>'
-       . $wrapClose;
+function iifr_board_card($img, $name, $role, $linkedin = '', $bio = '') {
+    $img_e = htmlspecialchars($img, ENT_QUOTES);
+    $name_e = htmlspecialchars($name, ENT_QUOTES);
+    $role_e = htmlspecialchars($role, ENT_QUOTES);
+    $hasProfile = ($linkedin !== '' || $bio !== '');
+    if (!$hasProfile) {
+        echo '<article class="iifr-gov-person">'
+           . '<div class="iifr-gov-person__photo"><img src="' . $img_e . '" alt="' . $name_e . '"></div>'
+           . '<h4 class="iifr-gov-person__name">' . $name_e . '</h4>'
+           . '<span class="iifr-gov-person__role">' . $role_e . '</span>'
+           . '</article>';
+        return;
+    }
+    $atts = 'data-name="' . $name_e . '"'
+          . ' data-role="' . $role_e . '"'
+          . ' data-bio="' . htmlspecialchars($bio, ENT_QUOTES) . '"'
+          . ' data-linkedin="' . htmlspecialchars($linkedin, ENT_QUOTES) . '"'
+          . ' data-initials=""'
+          . ' data-img="' . $img_e . '"';
+    echo '<article class="iifr-gov-person iifr-gov-person--clickable" data-profile ' . $atts
+       . ' role="button" tabindex="0" aria-label="View profile of ' . $name_e . '">'
+       . '<div class="iifr-gov-person__photo"><img src="' . $img_e . '" alt="' . $name_e . '"></div>'
+       . '<h4 class="iifr-gov-person__name">' . $name_e . '</h4>'
+       . '<span class="iifr-gov-person__role">' . $role_e . '</span>'
+       . '</article>';
 }
 ?>
 <section class="iifr-section iifr-paper">
@@ -264,8 +275,12 @@ function iifr_board_card($img, $name, $role, $linkedin = null) {
         }
         nameEl.textContent = el.getAttribute('data-name') || '';
         roleEl.textContent = el.getAttribute('data-role') || '';
-        bioEl.textContent = el.getAttribute('data-bio') || '';
-        liEl.href = el.getAttribute('data-linkedin') || '#';
+        var bioText = el.getAttribute('data-bio') || '';
+        bioEl.textContent = bioText;
+        bioEl.style.display = bioText ? '' : 'none';
+        var liHref = el.getAttribute('data-linkedin') || '';
+        if (liHref) { liEl.href = liHref; liEl.style.display = ''; }
+        else { liEl.style.display = 'none'; }
         modal.classList.add('is-open');
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';

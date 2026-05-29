@@ -19,37 +19,43 @@ include_once 'partials/header/transparent-header.php';
     </div>
 </div>
 
-<!-- ============ WHAT IS IIFR + STRATEGIC PARTNERS ============ -->
+<!-- ============ WHAT IS IIFR + STRATEGIC PARTNERS (stacked cards) ============ -->
 <section class="iifr-section">
-    <div class="iifr-whatis">
-        <div class="iifr-whatis__main">
-            <span class="iifr-eyebrow">About IIFR</span>
-            <h2>What is IIFR</h2>
+    <!-- Top card: icon + content + buttons -->
+    <div class="iifr-whatis-card">
+        <div class="iifr-whatis-card__icon" aria-hidden="true">
+            <i class="fa-light fa-building-columns"></i>
+        </div>
+        <div class="iifr-whatis-card__content">
+            <h2 class="iifr-whatis-card__title">What is IIFR</h2>
             <hr class="iifr-gold-line">
             <p>The International Institute for Faculty &amp; Research (IIFR) is an autonomous academic institute established to strengthen faculty capability, research excellence, and academic leadership across India and the Global South.</p>
             <p>Designed for the evolving needs of higher education and professional practice, IIFR brings practitioners &amp; academicians together and integrates relevance &amp; rigor to support impactful pedagogy and applied research.</p>
+        </div>
+        <div class="iifr-whatis-card__cta">
+            <a href="about.php" class="iifr-btn-dark">About IIFR</a>
+            <a href="about.php" class="iifr-btn-ghost">Our Vision</a>
+        </div>
+    </div>
 
-            <div class="iifr-whatis__cta">
-                <a href="about.php" class="iifr-btn-dark">About IIFR</a>
-                <a href="about.php" class="iifr-btn-ghost">Our Vision</a>
+    <!-- Bottom card: Strategic Partners with horizontal logo row -->
+    <div class="iifr-partners-card">
+        <div class="iifr-partners-card__head">
+            <h3 class="iifr-partners-card__title">Strategic Partners</h3>
+            <p class="iifr-partners-card__sub">Built in collaboration with trusted academic and institutional partners.</p>
+        </div>
+        <hr class="iifr-partners-card__divider">
+        <div class="iifr-partners-card__logos">
+            <div class="iifr-partners-card__logo">
+                <img src="assets/images/logo/bvb.png" alt="Bharatiya Vidya Bhavan">
+            </div>
+            <div class="iifr-partners-card__logo iifr-partners-card__logo--efmd">
+                <img src="assets/images/logo/efmd.png" alt="EFMD Global Network">
+            </div>
+            <div class="iifr-partners-card__logo">
+                <img src="assets/images/logo/latticed.png" alt="LatticEd" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=&quot;font-family:Playfair Display,Georgia,serif;font-size:26px;color:#0d1b3e;font-weight:700;&quot;>LatticEd</div>';">
             </div>
         </div>
-
-        <aside class="iifr-whatis__partners">
-            <h3 class="iifr-whatis__partners-title">Strategic Partners</h3>
-            <p class="iifr-whatis__partners-sub">Built in collaboration with trusted academic and institutional partners.</p>
-            <ul class="iifr-partner-list">
-                <li class="iifr-partner-list__item">
-                    <img src="assets/images/logo/bvb.png" alt="Bharatiya Vidya Bhavan">
-                </li>
-                <li class="iifr-partner-list__item iifr-partner-list__item--efmd">
-                    <img src="assets/images/logo/efmd.png" alt="EFMD Global Network">
-                </li>
-                <li class="iifr-partner-list__item">
-                    <img src="assets/images/logo/latticed.png" alt="LatticEd" onerror="this.style.display='none';this.parentNode.innerHTML='<div style=&quot;font-family:Playfair Display,Georgia,serif;font-size:24px;color:#0d1b3e;font-weight:700;&quot;>LatticEd</div>';">
-                </li>
-            </ul>
-        </aside>
     </div>
 </section>
 

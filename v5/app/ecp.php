@@ -13,7 +13,7 @@ include_once 'partials/header/transparent-header.php';
         <h1>Educators' Certificate Programme (ECP)</h1>
         <p>Become an impactful educator and shape the future of learning — an 8-day intensive, in-person programme designed to help professionals and faculty move seamlessly between industry and academia.</p>
         <div class="iifr-page-hero__cta">
-            <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply for June 2026 Cohort</a>
+            <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply for August 2026 Cohort</a>
             <a href="assets/files/document.pdf" class="iifr-btn-outline" target="_blank" rel="noopener">Download Brochure</a>
         </div>
     </div>
@@ -29,7 +29,7 @@ include_once 'partials/header/transparent-header.php';
             <div class="ecp-fact__body">
                 <span class="ecp-fact__label">Duration</span>
                 <span class="ecp-fact__value">8 Days</span>
-                <span class="ecp-fact__sub">Modular over 4 weekends</span>
+                <span class="ecp-fact__sub">In-person over 3 weekends</span>
             </div>
         </div>
         <div class="ecp-fact">
@@ -38,8 +38,8 @@ include_once 'partials/header/transparent-header.php';
             </span>
             <div class="ecp-fact__body">
                 <span class="ecp-fact__label">Mode</span>
-                <span class="ecp-fact__value">Hybrid / Weekend</span>
-                <span class="ecp-fact__sub">Classroom &amp; immersive</span>
+                <span class="ecp-fact__value">Classroom Learning</span>
+                <span class="ecp-fact__sub">&nbsp;</span>
             </div>
         </div>
         <div class="ecp-fact">
@@ -48,8 +48,8 @@ include_once 'partials/header/transparent-header.php';
             </span>
             <div class="ecp-fact__body">
                 <span class="ecp-fact__label">Certification</span>
-                <span class="ecp-fact__value">IIFR + EFMD</span>
-                <span class="ecp-fact__sub">Globally recognised</span>
+                <span class="ecp-fact__value">EFMD Approved</span>
+                <span class="ecp-fact__sub">&nbsp;</span>
             </div>
         </div>
         <div class="ecp-fact">
@@ -58,8 +58,8 @@ include_once 'partials/header/transparent-header.php';
             </span>
             <div class="ecp-fact__body">
                 <span class="ecp-fact__label">Cohort</span>
-                <span class="ecp-fact__value">June 2026</span>
-                <span class="ecp-fact__sub">25–30 participants</span>
+                <span class="ecp-fact__value">Next Cohort</span>
+                <span class="ecp-fact__sub">August 2026</span>
             </div>
         </div>
     </div>
@@ -187,32 +187,32 @@ include_once 'partials/header/transparent-header.php';
     </div>
     <ol class="ecp-journey">
         <li class="ecp-step wow fadeInUp" data-wow-delay="0s">
-            <span class="ecp-step__node"><span class="ecp-step__num">1</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-building-columns" aria-hidden="true"></i><span class="ecp-step__num">1</span></span>
             <h3 class="ecp-step__title">Foundations of Teaching Excellence</h3>
             <p class="ecp-step__desc">Core principles, roles and mindset of an educator.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.08s">
-            <span class="ecp-step__node"><span class="ecp-step__num">2</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-book-open" aria-hidden="true"></i><span class="ecp-step__num">2</span></span>
             <h3 class="ecp-step__title">Curriculum &amp; Learning Design</h3>
             <p class="ecp-step__desc">Designing outcome-based curricula and learning experiences.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.16s">
-            <span class="ecp-step__node"><span class="ecp-step__num">3</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-users" aria-hidden="true"></i><span class="ecp-step__num">3</span></span>
             <h3 class="ecp-step__title">Case Method &amp; Experiential Learning</h3>
             <p class="ecp-step__desc">Developing cases and using experiential pedagogies.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0s">
-            <span class="ecp-step__node"><span class="ecp-step__num">4</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-microchip" aria-hidden="true"></i><span class="ecp-step__num">4</span></span>
             <h3 class="ecp-step__title">AI in Teaching &amp; Research</h3>
             <p class="ecp-step__desc">Integrating AI tools for teaching, assessment, and research.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.08s">
-            <span class="ecp-step__node"><span class="ecp-step__num">5</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-comments" aria-hidden="true"></i><span class="ecp-step__num">5</span></span>
             <h3 class="ecp-step__title">Classroom Practice &amp; Peer Feedback</h3>
             <p class="ecp-step__desc">Apply learnings through practice sessions and peer review.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.16s">
-            <span class="ecp-step__node"><span class="ecp-step__num">6</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-award" aria-hidden="true"></i><span class="ecp-step__num">6</span></span>
             <h3 class="ecp-step__title">Certification &amp; Educator Portfolio</h3>
             <p class="ecp-step__desc">Build your portfolio and receive IIFR + EFMD certification.</p>
         </li>

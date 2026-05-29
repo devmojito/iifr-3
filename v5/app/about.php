@@ -21,17 +21,16 @@ include_once 'partials/header/transparent-header.php';
 
 <!-- ============ ABOUT IIFR ============ -->
 <section class="iifr-section">
-    <div class="iifr-about">
-        <div class="iifr-about__media">
-            <img src="assets/images/about/about-iifr.jpeg" alt="IIFR inauguration lamp-lighting ceremony">
-        </div>
-
+    <div class="iifr-about iifr-about--landscape">
         <div class="iifr-about__content">
-            <span class="iifr-eyebrow">About IIFR</span>
-            <h2>A multidisciplinary global institute.</h2>
+            <h2>About IIFR</h2>
             <hr class="iifr-gold-line">
             <p>The International Institute of Faculty &amp; Research (IIFR) is a multidisciplinary global institute integrating academic and industry perspectives to advance education and professional practice.</p>
             <p>We bring together scholars, practitioners, and institutions to foster innovation in teaching, research, and leadership for a more connected and sustainable world.</p>
+        </div>
+
+        <div class="iifr-about__media">
+            <img src="assets/images/about/about-iifr.jpeg" alt="IIFR inauguration lamp-lighting ceremony">
         </div>
     </div>
 </section>

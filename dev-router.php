@@ -6,19 +6,10 @@
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-// For versioned paths, check if it's a static file first — let built-in server handle MIME
-if (preg_match('#^/(v[345])(/.*)?$#', $uri, $m)) {
-    $version = $m[1];
-    $rest = $m[2] ?? '/';
-    $filePath = __DIR__ . '/' . $version . $rest;
-
-    // Static file exists and is not PHP → let built-in server serve it natively
-    if ($rest !== '/' && is_file($filePath) && !preg_match('#\.php$#i', $filePath)) {
-        return false;
-    }
-
-    // Dynamic route → go through API handler
-    require __DIR__ . '/api/' . $version . '.php';
+// PHP versions use mount paths /v3.1, /v4.1, /v5.1 (matches vercel.json + IIFR_BASE).
+// Route through api handlers so CSS/JS/fonts get correct MIME types.
+if (preg_match('#^/v([345])\.1(/.*)?$#', $uri, $m)) {
+    require __DIR__ . '/api/v' . $m[1] . '.php';
     return;
 }
 

@@ -462,64 +462,95 @@ body {
 }
 .iifr-btn-ghost:hover { background: var(--iifr-navy); color: #ffffff; }
 
-/* ── What is IIFR + Strategic Partners (two-column) ── */
-.iifr-whatis {
+/* ── What is IIFR + Strategic Partners — stacked card panels ── */
+.iifr-whatis-card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 16px;
+  padding: 32px 36px;
   display: grid;
-  grid-template-columns: 1.7fr 1fr;
-  gap: 72px;
-  align-items: start;
+  grid-template-columns: auto 1fr auto;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 24px;
 }
-.iifr-whatis__main h2 {
+.iifr-whatis-card__icon {
+  width: 92px; height: 92px;
+  background: var(--iifr-navy);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  color: #ffffff;
+  flex: none;
+}
+.iifr-whatis-card__icon i { font-size: 44px; }
+.iifr-whatis-card__title {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: var(--iifr-fs-h2);
   line-height: var(--iifr-lh-tight);
   color: var(--iifr-navy);
-  margin: 10px 0 14px;
-}
-.iifr-whatis__main p { font-size: var(--iifr-fs-body); line-height: var(--iifr-lh-relaxed); color: var(--iifr-text-mid); margin: 0 0 18px; max-width: 620px; }
-.iifr-whatis__main p:last-of-type { margin-bottom: 0; }
-.iifr-whatis__cta { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 32px; }
-.iifr-whatis__partners { padding-top: 6px; }
-.iifr-whatis__partners-title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: var(--iifr-fs-h3);
-  color: var(--iifr-navy);
   margin: 0 0 10px;
 }
-.iifr-whatis__partners-sub {
+.iifr-whatis-card__content p {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 8px 0 0;
+}
+.iifr-whatis-card__cta { display: flex; gap: 12px; flex: none; flex-wrap: wrap; }
+
+.iifr-partners-card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 16px;
+  padding: 32px 36px;
+}
+.iifr-partners-card__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h2);
+  color: var(--iifr-navy);
+  margin: 0 0 8px;
+  line-height: var(--iifr-lh-tight);
+}
+.iifr-partners-card__sub {
   font-size: var(--iifr-fs-small);
   line-height: var(--iifr-lh-relaxed);
-  color: var(--iifr-text-light);
-  margin: 0 0 8px;
+  color: var(--iifr-text-mid);
+  margin: 0;
 }
-.iifr-partner-list { list-style: none; margin: 0; padding: 0; }
-.iifr-partner-list__item {
-  display: flex;
+.iifr-partners-card__divider {
+  border: 0;
+  border-top: 1px solid var(--iifr-border);
+  margin: 20px 0 24px;
+}
+.iifr-partners-card__logos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  min-height: 78px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--iifr-border);
+  gap: 32px;
 }
-.iifr-partner-list__item:last-child { border-bottom: none; }
-.iifr-partner-list__item img {
-  max-height: 52px;
-  max-width: 240px;
+.iifr-partners-card__logo { display: flex; align-items: center; justify-content: center; }
+.iifr-partners-card__logo img {
+  max-height: 58px;
+  max-width: 100%;
   width: auto;
   object-fit: contain;
-  object-position: left center;
   display: block;
 }
-/* EFMD is a near-square logo, so it reads small at the others' height —
-   give it a larger height so its visual size matches the wide logos. */
-.iifr-partner-list__item--efmd img {
-  max-height: 110px;
-  max-width: 230px;
-}
-@media (max-width: 900px) {
-  .iifr-whatis { grid-template-columns: 1fr; gap: 48px; }
-  .iifr-whatis__partners { border-top: 1px solid var(--iifr-border); padding-top: 32px; }
+.iifr-partners-card__logo--efmd img { max-height: 88px; }
+
+@media (max-width: 800px) {
+  .iifr-whatis-card {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 28px 24px;
+    text-align: left;
+  }
+  .iifr-whatis-card__icon { width: 72px; height: 72px; }
+  .iifr-whatis-card__icon i { font-size: 36px; }
+  .iifr-partners-card { padding: 28px 24px; }
+  .iifr-partners-card__logos { grid-template-columns: 1fr; gap: 22px; }
 }
 
 /* ── Insights blog cards + article body ── */
@@ -735,11 +766,11 @@ body {
 footer.iifr-v1-footer {
   background: #0a1c3d;
   color: #fff;
-  padding: 0 0 40px;
+  padding: 0 0 24px;
   border-top: 1px solid rgba(227, 184, 90, 0.18);
   font-family: 'Source Sans 3', sans-serif;
 }
-.iifr-foot-cta { padding: 30px 0; border-bottom: 1px solid rgba(227, 184, 90, 0.18); }
+.iifr-foot-cta { padding: 20px 0; border-bottom: 1px solid rgba(227, 184, 90, 0.18); }
 .iifr-foot-cta__inner {
   display: flex;
   align-items: center;
@@ -761,7 +792,7 @@ footer.iifr-v1-footer {
 .iifr-foot-cta__title span { color: #e3b85a; }
 .iifr-foot-cta__sub { color: #cfd5e6; font-size: var(--iifr-fs-body); margin: 0; }
 .iifr-foot-cta__btn { white-space: nowrap; flex: none; }
-footer.iifr-v1-footer .foot-grid { padding-top: 44px; }
+footer.iifr-v1-footer .foot-grid { padding-top: 28px; }
 @media (max-width: 700px) {
   .iifr-foot-cta__inner { flex-direction: column; align-items: flex-start; gap: 20px; }
 }
@@ -775,7 +806,7 @@ footer.iifr-v1-footer .wrap {
 footer.iifr-v1-footer .foot-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1.3fr;
-  gap: 48px;
+  gap: 32px;
   align-items: start;
 }
 footer.iifr-v1-footer .foot-brand {
@@ -815,7 +846,7 @@ footer.iifr-v1-footer .foot-brand p {
   color: #cfd5e6;
   font-size: var(--iifr-fs-body);
   line-height: var(--iifr-lh-body);
-  margin: 18px 0;
+  margin: 12px 0;
 }
 footer.iifr-v1-footer .foot-brand .meta {
   font-size: var(--iifr-fs-body);
@@ -829,7 +860,11 @@ footer.iifr-v1-footer .foot-brand .meta a:hover { color: #e3b85a; }
 footer.iifr-v1-footer .socials {
   display: flex;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 14px;
+}
+footer.iifr-v1-footer .foot-newscol .socials {
+  margin-top: 24px;
+  margin-bottom: 0;
 }
 footer.iifr-v1-footer .soc {
   width: 36px;
@@ -880,7 +915,7 @@ footer.iifr-v1-footer h5 {
   font-size: var(--iifr-fs-eyebrow);
   letter-spacing: 2px;
   color: #e3b85a;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -890,7 +925,7 @@ footer.iifr-v1-footer ul {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 footer.iifr-v1-footer ul a {
   color: #cfd5e6;
@@ -903,19 +938,19 @@ footer.iifr-v1-footer .foot-newscol p {
   font-size: var(--iifr-fs-body);
   color: #cfd5e6;
   line-height: var(--iifr-lh-body);
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 }
 footer.iifr-v1-footer .iifr-v1-footer__ctas {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 14px;
+  margin-bottom: 0;
 }
 footer.iifr-v1-footer .btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 10px 22px;
   border-radius: 999px;
   font-weight: 600;
   font-size: 16px;
@@ -1058,7 +1093,7 @@ footer.iifr-v1-footer .visually-hidden {
   .iifr-programmes-grid { grid-template-columns: 1fr; }
   .iifr-insights-grid { grid-template-columns: 1fr; }
   .iifr-cta-bar { padding: 32px 24px; }
-  footer.iifr-v1-footer { padding-top: 56px; }
+  footer.iifr-v1-footer { padding-top: 32px; }
 }
 
 /* ================================================================
@@ -1221,6 +1256,29 @@ footer.iifr-v1-footer .visually-hidden {
                                     not against the page edge */
   width: 100%;                   /* fall back to filling the column on small screens */
   max-width: 480px;              /* match the implicit width from aspect-ratio + max-height cap */
+}
+
+/* Landscape variant — image rendered in a clearly landscape rectangle
+   that stretches to match the text block height. Used on the About IIFR section. */
+.iifr-about--landscape { align-items: stretch; }
+.iifr-about--landscape .iifr-about__content { display: flex; flex-direction: column; justify-content: center; }
+.iifr-about--landscape .iifr-about__media {
+  aspect-ratio: 4 / 3;
+  max-height: none;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.iifr-about--landscape .iifr-about__media::before { display: none; }
+.iifr-about--landscape .iifr-about__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
 }
 .iifr-about--reverse .iifr-about__media::before {
   inset: -16px -16px auto auto;
@@ -3251,47 +3309,63 @@ footer.iifr-v1-footer .visually-hidden {
   margin: 26px 0 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 44px 28px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
   position: relative;
 }
 .ecp-journey--three { max-width: 1000px; margin-left: auto; margin-right: auto; }
 .ecp-step {
   position: relative;
-  background: #ffffff;
-  border: 1px solid var(--iifr-border);
-  border-radius: 12px;
-  padding: 34px 24px 24px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.ecp-step:hover {
-  transform: translateY(-3px);
-  border-color: var(--iifr-gold);
-  box-shadow: 0 12px 30px rgba(13,27,62,0.08);
+  padding: 0 6px;
 }
 .ecp-step__node {
-  position: absolute;
-  top: -26px; left: 50%; transform: translateX(-50%);
-  width: 52px; height: 52px;
+  position: relative;
+  width: 84px; height: 84px;
+  margin: 0 auto 18px;
   border-radius: 50%;
   background: var(--iifr-navy);
+  color: #ffffff;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 0 0 6px var(--iifr-light-bg);
 }
-.ecp-step__num { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 22px; color: var(--iifr-gold); }
+.ecp-step__node i { font-size: 36px; }
+.ecp-step__num {
+  position: absolute;
+  bottom: -4px; right: -4px;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--iifr-gold);
+  color: #ffffff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-small);
+  display: flex; align-items: center; justify-content: center;
+  border: 3px solid #f6f2e9;
+}
 .ecp-step__title {
   font-family: 'Playfair Display', serif;
-  font-size: var(--iifr-fs-h3);
+  font-size: var(--iifr-fs-body);
   font-weight: 700;
   color: var(--iifr-navy);
-  line-height: var(--iifr-lh-tight);
-  margin: 6px 0 8px;
+  line-height: 1.25;
+  margin: 0 0 6px;
 }
 .ecp-step__desc {
   font-size: var(--iifr-fs-small);
-  line-height: var(--iifr-lh-body);
+  line-height: var(--iifr-lh-relaxed);
   color: var(--iifr-text-mid);
+  margin: 0;
+}
+/* Gold chevron arrow between steps */
+.ecp-step:not(:last-child)::after {
+  content: '›';
+  position: absolute;
+  top: 30px;
+  right: -10px;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--iifr-gold);
 }
 
 /* ── ECP responsive ── */
@@ -3305,7 +3379,8 @@ footer.iifr-v1-footer .visually-hidden {
   .ecp-facts { grid-template-columns: repeat(2, 1fr); }
   .ecp-fact:nth-child(2) { border-right: none; }
   .ecp-fact:nth-child(1), .ecp-fact:nth-child(2) { border-bottom: 1px solid var(--iifr-border); }
-  .ecp-journey { grid-template-columns: repeat(2, 1fr); }
+  .ecp-journey { grid-template-columns: repeat(3, 1fr); gap: 32px 16px; }
+  .ecp-step:nth-child(3n)::after { display: none; }
 }
 @media (max-width: 767.98px) {
   .ecp-facts-wrap { padding: 0 24px; }
@@ -3316,5 +3391,10 @@ footer.iifr-v1-footer .visually-hidden {
   .ecp-facts { grid-template-columns: 1fr; }
   .ecp-fact { border-right: none; border-bottom: 1px solid var(--iifr-border); }
   .ecp-fact:last-child { border-bottom: none; }
+  .ecp-journey { grid-template-columns: repeat(2, 1fr); }
+  .ecp-step:nth-child(2n)::after { display: none; }
+}
+@media (max-width: 380px) {
   .ecp-journey { grid-template-columns: 1fr; }
+  .ecp-step::after { display: none; }
 }

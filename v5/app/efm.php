@@ -187,32 +187,32 @@ include_once 'partials/header/transparent-header.php';
     </div>
     <ol class="ecp-journey">
         <li class="ecp-step wow fadeInUp" data-wow-delay="0s">
-            <span class="ecp-step__node"><span class="ecp-step__num">1</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-graduation-cap" aria-hidden="true"></i><span class="ecp-step__num">1</span></span>
             <h3 class="ecp-step__title">Preparatory Foundations</h3>
             <p class="ecp-step__desc">Online finance, accounting, statistics, economics — plus Harvard, Stanford &amp; MIT baselines.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.08s">
-            <span class="ecp-step__node"><span class="ecp-step__num">2</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-book-open" aria-hidden="true"></i><span class="ecp-step__num">2</span></span>
             <h3 class="ecp-step__title">Foundation Courses</h3>
             <p class="ecp-step__desc">Philosophy of science, theories of the firm, curriculum design, case writing.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.16s">
-            <span class="ecp-step__node"><span class="ecp-step__num">3</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-diagram-project" aria-hidden="true"></i><span class="ecp-step__num">3</span></span>
             <h3 class="ecp-step__title">Interdisciplinary Management</h3>
             <p class="ecp-step__desc">Value creation, AI &amp; digital transformation, governance, organisational change.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0s">
-            <span class="ecp-step__node"><span class="ecp-step__num">4</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-landmark" aria-hidden="true"></i><span class="ecp-step__num">4</span></span>
             <h3 class="ecp-step__title">Geopolitics &amp; Policy</h3>
             <p class="ecp-step__desc">Geopolitics and business, diplomacy, public–private partnerships, policy dialogue.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.08s">
-            <span class="ecp-step__node"><span class="ecp-step__num">5</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-flask" aria-hidden="true"></i><span class="ecp-step__num">5</span></span>
             <h3 class="ecp-step__title">Research Methods</h3>
             <p class="ecp-step__desc">Qualitative &amp; quantitative methods, regression, multivariate analysis, AI &amp; LLMs.</p>
         </li>
         <li class="ecp-step wow fadeInUp" data-wow-delay="0.16s">
-            <span class="ecp-step__node"><span class="ecp-step__num">6</span></span>
+            <span class="ecp-step__node"><i class="fa-light fa-award" aria-hidden="true"></i><span class="ecp-step__num">6</span></span>
             <h3 class="ecp-step__title">Research Labs &amp; Dissertation</h3>
             <p class="ecp-step__desc">Research labs, dissertation seminars, proposal and final defence.</p>
         </li>

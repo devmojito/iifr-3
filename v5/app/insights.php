@@ -29,7 +29,7 @@ include_once 'partials/header/transparent-header.php';
     </div>
 
     <div class="iifr-grid iifr-grid--3">
-        <a href="insight/blog/faculty-development.php" class="iifr-prog-card">
+        <div class="iifr-prog-card iifr-prog-card--static">
             <div class="iifr-prog-img">
                 <img src="assets/images/insights/rethinking.png" alt="Rethinking Faculty Development in India">
             </div>
@@ -37,11 +37,10 @@ include_once 'partials/header/transparent-header.php';
                 <span class="iifr-prog-date">May 15, 2026</span>
                 <h3>Rethinking Faculty Development in India</h3>
                 <p>Why continuous learning, mentoring, and capability building are essential for the future of higher education.</p>
-                <div class="iifr-prog-arrow">Read More →</div>
             </div>
-        </a>
+        </div>
 
-        <a href="insight/blog/academia-industry.php" class="iifr-prog-card">
+        <div class="iifr-prog-card iifr-prog-card--static">
             <div class="iifr-prog-img">
                 <img src="assets/images/insights/academia.png" alt="Bridging Academia and Industry">
             </div>
@@ -49,11 +48,10 @@ include_once 'partials/header/transparent-header.php';
                 <span class="iifr-prog-date">April 28, 2026</span>
                 <h3>Bridging Academia and Industry</h3>
                 <p>Building meaningful partnerships to create relevant learning and real-world impact.</p>
-                <div class="iifr-prog-arrow">Read More →</div>
             </div>
-        </a>
+        </div>
 
-        <a href="insight/blog/applied-research.php" class="iifr-prog-card">
+        <div class="iifr-prog-card iifr-prog-card--static">
             <div class="iifr-prog-img">
                 <img src="assets/images/insights/future.png" alt="The Future of Applied Research">
             </div>
@@ -61,9 +59,8 @@ include_once 'partials/header/transparent-header.php';
                 <span class="iifr-prog-date">April 10, 2026</span>
                 <h3>The Future of Applied Research</h3>
                 <p>How applied research can address real-world challenges and shape societal progress.</p>
-                <div class="iifr-prog-arrow">Read More →</div>
             </div>
-        </a>
+        </div>
     </div>
 </section>
 <?php

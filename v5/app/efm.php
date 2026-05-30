@@ -181,7 +181,6 @@ include_once 'partials/header/transparent-header.php';
 <!-- ============ PROGRAMME JOURNEY ============ -->
 <section class="iifr-section iifr-cream">
     <div class="iifr-section__head iifr-section__head--center wow fadeInUp">
-        <span class="iifr-eyebrow">The 3-Year Arc</span>
         <h2>Programme Journey</h2>
         <hr class="iifr-gold-line-center">
     </div>

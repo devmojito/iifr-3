@@ -766,11 +766,11 @@ body {
 footer.iifr-v1-footer {
   background: #0a1c3d;
   color: #fff;
-  padding: 0 0 24px;
+  padding: 0 0 16px;
   border-top: 1px solid rgba(227, 184, 90, 0.18);
   font-family: 'Source Sans 3', sans-serif;
 }
-.iifr-foot-cta { padding: 20px 0; border-bottom: 1px solid rgba(227, 184, 90, 0.18); }
+.iifr-foot-cta { padding: 14px 0; border-bottom: 1px solid rgba(227, 184, 90, 0.18); }
 .iifr-foot-cta__inner {
   display: flex;
   align-items: center;
@@ -792,7 +792,7 @@ footer.iifr-v1-footer {
 .iifr-foot-cta__title span { color: #e3b85a; }
 .iifr-foot-cta__sub { color: #cfd5e6; font-size: var(--iifr-fs-body); margin: 0; }
 .iifr-foot-cta__btn { white-space: nowrap; flex: none; }
-footer.iifr-v1-footer .foot-grid { padding-top: 28px; }
+footer.iifr-v1-footer .foot-grid { padding-top: 20px; }
 @media (max-width: 700px) {
   .iifr-foot-cta__inner { flex-direction: column; align-items: flex-start; gap: 20px; }
 }
@@ -1347,6 +1347,155 @@ footer.iifr-v1-footer .visually-hidden {
   .iifr-collab { grid-template-columns: 1fr; gap: 36px; align-items: start; }
 }
 
+/* ── ECP — AI in Learning & Teaching: list column sits to the right of the intro ── */
+.ecp-overview__list { align-self: center; }
+.ecp-overview__list .iifr-list { margin: 0; }
+
+/* ── ECP — Certification + Ready-to-Apply CTA (above footer) ── */
+.iifr-ecp-cta { display: grid; grid-template-columns: 1.8fr 1fr; gap: 32px; align-items: stretch; }
+.iifr-ecp-cta__cert {
+  background: #0a1c3d;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.iifr-ecp-cta__logos { display: flex; align-items: center; gap: 18px; flex: none; }
+.iifr-ecp-cta__logo { display: block; width: auto; }
+.iifr-ecp-cta__logo--efmd {
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 12px;
+  box-sizing: content-box;
+}
+.iifr-ecp-cta__iifr-mark { display: inline-flex; align-items: center; gap: 12px; color: #ffffff; }
+.iifr-ecp-cta__iifr-emblem { height: 60px; width: auto; display: block; }
+.iifr-ecp-cta__iifr-word {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  line-height: 1;
+}
+.iifr-ecp-cta__logo-divider { width: 1px; height: 56px; background: rgba(255, 255, 255, 0.25); display: block; }
+.iifr-ecp-cta__cert-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h3);
+  color: #ffffff;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.iifr-ecp-cta__cert-text {
+  font-size: var(--iifr-fs-small);
+  line-height: var(--iifr-lh-relaxed);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+.iifr-ecp-cta__action {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 8px 20px;
+}
+.iifr-ecp-cta__action-icon { color: var(--iifr-navy); flex: none; line-height: 1; }
+.iifr-ecp-cta__action-icon i { font-size: 110px; }
+.iifr-ecp-cta__action-body { display: flex; flex-direction: column; gap: 12px; flex: 1; min-width: 0; }
+.iifr-ecp-cta__action-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h3);
+  color: var(--iifr-navy);
+  margin: 0;
+  line-height: 1.2;
+}
+.iifr-ecp-cta__action-buttons { display: flex; flex-direction: column; gap: 10px; width: 100%; align-items: stretch; }
+.iifr-ecp-cta__action-buttons > * { text-align: center; cursor: pointer; }
+.iifr-ecp-cta__action-buttons button.iifr-btn-primary { font-family: inherit; border: 0; }
+@media (max-width: 900px) {
+  .iifr-ecp-cta { grid-template-columns: 1fr; }
+  .iifr-ecp-cta__cert { flex-direction: column; text-align: center; }
+  .iifr-ecp-cta__logo-divider { display: none; }
+}
+
+/* ── Faculty page — full layout: intro left, 4×2 cards right with photo+LinkedIn+name+role+desc+more ── */
+.iifr-fac-page__row { display: grid; grid-template-columns: 0.95fr 2.5fr; gap: 40px; align-items: start; }
+.iifr-fac-page__title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-h2);
+  color: var(--iifr-navy);
+  line-height: var(--iifr-lh-tight);
+  margin: 8px 0 14px;
+}
+.iifr-fac-page__intro p {
+  font-size: var(--iifr-fs-body);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 0 0 14px;
+}
+.iifr-fac-page__cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: start; }
+.iifr-fac-card {
+  background: #ffffff;
+  border: 1px solid var(--iifr-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.iifr-fac-card__photo { position: relative; aspect-ratio: 4 / 3; background: #f6f2e9; }
+.iifr-fac-card__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.iifr-fac-card__li {
+  position: absolute; top: 8px; right: 8px;
+  width: 28px; height: 28px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0a66c2;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+}
+.iifr-fac-card__li svg { width: 18px; height: 18px; }
+.iifr-fac-card__li:hover { background: #ffffff; }
+.iifr-fac-card__body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; }
+.iifr-fac-card__name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: var(--iifr-fs-body);
+  color: var(--iifr-navy);
+  line-height: 1.25;
+  margin: 0;
+}
+.iifr-fac-card__role {
+  font-size: var(--iifr-fs-small);
+  font-weight: 700;
+  color: var(--iifr-gold);
+  line-height: 1.3;
+}
+.iifr-fac-card__desc {
+  font-size: var(--iifr-fs-small);
+  line-height: var(--iifr-lh-relaxed);
+  color: var(--iifr-text-mid);
+  margin: 0;
+}
+.iifr-fac-card__more {
+  font-size: var(--iifr-fs-small);
+  font-weight: 700;
+  color: var(--iifr-gold);
+  text-decoration: none;
+  margin-top: 6px;
+}
+.iifr-fac-card__more:hover { color: var(--iifr-navy); }
+@media (max-width: 1100px) {
+  .iifr-fac-page__row { grid-template-columns: 1fr; gap: 32px; }
+  .iifr-fac-page__cards { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 760px) { .iifr-fac-page__cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 460px) { .iifr-fac-page__cards { grid-template-columns: 1fr; } }
+
 /* ── Research page — Our Faculty (intro left, profile cards right) ── */
 .iifr-faculty-row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: stretch; }
 .iifr-faculty-row__intro { display: flex; flex-direction: column; justify-content: center; }
@@ -1893,14 +2042,19 @@ footer.iifr-v1-footer .visually-hidden {
 .iifr-council-card__role { font-size: var(--iifr-fs-small); color: #e9c877; line-height: 1.3; display: block; }
 
 /* ── Leadership & Governance — two separate cards ── */
-.iifr-govern { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; align-items: start; }
+.iifr-govern { display: grid; grid-template-columns: 1fr 1.2fr; gap: 28px; align-items: stretch; }
 .iifr-govern__card {
   background: #ffffff;
   border: 1px solid var(--iifr-border);
   border-radius: 16px;
   padding: 40px 32px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
+/* On the Exec Board card, push the Members section to the bottom so the
+   leftover space is distributed (no empty gap at the bottom). */
+.iifr-govern__card .iifr-govern__label ~ .iifr-govern__label { margin-top: auto; }
 .iifr-govern__heading {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -1927,6 +2081,7 @@ footer.iifr-v1-footer .visually-hidden {
   margin: 30px 0 16px;
 }
 .iifr-gov-grid { display: flex; flex-wrap: wrap; gap: 22px 16px; justify-content: center; }
+.iifr-gov-grid--small { max-width: 78%; margin-left: auto; margin-right: auto; }
 .iifr-gov-grid--2 > * { flex: 0 1 calc(50% - 8px); }
 .iifr-gov-grid--3 > * { flex: 0 1 calc(33.333% - 11px); }
 .iifr-gov-grid--4 > * { flex: 0 1 calc(25% - 12px); }
@@ -3451,7 +3606,8 @@ footer.iifr-v1-footer .visually-hidden {
   gap: 16px;
   position: relative;
 }
-.ecp-journey--three { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.ecp-journey--three { grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin-left: auto; margin-right: auto; }
+.ecp-journey--three .ecp-step:nth-child(3)::after { display: none; }
 .ecp-step {
   position: relative;
   text-align: center;

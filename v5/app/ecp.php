@@ -226,12 +226,44 @@ include_once 'partials/header/transparent-header.php';
             <h2 class="ecp-overview__title">AI in Learning &amp; Teaching</h2>
             <hr class="iifr-gold-line">
             <p>AI is not one tool in the kit. It is a new mode of pedagogical delivery running through every module. At the ECP, you will learn how to reduce the 12-month traditional case-study development cycle to days through:</p>
-            <ul class="iifr-list" style="margin-top:18px;">
+        </div>
+        <div class="ecp-overview__list wow fadeInUp" data-wow-delay="0.2s">
+            <ul class="iifr-list">
                 <li><p><strong>Assisted case writing</strong> — AI-assisted case development using LLMs and web resources.</p></li>
                 <li><p><strong>Course design</strong> — AI-powered curriculum architecture and learning-objective setting.</p></li>
                 <li><p><strong>Content creation</strong> — AI-integrated teaching materials and assessments.</p></li>
                 <li><p><strong>Student engagement</strong> — AI-enabled personalised learning pathways and classroom analytics.</p></li>
             </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CERTIFICATION + READY-TO-APPLY (above footer) ============ -->
+<section class="iifr-section">
+    <div class="iifr-ecp-cta">
+        <div class="iifr-ecp-cta__cert">
+            <div class="iifr-ecp-cta__logos">
+                <img src="assets/images/logo/efmd.png" alt="EFMD Approved" class="iifr-ecp-cta__logo iifr-ecp-cta__logo--efmd">
+                <span class="iifr-ecp-cta__logo-divider" aria-hidden="true"></span>
+                <span class="iifr-ecp-cta__iifr-mark" aria-label="IIFR">
+                    <img src="assets/logo.png" alt="" class="iifr-ecp-cta__iifr-emblem">
+                    <span class="iifr-ecp-cta__iifr-word">IIFR</span>
+                </span>
+            </div>
+            <div class="iifr-ecp-cta__cert-body">
+                <h3 class="iifr-ecp-cta__cert-title">Globally Oriented Certification</h3>
+                <p class="iifr-ecp-cta__cert-text">Participants who successfully complete the Educators' Certificate Programme will receive an EFMD approved certification reflecting capability in modern teaching, curriculum design, and academic practice.</p>
+            </div>
+        </div>
+        <div class="iifr-ecp-cta__action">
+            <span class="iifr-ecp-cta__action-icon" aria-hidden="true"><i class="fa-light fa-graduation-cap"></i></span>
+            <div class="iifr-ecp-cta__action-body">
+                <h3 class="iifr-ecp-cta__action-title">Ready to Shape the Future of Learning?</h3>
+                <div class="iifr-ecp-cta__action-buttons">
+                    <button type="button" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal">Apply Now</button>
+                    <a href="contact.php" class="iifr-btn-ghost">Speak to Programme Advisor</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

@@ -9,7 +9,6 @@ include_once 'partials/header/transparent-header.php';
 <div class="iifr-page-hero">
     <div class="iifr-page-hero__bg" style="background-image:url('assets/images/about-hero.jpeg');"></div>
     <div class="iifr-page-hero__inner">
-        <span class="iifr-page-hero__eyebrow">About</span>
         <h1>About Us</h1>
         <p>The International Institute for Faculty &amp; Research advances higher education, research, and leadership across India and the Global South.</p>
         <div class="iifr-page-hero__cta">
@@ -187,7 +186,7 @@ function iifr_board_card($img, $name, $role, $linkedin = '', $bio = '') {
             </div>
 
             <span class="iifr-govern__label">Members</span>
-            <div class="iifr-gov-grid iifr-gov-grid--2">
+            <div class="iifr-gov-grid iifr-gov-grid--2 iifr-gov-grid--small">
                 <?php iifr_board_card('assets/images/faculty/rohit-bansal.jpeg', 'Rohit Bansal', 'Member', 'https://www.linkedin.com/in/therohitbansal/'); ?>
                 <?php iifr_board_card('assets/images/faculty/siva.jpeg', 'Siva Prasad', 'Member', 'https://www.linkedin.com/in/gitaacharan/'); ?>
                 <?php iifr_board_card('assets/images/faculty/aruna-reddy.jpeg', 'Aruna Reddy', 'Member', 'https://www.linkedin.com/in/reddyaruna/'); ?>

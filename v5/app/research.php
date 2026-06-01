@@ -24,14 +24,16 @@ include_once 'partials/header/transparent-header.php';
 /* First 8 profiles from the About-page Academic Council (priority order),
    with short bios used for the card excerpts. */
 $research_faculty = [
-    ['name' => 'Prof. Rajendra Srivastava', 'role' => 'Former Dean, Indian School of Business', 'img' => 'assets/images/faculty/rajendra-srivastava.png', 'linkedin' => 'https://in.linkedin.com/in/rajendra-srivastava-816643118', 'excerpt' => 'Globally recognised leader in marketing strategy and innovation. Former Dean of the Indian School of Business; advises leading organisations on strategic transformation.'],
-    ['name' => 'Prof. Uday B. Desai', 'role' => 'Founding Director, IIT Hyderabad', 'img' => 'assets/images/faculty/uday-desai.png', 'linkedin' => 'https://in.linkedin.com/in/ubdesai', 'excerpt' => 'Distinguished academician and founding Director of IIT Hyderabad. Professor Emeritus contributing extensively to policy, institutional governance, and research.'],
-    ['name' => 'Prof. Alfons Sauquet', 'role' => 'Associate Director, EFMD Quality Services', 'img' => 'assets/images/faculty/alfons-sauquet.png', 'linkedin' => 'https://www.linkedin.com/in/alfons-sauquet-53871211/', 'excerpt' => 'Associate Director at EFMD Quality Services and Director of EDAF. Former Global Dean of ESADE Business and Law School; published widely on learning and innovation.'],
-    ['name' => 'Mr. Manoj Kohli', 'role' => 'Chairman & Managing Partner, MK Knowledge LLP', 'img' => 'assets/images/faculty/manoj-kohli.png', 'linkedin' => 'https://www.linkedin.com/in/manoj-kohli-34948b108/', 'excerpt' => 'Professional entrepreneur with 46 years of industrial experience. Former country head of SoftBank, CEO & MD of Airtel, and executive chairman of SB Energy.'],
-    ['name' => 'Prof. Baljit Sidhu', 'role' => 'Professor of Accounting, University of Sydney', 'img' => 'assets/images/faculty/baljit-sidhu.png', 'linkedin' => 'https://www.linkedin.com/in/baljit-sidhu-66870a8/', 'excerpt' => 'Professor of Accounting at the University of Sydney Business School. Joint Editor-in-Chief at Abacus; serves on the Australian Accounting Standards Board.'],
-    ['name' => 'Prof. Rishikesha T. Krishnan', 'role' => 'Professor of Strategy, IIM Bangalore', 'img' => 'assets/images/faculty/rishikesha-krishnan.png', 'linkedin' => 'https://in.linkedin.com/in/rishikesha-krishnan-662601', 'excerpt' => 'Professor of Strategy at IIM Bangalore. Former Director of IIM Indore and IIM Bangalore; focuses on innovation, strategy, and technology management.'],
-    ['name' => 'Mr. Nandu Nandkishore', 'role' => 'Professor of Practice, Indian School of Business', 'img' => 'assets/images/faculty/nandu-nandkishore.png', 'linkedin' => 'https://ae.linkedin.com/in/nandu-nandkishore-7380a722', 'excerpt' => 'Global C-suite leader with three decades of experience. Former Global CEO of Nestle Nutrition; Professor of Practice at the Indian School of Business.'],
-    ['name' => 'Prof. Ashley Braganza', 'role' => 'Chair in Business Transformation, Brunel', 'img' => 'assets/images/faculty/ashley-braganza.png', 'linkedin' => 'https://www.linkedin.com/in/ashley-braganza/', 'excerpt' => 'Chair in Business Transformation and former Dean of Brunel Business School. Co-Director of Brunel\'s Research Centre for Artificial Intelligence.'],
+    ['name' => 'Dr. Rajendra Srivastava', 'role' => 'Former Dean, Indian School of Business', 'img' => 'assets/images/faculty/rajendra-srivastava.png', 'linkedin' => 'https://www.linkedin.com/in/rajendra-srivastava-816643118'],
+    ['name' => 'Prof. Ramakrishna Velamuri', 'role' => 'Dean, School of Management, Mahindra University', 'img' => 'assets/images/faculty/ramakrishna-velamuri.png', 'linkedin' => 'https://www.linkedin.com/in/ramavelamuri/'],
+    ['name' => 'Prof. Uday B. Desai', 'role' => 'Founding Director, IIT Hyderabad', 'img' => 'assets/images/faculty/uday-desai.png', 'linkedin' => 'https://www.linkedin.com/in/ubdesai/'],
+    ['name' => 'Charles Dhanaraj', 'role' => 'Professor of Strategy', 'img' => 'assets/images/faculty/charles-dhanaraj.avif', 'linkedin' => 'https://www.linkedin.com/in/charles-dhanaraj-949566'],
+    ['name' => 'Sundar Bharadwaj', 'role' => 'Professor of Marketing', 'img' => 'assets/images/faculty/bharadwaj.jpg', 'linkedin' => 'https://www.linkedin.com/in/sundarbharadwajmarketingprof'],
+    ['name' => 'Vish Krishnan', 'role' => 'Professor, UC San Diego', 'img' => 'assets/images/faculty/Vish-Krishnan.avif', 'linkedin' => 'https://www.linkedin.com/in/vish-krishnan-0ab0601'],
+    ['name' => 'Ashish Sinha', 'role' => 'Professor of Marketing, UQ Business School', 'img' => 'assets/images/faculty/ashish-sinha.jpg', 'linkedin' => 'https://www.linkedin.com/in/ashish-sinha-7a021522'],
+    ['name' => 'Prakash Bagri', 'role' => 'Practice Faculty', 'img' => 'assets/images/faculty/prakash.avif', 'linkedin' => 'https://www.linkedin.com/in/prakashbagri'],
+    ['name' => 'Shankar Prakash', 'role' => 'Practice Faculty', 'img' => 'assets/images/faculty/shankar-prakash.avif', 'linkedin' => 'https://www.linkedin.com/in/shankarprakash'],
+    ['name' => 'Muralikrishnan B', 'role' => 'Practice Faculty', 'img' => 'assets/images/faculty/muralikrishnan-b.jpg', 'linkedin' => 'https://www.linkedin.com/in/muralikrishnan'],
 ];
 ?>
 <section class="iifr-section">
@@ -47,13 +49,12 @@ $research_faculty = [
             </div>
         </div>
 
-        <div class="iifr-fac-page__cards">
+        <div class="iifr-fac-page__cards iifr-fac-page__cards--five">
             <?php foreach ($research_faculty as $f):
                 $n = htmlspecialchars($f['name'], ENT_QUOTES);
                 $r = htmlspecialchars($f['role'], ENT_QUOTES);
                 $i = htmlspecialchars($f['img'], ENT_QUOTES);
                 $li = htmlspecialchars($f['linkedin'], ENT_QUOTES);
-                $e = htmlspecialchars($f['excerpt'], ENT_QUOTES);
             ?>
             <article class="iifr-fac-card">
                 <div class="iifr-fac-card__photo">
@@ -65,8 +66,6 @@ $research_faculty = [
                 <div class="iifr-fac-card__body">
                     <h3 class="iifr-fac-card__name"><?= $n ?></h3>
                     <span class="iifr-fac-card__role"><?= $r ?></span>
-                    <p class="iifr-fac-card__desc"><?= $e ?></p>
-                    <a class="iifr-fac-card__more" href="about.php#leadership">Read More →</a>
                 </div>
             </article>
             <?php endforeach; ?>

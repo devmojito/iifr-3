@@ -1500,20 +1500,27 @@ footer.iifr-v1-footer .visually-hidden {
   margin-top: 6px;
 }
 .iifr-fac-card__more:hover { color: var(--iifr-navy); }
+/* Stack the 5-card variant earlier so each card has proper room on 1366×768 and smaller laptops */
+@media (max-width: 1399px) {
+  .iifr-fac-page__row:has(.iifr-fac-page__cards--five) { grid-template-columns: 1fr; gap: 28px; }
+  .iifr-fac-page__row:has(.iifr-fac-page__cards--five) .iifr-fac-page__intro { max-width: none; }
+  .iifr-fac-page__cards--five { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+  .iifr-fac-page__cards--five .iifr-fac-card__body { padding: 10px 12px 12px; }
+  .iifr-fac-page__cards--five .iifr-fac-card__name { font-size: var(--iifr-fs-small); }
+  .iifr-fac-page__cards--five .iifr-fac-card__role { font-size: 12px; }
+}
 @media (max-width: 1100px) {
   .iifr-fac-page__row { grid-template-columns: 1fr; gap: 32px; }
-  .iifr-fac-page__row:has(.iifr-fac-page__cards--five) { grid-template-columns: 1fr; gap: 32px; }
-  .iifr-fac-page__cards { grid-template-columns: repeat(3, 1fr); }
-  .iifr-fac-page__cards--five { grid-template-columns: repeat(5, 1fr); }
+  .iifr-fac-page__cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-@media (max-width: 900px) { .iifr-fac-page__cards--five { grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 900px) { .iifr-fac-page__cards--five { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (max-width: 760px) {
-  .iifr-fac-page__cards { grid-template-columns: repeat(2, 1fr); }
-  .iifr-fac-page__cards--five { grid-template-columns: repeat(3, 1fr); }
+  .iifr-fac-page__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .iifr-fac-page__cards--five { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 460px) {
   .iifr-fac-page__cards { grid-template-columns: 1fr; }
-  .iifr-fac-page__cards--five { grid-template-columns: repeat(2, 1fr); }
+  .iifr-fac-page__cards--five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* ── Research page — Our Faculty (intro left, profile cards right) ── */

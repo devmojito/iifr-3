@@ -1441,13 +1441,41 @@ footer.iifr-v1-footer .visually-hidden {
 }
 .iifr-fac-page__cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
 .iifr-fac-page__cards--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.iifr-fac-page__cards--five { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; grid-auto-rows: 1fr; }
-.iifr-fac-page__cards--five .iifr-fac-card { height: 100%; }
-.iifr-fac-page__cards--five .iifr-fac-card__photo { aspect-ratio: 1 / 1; flex: 0 0 auto; }
-.iifr-fac-page__cards--five .iifr-fac-card__photo img { object-position: center 18%; }
-.iifr-fac-page__cards--five .iifr-fac-card__body { padding: 8px 10px 10px; gap: 3px; flex: 1 1 auto; }
-.iifr-fac-page__cards--five .iifr-fac-card__name { font-size: 13px; line-height: 1.2; }
-.iifr-fac-page__cards--five .iifr-fac-card__role { font-size: 11px; line-height: 1.25; }
+
+/* 5-up variant — bullet-proof equal sizing via padding-bottom aspect trick + fixed-height role slot */
+.iifr-fac-page__cards--five { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: stretch; }
+.iifr-fac-page__cards--five .iifr-fac-card { height: 100%; display: flex; flex-direction: column; }
+.iifr-fac-page__cards--five .iifr-fac-card__photo {
+  aspect-ratio: auto;
+  height: 0;
+  padding-bottom: 100%;        /* perfect 1:1 square, computed from card width */
+  position: relative;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+.iifr-fac-page__cards--five .iifr-fac-card__photo img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 18%;
+}
+.iifr-fac-page__cards--five .iifr-fac-card__body {
+  padding: 10px 12px 12px;
+  gap: 4px;
+  flex: 1 1 auto;
+  display: flex; flex-direction: column;
+}
+.iifr-fac-page__cards--five .iifr-fac-card__name {
+  font-size: 13px; line-height: 1.2;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.4em;            /* reserve 2 lines for name (scales with font-size) */
+}
+.iifr-fac-page__cards--five .iifr-fac-card__role {
+  font-size: 11px; line-height: 1.3;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6em;            /* reserve 2 lines for role (scales with font-size) */
+}
 .iifr-fac-page__cards--five .iifr-fac-card__li { width: 22px; height: 22px; top: 6px; right: 6px; }
 .iifr-fac-page__cards--five .iifr-fac-card__li svg { width: 14px; height: 14px; }
 .iifr-fac-card {

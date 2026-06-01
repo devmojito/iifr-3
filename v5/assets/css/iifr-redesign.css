@@ -1439,12 +1439,13 @@ footer.iifr-v1-footer .visually-hidden {
   color: var(--iifr-text-mid);
   margin: 0 0 14px;
 }
-.iifr-fac-page__cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; align-items: stretch; }
-.iifr-fac-page__cards--two { grid-template-columns: repeat(2, 1fr); }
-.iifr-fac-page__cards--five { grid-template-columns: repeat(5, 1fr); gap: 10px; }
-.iifr-fac-page__cards--five .iifr-fac-card__photo { aspect-ratio: 1 / 1; }
+.iifr-fac-page__cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.iifr-fac-page__cards--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.iifr-fac-page__cards--five { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; grid-auto-rows: 1fr; }
+.iifr-fac-page__cards--five .iifr-fac-card { height: 100%; }
+.iifr-fac-page__cards--five .iifr-fac-card__photo { aspect-ratio: 1 / 1; flex: 0 0 auto; }
 .iifr-fac-page__cards--five .iifr-fac-card__photo img { object-position: center 18%; }
-.iifr-fac-page__cards--five .iifr-fac-card__body { padding: 8px 10px 10px; gap: 3px; }
+.iifr-fac-page__cards--five .iifr-fac-card__body { padding: 8px 10px 10px; gap: 3px; flex: 1 1 auto; }
 .iifr-fac-page__cards--five .iifr-fac-card__name { font-size: 13px; line-height: 1.2; }
 .iifr-fac-page__cards--five .iifr-fac-card__role { font-size: 11px; line-height: 1.25; }
 .iifr-fac-page__cards--five .iifr-fac-card__li { width: 22px; height: 22px; top: 6px; right: 6px; }

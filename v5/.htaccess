@@ -1,2 +1,71 @@
-# Custom error documents (path is relative to server document root; adjust if site runs in a subdirectory)
+# ==============================================================
+# IIFR — Apache front-controller config for Hostinger (public_html)
+# ==============================================================
+
+# --- Block direct access to internal / sensitive files ---
+<FilesMatch "^(iifr-config|iifr-config\.local|iifr-config\.local\.SAMPLE|iifr-mail|dev-router)\.php$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "\.(docx|md|markdown|gitignore|sample|local|log|sql)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# --- Tell Apache to use api/index.php as the directory index ---
+DirectoryIndex api/index.php
+
+# Hide directory listings if someone hits an asset folder without an index
+Options -Indexes
+
+# --- Rewrite engine ---
+RewriteEngine On
+RewriteBase /
+
+# Force HTTPS (uncomment after the SSL certificate is issued on Hostinger)
+# RewriteCond %{HTTPS} !=on
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Strip trailing slash on virtual URLs (keeps directories like /assets/ alone)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Let Apache serve real static files (CSS, JS, images, fonts, etc.) directly
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Everything else → front controller (api/index.php) so /research.php, /about, etc. all route correctly
+RewriteRule ^ api/index.php [L,QSA]
+
+# --- Tell the PHP app it's running at the domain root, not /v5.1 ---
+SetEnv IIFR_BASE_PATH /
+
+# --- Custom error documents ---
 ErrorDocument 404 /404.php
+
+# --- MIME tweaks (helps when Hostinger serves modern asset formats) ---
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+</IfModule>
+
+# --- Caching for static assets ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                "access plus 7 days"
+  ExpiresByType application/javascript  "access plus 7 days"
+  ExpiresByType image/jpeg              "access plus 30 days"
+  ExpiresByType image/png               "access plus 30 days"
+  ExpiresByType image/webp              "access plus 30 days"
+  ExpiresByType image/avif              "access plus 30 days"
+  ExpiresByType image/svg+xml           "access plus 30 days"
+  ExpiresByType font/woff2              "access plus 365 days"
+</IfModule>
+
+# --- Gzip compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>

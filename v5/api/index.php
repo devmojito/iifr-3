@@ -7,7 +7,12 @@ declare(strict_types=1);
  * as a static file (filesystem wins over rewrites). Static assets stay in /assets etc.
  */
 
-require_once dirname(__DIR__, 2) . '/api/iifr-mime.php';
+// Helper lives next to this file (Hostinger/Apache layout). Fall back to the original
+// Vercel path (parent /api/iifr-mime.php) when running under Vercel's flat structure.
+$__iifr_mime_local = __DIR__ . '/iifr-mime.php';
+$__iifr_mime_vercel = dirname(__DIR__, 2) . '/api/iifr-mime.php';
+require_once is_file($__iifr_mime_local) ? $__iifr_mime_local : $__iifr_mime_vercel;
+unset($__iifr_mime_local, $__iifr_mime_vercel);
 
 $root = dirname(__DIR__);
 $rootReal = realpath($root);

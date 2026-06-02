@@ -67,7 +67,16 @@ include_once 'partials/header/transparent-header.php';
     </div>
 </section>
 
-<!-- ============ MISSION (4 priorities) — above Vision ============ -->
+<!-- ============ VISION — above Mission, dark band ============ -->
+<section class="iifr-section iifr-vision">
+    <div class="iifr-section__head iifr-section__head--center">
+        <h2>Our Vision</h2>
+        <hr class="iifr-gold-line-center">
+        <p class="iifr-lead">To be a multidisciplinary global institute integrating academic and industry perspectives to advance education and professional practice.</p>
+    </div>
+</section>
+
+<!-- ============ MISSION (4 priorities) — below Vision ============ -->
 <section class="iifr-section iifr-cream">
     <div class="iifr-section__head iifr-section__head--center">
         <h2>Our Mission</h2>
@@ -104,15 +113,6 @@ include_once 'partials/header/transparent-header.php';
             <h3 class="iifr-mission-card__title">Building a Global Network</h3>
             <p class="iifr-mission-card__body">Building a high-impact global network that fosters seamless collaboration between the world's leading scholars and industry practitioners.</p>
         </article>
-    </div>
-</section>
-
-<!-- ============ VISION — below Mission, dark band ============ -->
-<section class="iifr-section iifr-vision">
-    <div class="iifr-section__head iifr-section__head--center">
-        <h2>Our Vision</h2>
-        <hr class="iifr-gold-line-center">
-        <p class="iifr-lead">To be a multidisciplinary global institute integrating academic and industry perspectives to advance education and professional practice.</p>
     </div>
 </section>
 

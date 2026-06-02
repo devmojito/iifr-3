@@ -44,9 +44,6 @@ $research_faculty = [
             <hr class="iifr-gold-line">
             <p>IIFR's faculty model blends globally connected academics, accomplished practice leaders, and scholar-practitioners who bring contemporary relevance into teaching, research, and institutional transformation.</p>
             <p>Our faculty community includes internationally networked scholars, senior industry professionals, policy thinkers, and educators committed to pedagogical innovation.</p>
-            <div style="margin-top:24px;">
-                <a href="about.php#leadership" class="iifr-btn-ghost">View All Faculty Profiles →</a>
-            </div>
         </div>
 
         <div class="iifr-fac-page__cards iifr-fac-page__cards--five">

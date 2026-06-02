@@ -14,7 +14,6 @@ include_once 'partials/header/transparent-header.php';
         <p>A doctoral-equivalent fellowship for senior practitioners ready to engage with the rigour of academic scholarship — without abandoning practice. India's most ambitious academic credential for senior executives.</p>
         <div class="iifr-page-hero__cta">
             <a href="#" class="iifr-btn-primary" data-bs-toggle="modal" data-bs-target="#iifrApplyModal" role="button">Apply for October 2026 Cohort</a>
-            <a href="assets/files/document.pdf" class="iifr-btn-outline" target="_blank" rel="noopener">Download Brochure</a>
         </div>
     </div>
 </div>
@@ -341,7 +340,7 @@ include_once 'partials/header/transparent-header.php';
             <p>The programme is led by <strong>Dr. Rajendra Srivastava</strong> (Vice Chairman, IIFR; Former Dean, ISB) and supported by a global faculty network.</p>
             <p>Fellows benefit from a 9-day residential research camp, 36 contact days, and supervision from internationally networked scholars and practice leaders.</p>
             <div class="iifr-page-hero__cta" style="margin-top:8px;">
-                <a href="faculty.php" class="iifr-btn-dark">Meet Our Faculty</a>
+                <a href="research.php" class="iifr-btn-dark">Meet Our Faculty</a>
                 <a href="ecp.php" class="iifr-btn-ghost">Compare with ECP</a>
             </div>
         </div>

@@ -35,7 +35,7 @@ require_once __DIR__ . '/../../iifr-config.php';
         <ul>
           <li><a href="<?= IIFR_BASE ?>">Home</a></li>
           <li><a href="about.php">About Us</a></li>
-          <li><a href="faculty.php">Faculty</a></li>
+          <li><a href="research.php">Research and Faculty</a></li>
           <li><a href="programmes.php">Programmes</a></li>
           <li><a href="insights.php">Insights</a></li>
         </ul>
